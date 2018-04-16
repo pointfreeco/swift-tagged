@@ -1,4 +1,5 @@
 # 🏷 Tagged
+MacOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-tagged.svg?style=svg)](https://circleci.com/gh/pointfreeco/swift-tagged) Linux [![Build Status](https://travis-ci.org/pointfreeco/swift-tagged.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-tagged)
 
 A library for safer types.
 
@@ -78,7 +79,7 @@ Now our `User` can be even more type-safe.
 ``` swift
 struct User: Decodable {
   typealias Id = Tagged<User, Int>
-  
+
   let id: Id
   let email: Email
   let subscriptionId: Subscription.Id?
@@ -104,7 +105,7 @@ User(
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-tagged" "master"
+github "pointfreeco/swift-tagged" ~> 0.1
 ```
 
 ### CocoaPods
@@ -112,7 +113,7 @@ github "pointfreeco/swift-tagged" "master"
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Tagged', :git => 'https://github.com/pointfreeco/swift-tagged.git'
+pod 'Tagged', :git => 'https://github.com/pointfreeco/swift-tagged.git', :tag => '0.1.0'
 ```
 
 ### SwiftPM
@@ -121,9 +122,7 @@ If you want to use Tagged in a project that uses [SwiftPM](https://swift.org/pac
 
 ``` swift
 dependencies: [
-  .package(
-    url: "https://github.com/pointfreeco/swift-tagged.git",
-    .branch("master")),
+  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.1.0")
 ]
 ```
 

@@ -1,10 +1,12 @@
 Pod::Spec.new do |s|
   s.name = "Tagged"
-  s.version = "0.0.1"
+  s.version = "0.1.0"
   s.summary = "A library for safer types."
 
   s.description = <<-DESC
-  A library for safer types.
+  We often work with types that are far too general or hold far too many values than what is necessary for our domain. Sometimes we just want to differentiate between two seemingly equivalent values at the type level.
+
+  Tagged lets us wrap basic types in more specific contexts with ease.
   DESC
 
   s.homepage = "https://github.com/pointfreeco/swift-tagged"
@@ -19,8 +21,11 @@ Pod::Spec.new do |s|
 
   s.source = {
     :git => "https://github.com/pointfreeco/swift-tagged.git",
-    :branch => "master"
+    :tag => "0.1.0"
   }
+
+  s.ios.deployment_target = "8.0"
+  s.osx.deployment_target = "10.9"
 
   s.source_files  = "Sources", "Sources/**/*.swift"
 end
