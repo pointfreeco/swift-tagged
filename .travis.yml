@@ -1,0 +1,12 @@
+os:
+  - linux
+env:
+language: generic
+sudo: required
+dist: trusty
+install:
+  - if [ $TRAVIS_OS_NAME = linux ]; then
+      eval "$(curl -sL https://swiftenv.fuller.li/install.sh)";
+    fi
+script:
+  - swift test
