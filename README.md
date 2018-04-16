@@ -1,4 +1,5 @@
 # 🏷 Tagged
+MacOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-tagged.svg?style=svg)](https://circleci.com/gh/pointfreeco/swift-tagged) Linux [![Build Status](https://travis-ci.org/pointfreeco/swift-tagged.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-tagged)
 
 A library for safer types.
 
@@ -78,7 +79,7 @@ Now our `User` can be even more type-safe.
 ``` swift
 struct User: Decodable {
   typealias Id = Tagged<User, Int>
-  
+
   let id: Id
   let email: Email
   let subscriptionId: Subscription.Id?
