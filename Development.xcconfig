@@ -1,1 +1,3 @@
 OTHER_SWIFT_FLAGS=$(inherited) -Xfrontend -warn-long-expression-type-checking=80
+IPHONEOS_DEPLOYMENT_TARGET=8.0
+MACOSX_DEPLOYMENT_TARGET=10.9
