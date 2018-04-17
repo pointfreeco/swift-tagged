@@ -113,7 +113,7 @@ github "pointfreeco/swift-tagged" ~> 0.1
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Tagged', :git => 'https://github.com/pointfreeco/swift-tagged.git', :tag => '0.1.0'
+pod 'Tagged', '~> 0.1'
 ```
 
 ### SwiftPM
