@@ -152,7 +152,7 @@ struct User {
 
   typealias Id = Tagged<User, Int>
   typealias Email = Tagged<User, String>
-  typealias Address = ???
+  typealias Address = Tagged<???, String>
 }
 ```
 
