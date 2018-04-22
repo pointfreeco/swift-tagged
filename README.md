@@ -297,7 +297,7 @@ User(
 
   - **Why not use `RawRepresentable`, or some other protocol?**
 
-    Protocols like `RawRepresentable` are useful, but they can't be extended conditionally, so you miss out on all of Tagged's [features](#features).
+    Protocols like `RawRepresentable` are useful, but they can't be extended conditionally, so you miss out on all of Tagged's free [features](#features). Using a protocol means you need to manually opt each type into synthesizing `Equatable`, `Hashable`, `Decodable` and `Encodable`, and to achieve the same level of expressiveness as Tagged, you need to manually conform to other protocols, like `Comparable`, the `ExpressibleBy`-`Literal` family of protocols, and `Numeric`. That's a _lot_ of boilerplate you need to write or generate, but Tagged gives it to you for free!
 
 ## Installation
 
