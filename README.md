@@ -141,7 +141,7 @@ sendWelcomeEmail(toAddress: user.address)
 
 ### Handling Tag Collisions
 
-Alright, but what if we want to tag our user's address?
+What if we want to tag two string values within the same type?
 
 ``` swift
 struct User {
@@ -156,7 +156,7 @@ struct User {
 }
 ```
 
-We shouldn't reuse `Tagged<User, String>`, because then the compiler would treat `Email` and `Address` as the same type! We need a new tag, which means we need a new type. We can use anything, but an uninhabited enum is nestable and uninstantiable, making it pretty perfect.
+We shouldn't reuse `Tagged<User, String>` because the compiler would treat `Email` and `Address` as the same type! We need a new tag, which means we need a new type. We can use any type, but an uninhabited enum is nestable and uninstantiable, which is perfect here.
 
 ``` swift
 struct User {
@@ -173,9 +173,9 @@ struct User {
 }
 ```
 
-We've now distinguished `User.Email` and `User.Address` at the cost of an extra line and type, but things are documented very explicitly.
+We've now distinguished `User.Email` and `User.Address` at the cost of an extra line per type, but things are documented very explicitly.
 
-If we want to save a line, we can take advantage of the fact that tuple labels are encoded in the type system and can be used to differentiate two seemingly equivalent tuple types.
+If we want to save this extra line, we could instead take advantage of the fact that tuple labels are encoded in the type system and can be used to differentiate two seemingly equivalent tuple types.
 
 ``` swift
 struct User {
@@ -194,10 +194,13 @@ This may look a bit strange with the dangling `()`, but it's nice and succinct, 
 
 ### Accessing Raw Values
 
-Inevitably, you're going to need the raw value _somewhere_ in your code. Luckily, the interface is familiar. Tagged uses the same interface as `RawRepresentable`.
+Tagged uses the same interface as `RawRepresentable` to expose its raw values.
 
 ``` swift
+// Access a raw value:
 user.id.rawValue     // Int
+
+// Manually wrap a raw value:
 User.Id(rawValue: 1) // User.Id
 ```
 
