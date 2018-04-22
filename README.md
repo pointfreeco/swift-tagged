@@ -3,6 +3,18 @@ MacOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-tagged.svg?style=sv
 
 A library for safer types.
 
+## Table of Contents
+
+  - [Introduction](#introduction)
+  - [The Problem](#the-problem)
+  - [The Solution](#the-solution)
+      - [Handling Tag Collisions](#handling-tag-collisions)
+      - [Accessing Raw Values](#accessing-raw-values)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Learn More](#learn-more)
+  - [License](#license)
+
 ## Introduction
 
 We often work with types that are far too general or hold far too many values than what is necessary for our domain. Sometimes we just want to differentiate between two seemingly equivalent values at the type level.
@@ -11,7 +23,7 @@ An email address is nothing but a `String`, but it should be restricted in the w
 
 Tagged can help solve serious runtime bugs at compile time by wrapping basic types in more specific contexts with ease.
 
-## Examples
+## The Problem
 
 Swift has an incredibly powerful type system, yet it's still common to model most data like this:
 
@@ -43,6 +55,8 @@ let subscription = fetchSubscription(byId: user.id)
 ```
 
 This code will fail to find a user's subscription. Worse yet, if a user id and subscription id overlap, it will display the _wrong_ subscription to the _wrong_ user! It may even surface sensitive data like billing details!
+
+## The Solution
 
 Luckily, we can use Tagged to succinctly differentiate these types.
 
@@ -125,7 +139,7 @@ sendWelcomeEmail(toAddress: user.address)
 
 > Cannot convert value of type 'String' to expected argument type 'Email' (aka 'Tagged<EmailTag, String>')
 
-## Tag collisions
+### Handling Tag Collisions
 
 Alright, but what if we want to tag our user's address?
 
@@ -178,7 +192,7 @@ struct User {
 
 This may look a bit strange with the dangling `()`, but it's nice and succinct, and the type safety we get is more than worth it.
 
-## How do I work with the underlying value?
+### Accessing Raw Values
 
 Inevitably, you're going to need the raw value _somewhere_ in your code. Luckily, the interface is familiar. Tagged uses the same interface as `RawRepresentable`.
 
@@ -187,7 +201,7 @@ user.id.rawValue     // Int
 User.Id(rawValue: 1) // User.Id
 ```
 
-## Other features
+## Features
 
 Tagged relies on conditional conformance to be practical: if the raw values are encodable or decodable, equatable, hashable, or comparable, the tagged values follow suit.
 
@@ -303,9 +317,9 @@ dependencies: [
 
 Submodule, clone, or download Tagged, and drag `Tagged.xcodeproj` into your project.
 
-## Interested in learning more?
+## Learn More
 
-These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co).
+These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift.
 
 ## License
 
