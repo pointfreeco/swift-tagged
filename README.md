@@ -17,7 +17,7 @@ A wrapper type for safer, expressive code.
   - [Features](#features)
   - [FAQ](#faq)
   - [Installation](#installation)
-  - [Learn More](#learn-more)
+  - [Interested in learning more?](#interested-in-learning-more)
   - [License](#license)
 
 ## Introduction
@@ -344,7 +344,7 @@ dependencies: [
 
 Submodule, clone, or download Tagged, and drag `Tagged.xcodeproj` into your project.
 
-## Learn More
+## Interested in learning more?
 
 These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://github.com/mbrandonw) and [Stephen Celis](https://github.com/stephencelis).
 
