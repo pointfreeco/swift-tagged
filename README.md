@@ -207,7 +207,7 @@ User.Id(rawValue: 1) // User.Id
 
 ## Features
 
-Tagged relies on [conditional conformance](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md) to be practical: if the raw values are encodable or decodable, equatable, hashable, comparable, or expressible by literals, the tagged values follow suit. This helps avoid unnecessary (and potentially dangerous) [wrapping and unwrapping](#accessing-raw-values).
+Tagged uses [conditional conformance](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md) so you don't have to sacrifice expressiveness for safety. If the raw values are encodable or decodable, equatable, hashable, comparable, or expressible by literals, the tagged values follow suit. This means we can often avoid unnecessary (and potentially dangerous) [wrapping and unwrapping](#accessing-raw-values).
 
 ### Equatable
 
@@ -278,7 +278,7 @@ let totalCents = products.reduce(0) { $0.amount + $1.amount }
 
 ### ExpressiblyBy–Literal
 
-Tagged types also inherit any literal expressibility. This is helpful for working with constants, like instantiating test data.
+Tagged types inherit literal expressibility. This is helpful for working with constants, like instantiating test data.
 
 ``` swift
 User(
