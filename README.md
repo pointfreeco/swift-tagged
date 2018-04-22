@@ -40,7 +40,7 @@ struct Subscription {
 }
 ```
 
-We're modeling user and subscription ids using the same type, but our app logic shouldn't treat these values interchangeably. We might write a function to fetch a subscription:
+We're modeling user and subscription ids using _the same type_, but our app logic shouldn't treat these values interchangeably! We might write a function to fetch a subscription:
 
 ``` swift
 func fetchSubscription(byId id: Int) -> Subscription? {
@@ -206,7 +206,7 @@ User.Id(rawValue: 1) // User.Id
 
 ## Features
 
-Tagged relies on conditional conformance to be practical: if the raw values are encodable or decodable, equatable, hashable, or comparable, the tagged values follow suit.
+Tagged relies on [conditional conformance](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md) to be practical: if the raw values are encodable or decodable, equatable, hashable, comparable, or expressible by literals, the tagged values follow suit. This helps avoid unnecessary (and potentially dangerous) [wrapping and unwrapping](#accessing-raw-values).
 
 ### Equatable
 
@@ -323,6 +323,12 @@ Submodule, clone, or download Tagged, and drag `Tagged.xcodeproj` into your proj
 ## Learn More
 
 These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift.
+
+Tagged was first explored in [this episode](https://www.pointfree.co/episodes/ep12-tagged).
+
+<a href="https://www.pointfree.co/episodes/ep12-tagged">
+  <img alt="video poster image" src="https://d1hf1soyumxcgv.cloudfront.net/0012-tagged/0012-poster.jpg" width="480">
+</a>
 
 ## License
 
