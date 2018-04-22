@@ -1,6 +1,6 @@
 # 🏷 Tagged
 
-[![Swift 4.1](https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat)](https://swift.org/download/)
+[![Swift 4.1](https://img.shields.io/badge/swift-4.1-ED523F.svg?style=flat)](https://swift.org/download/)
 [![iOS/macOS CI](https://img.shields.io/circleci/project/github/pointfreeco/swift-tagged.svg?label=ios/macos)](https://circleci.com/gh/pointfreeco/swift-tagged)
 [![Linux CI](https://img.shields.io/travis/pointfreeco/swift-tagged.svg?label=linux)](https://travis-ci.org/pointfreeco/swift-tagged)
 [![@pointfreeco](https://img.shields.io/badge/contact-@pointfreeco-5AA9E7.svg?style=flat)](https://twitter.com/pointfreeco)
