@@ -95,7 +95,7 @@ And there's no chance we'll accidentally pass a `User` id where we expect a `Sub
 let subscription = fetchSubscription(byId: user.id)
 ```
 
-> Cannot convert value of type 'User.Id' (aka 'Tagged<User, Int>') to expected argument type 'Subscription.Id' (aka 'Tagged<Subscription, Int>')
+> 🛑 Cannot convert value of type 'User.Id' (aka 'Tagged<User, Int>') to expected argument type 'Subscription.Id' (aka 'Tagged<Subscription, Int>')
 
 We've prevented a couple serious bugs at compile time!
 
@@ -137,7 +137,7 @@ sendWelcomeEmail(toAddress address: Email)
 sendWelcomeEmail(toAddress: user.address)
 ```
 
-> Cannot convert value of type 'String' to expected argument type 'Email' (aka 'Tagged<EmailTag, String>')
+> 🛑 Cannot convert value of type 'String' to expected argument type 'Email' (aka 'Tagged<EmailTag, String>')
 
 ### Handling Tag Collisions
 
