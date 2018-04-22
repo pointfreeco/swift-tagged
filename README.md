@@ -161,7 +161,7 @@ struct User {
 
 We've now distinguished `User.Email` and `User.Address` at the cost of an extra line and type, but things are documented very explicitly.
 
-If we don't want the extra line, we could take advantage of the fact that tuple labels are encoded in the type system and can be used to differentiate two seemingly equivalent tuple types.
+If we want to save a line, we can take advantage of the fact that tuple labels are encoded in the type system and can be used to differentiate two seemingly equivalent tuple types.
 
 ``` swift
 struct User {
