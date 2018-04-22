@@ -261,6 +261,28 @@ JSONDecoder().decode(User.self, from: Data("""
 """.utf8)
 ```
 
+### ExpressiblyBy–Literal
+
+Tagged types inherit literal expressibility. This is helpful for working with constants, like instantiating test data.
+
+``` swift
+User(
+  id: 1,
+  email: "blob@pointfree.co",
+  address: "1 Blob Ln"
+  subscriptionId: 1
+)
+
+// vs.
+
+User(
+  id: User.Id(rawValue: 1),
+  email: User.Email(rawValue: "blob@pointfree.co"),
+  address: User.Address(rawValue: "1 Blob Ln")
+  subscriptionId: Subscription.Id(rawValue: 1)
+)
+```
+
 ### Numeric
 
 Numeric tagged types get mathematical operations for free!
@@ -274,19 +296,6 @@ struct Product {
 ```
 ``` swift
 let totalCents = products.reduce(0) { $0.amount + $1.amount }
-```
-
-### ExpressiblyBy–Literal
-
-Tagged types inherit literal expressibility. This is helpful for working with constants, like instantiating test data.
-
-``` swift
-User(
-  id: 1,
-  email: "blob@pointfree.co",
-  address: "1 Blob Ln"
-  subscriptionId: 1
-)
 ```
 
 ## FAQ
