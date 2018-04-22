@@ -1,5 +1,6 @@
 # 🏷 Tagged
-MacOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-tagged.svg?style=svg)](https://circleci.com/gh/pointfreeco/swift-tagged) Linux [![Build Status](https://travis-ci.org/pointfreeco/swift-tagged.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-tagged)
+
+[![macOS CI](https://circleci.com/gh/pointfreeco/swift-tagged.svg?style=shield)](https://circleci.com/gh/pointfreeco/swift-tagged) [![Linux CI](https://travis-ci.org/pointfreeco/swift-tagged.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-tagged)
 
 A wrapper type for safer, expressive code.
 
