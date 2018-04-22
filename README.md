@@ -291,7 +291,7 @@ Numeric tagged types get mathematical operations for free!
 struct Product {
   let amount: Cents
 
-  typealias Cents = Tagged<Payment, Int>
+  typealias Cents = Tagged<Product, Int>
 }
 ```
 ``` swift
