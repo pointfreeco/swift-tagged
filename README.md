@@ -142,7 +142,7 @@ struct User {
 }
 ```
 
-We shouldn't reuse `Tagged<User, String>`, because then the compiler would treat `Email` and `Address` as the same type! We need a new tag, which means we need a new type. We can use anything, but an uninhabited enum nestable and uninstantiable, making it pretty perfect.
+We shouldn't reuse `Tagged<User, String>`, because then the compiler would treat `Email` and `Address` as the same type! We need a new tag, which means we need a new type. We can use anything, but an uninhabited enum is nestable and uninstantiable, making it pretty perfect.
 
 ``` swift
 struct User {
