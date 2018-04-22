@@ -11,6 +11,7 @@ A library for safer types.
       - [Handling Tag Collisions](#handling-tag-collisions)
       - [Accessing Raw Values](#accessing-raw-values)
   - [Features](#features)
+  - [FAQ](#faq)
   - [Installation](#installation)
   - [Learn More](#learn-more)
   - [License](#license)
@@ -210,7 +211,7 @@ Tagged relies on [conditional conformance](https://github.com/apple/swift-evolut
 
 ### Equatable
 
-We took advantage of this in our example, above.
+We took advantage of this in [our example](#the-problem), above.
 
 ``` swift
 subscriptions.first(where: { $0.id == user.subscriptionId })
@@ -287,6 +288,16 @@ User(
   subscriptionId: 1
 )
 ```
+
+## FAQ
+
+  - **Why not use a type alias?**
+
+    Type aliases are just that: aliases. A type alias can be used interchangeably with the original type and offers no additional safety or guarantees.
+
+  - **Why not use `RawRepresentable`, or some other protocol?**
+
+    Protocols like `RawRepresentable` are useful, but they can't be extended conditionally, so you miss out on all of Tagged's [features](#features).
 
 ## Installation
 
