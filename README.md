@@ -1,7 +1,7 @@
 # 🏷 Tagged
 MacOS [![CircleCI](https://circleci.com/gh/pointfreeco/swift-tagged.svg?style=svg)](https://circleci.com/gh/pointfreeco/swift-tagged) Linux [![Build Status](https://travis-ci.org/pointfreeco/swift-tagged.svg?branch=master)](https://travis-ci.org/pointfreeco/swift-tagged)
 
-A library for safer types.
+A wrapper type for safer, expressive code.
 
 ## Table of Contents
 
@@ -59,7 +59,7 @@ This code will fail to find a user's subscription. Worse yet, if a user id and s
 
 ## The Solution
 
-Luckily, we can use Tagged to succinctly differentiate these types.
+We can use Tagged to succinctly differentiate types.
 
 ``` swift
 import Tagged
