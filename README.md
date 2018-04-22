@@ -269,7 +269,7 @@ Tagged types inherit literal expressibility. This is helpful for working with co
 User(
   id: 1,
   email: "blob@pointfree.co",
-  address: "1 Blob Ln"
+  address: "1 Blob Ln",
   subscriptionId: 1
 )
 
@@ -278,7 +278,7 @@ User(
 User(
   id: User.Id(rawValue: 1),
   email: User.Email(rawValue: "blob@pointfree.co"),
-  address: User.Address(rawValue: "1 Blob Ln")
+  address: User.Address(rawValue: "1 Blob Ln"),
   subscriptionId: Subscription.Id(rawValue: 1)
 )
 ```
