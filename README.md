@@ -9,18 +9,18 @@ A wrapper type for safer, expressive code.
 
 ## Table of Contents
 
-  - [Introduction](#introduction)
-  - [The Problem](#the-problem)
-  - [The Solution](#the-solution)
-      - [Handling Tag Collisions](#handling-tag-collisions)
-      - [Accessing Raw Values](#accessing-raw-values)
+  - [Motivation](#motivation)
+  - [The problem](#the-problem)
+  - [The solution](#the-solution)
+      - [Handling tag collisions](#handling-tag-collisions)
+      - [Accessing raw values](#accessing-raw-values)
   - [Features](#features)
   - [FAQ](#faq)
   - [Installation](#installation)
   - [Interested in learning more?](#interested-in-learning-more)
   - [License](#license)
 
-## Introduction
+## Motivation
 
 We often work with types that are far too general or hold far too many values than what is necessary for our domain. Sometimes we just want to differentiate between two seemingly equivalent values at the type level.
 
@@ -28,7 +28,7 @@ An email address is nothing but a `String`, but it should be restricted in the w
 
 Tagged can help solve serious runtime bugs at compile time by wrapping basic types in more specific contexts with ease.
 
-## The Problem
+## The problem
 
 Swift has an incredibly powerful type system, yet it's still common to model most data like this:
 
@@ -61,7 +61,7 @@ let subscription = fetchSubscription(byId: user.id)
 
 This code will fail to find a user's subscription. Worse yet, if a user id and subscription id overlap, it will display the _wrong_ subscription to the _wrong_ user! It may even surface sensitive data like billing details!
 
-## The Solution
+## The solution
 
 We can use Tagged to succinctly differentiate types.
 
@@ -265,7 +265,7 @@ JSONDecoder().decode(User.self, from: Data("""
 """.utf8)
 ```
 
-### ExpressiblyBy–Literal
+### ExpressiblyBy-Literal
 
 Tagged types inherit literal expressibility. This is helpful for working with constants, like instantiating test data.
 
@@ -304,11 +304,14 @@ let totalCents = products.reduce(0) { $0.amount + $1.amount }
 
 ## FAQ
 
-  - **Why not use a type alias?**
+  - [Why not use a type alias?](#why-not-use-a-type-alias)
+  - [Why not use `RawRepresentable`, or some other protocol?](#why-not-use-rawrepresentable-or-some-other-protocol)
 
-    Type aliases are just that: aliases. A type alias can be used interchangeably with the original type and offers no additional safety or guarantees.
+### Why not use a type alias?
 
-  - **Why not use `RawRepresentable`, or some other protocol?**
+Type aliases are just that: aliases. A type alias can be used interchangeably with the original type and offers no additional safety or guarantees.
+
+### Why not use `RawRepresentable`, or some other protocol?
 
     Protocols like `RawRepresentable` are useful, but they can't be extended conditionally, so you miss out on all of Tagged's free [features](#features). Using a protocol means you need to manually opt each type into synthesizing `Equatable`, `Hashable`, `Decodable` and `Encodable`, and to achieve the same level of expressiveness as Tagged, you need to manually conform to other protocols, like `Comparable`, the `ExpressibleBy`-`Literal` family of protocols, and `Numeric`. That's a _lot_ of boilerplate you need to write or generate, but Tagged gives it to you for free!
 
