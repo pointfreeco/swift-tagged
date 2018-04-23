@@ -84,7 +84,7 @@ struct Subscription {
 }
 ```
 
-Tagged depends on a generic "tag" parameter to make each type unique. Here we've use the parent type to uniquely tag each id.
+Tagged depends on a generic "tag" parameter to make each type unique. Here we've used the container type to uniquely tag each id.
 
 We can now update `fetchSubscription` to take a `Subscription.Id` where it previously took any `Int`.
 
@@ -94,7 +94,7 @@ func fetchSubscription(byId id: Subscription.Id) -> Subscription? {
 }
 ```
 
-And there's no chance we'll accidentally pass a `User` id where we expect a `Subscription` id.
+And there's no chance we'll accidentally pass a user id where we expect a subscription id.
 
 ``` swift
 let subscription = fetchSubscription(byId: user.id)
@@ -110,13 +110,13 @@ There's another bug lurking in these types. We've written a function with the fo
 sendWelcomeEmail(toAddress address: String)
 ```
 
-It contains logic that sends a specific email to an email address. Unfortunately, it takes _any_ string as input.
+It contains logic that sends an email to an email address. Unfortunately, it takes _any_ string as input.
 
 ``` swift
 sendWelcomeEmail(toAddress: user.address)
 ```
 
-This compiles and runs, but `user.address` refers to our user's billing address, _not_ their email! None of our users are getting welcome emails! Worse yet, calling this function with invalid data may cause server churn and crashes.
+This compiles and runs, but `user.address` refers to our user's _billing_ address, _not_ their email! None of our users are getting welcome emails! Worse yet, calling this function with invalid data may cause server churn and crashes.
 
 Tagged again can save the day.
 
@@ -132,7 +132,7 @@ struct User {
 }
 ```
 
-We update our `sendWelcomeEmail` signature and have another compile time guarantee.
+We can now update `sendWelcomeEmail` and have another compile time guarantee.
 
 ``` swift
 sendWelcomeEmail(toAddress address: Email)
@@ -195,27 +195,25 @@ struct User {
 }
 ```
 
-This may look a bit strange with the dangling `()`, but it's nice and succinct, and the type safety we get is more than worth it.
+This may look a bit strange with the dangling `()`, but it's otherwise nice and succinct, and the type safety we get is more than worth it.
 
 ### Accessing Raw Values
 
-Tagged uses the same interface as `RawRepresentable` to expose its raw values.
+Tagged uses the same interface as `RawRepresentable` to expose its raw values, _via_ a `rawValue` property:
 
 ``` swift
-// Access a raw value:
-user.id.rawValue     // Int
-
-// Manually wrap a raw value:
-User.Id(rawValue: 1) // User.Id
+user.id.rawValue // Int
 ```
+
+You can also manually instantiate tagged types using `init(rawValue:)`, though you can often avoid this using the [`Decodable`](#codable) and [`ExpressibleBy`-`Literal`](#expressibleby-literal) family of protocols.
 
 ## Features
 
-Tagged uses [conditional conformance](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md) so you don't have to sacrifice expressiveness for safety. If the raw values are encodable or decodable, equatable, hashable, comparable, or expressible by literals, the tagged values follow suit. This means we can often avoid unnecessary (and potentially dangerous) [wrapping and unwrapping](#accessing-raw-values).
+Tagged uses [conditional conformance](https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md), so you don't have to sacrifice expressiveness for safety. If the raw values are encodable or decodable, equatable, hashable, comparable, or expressible by literals, the tagged values follow suit. This means we can often avoid unnecessary (and potentially dangerous) [wrapping and unwrapping](#accessing-raw-values).
 
 ### Equatable
 
-We took advantage of this in [our example](#the-problem), above.
+A tagged type is automatically equatable if its raw value is equatable. We took advantage of this in [our example](#the-problem), above.
 
 ``` swift
 subscriptions.first(where: { $0.id == user.subscriptionId })
