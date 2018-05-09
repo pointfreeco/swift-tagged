@@ -78,12 +78,6 @@ extension Tagged: ExpressibleByIntegerLiteral where RawValue: ExpressibleByInteg
   }
 }
 
-extension Tagged: ExpressibleByNilLiteral where RawValue: ExpressibleByNilLiteral {
-  public init(nilLiteral: ()) {
-    self.init(rawValue: RawValue(nilLiteral: nilLiteral))
-  }
-}
-
 extension Tagged: ExpressibleByStringLiteral where RawValue: ExpressibleByStringLiteral {
   public typealias StringLiteralType = RawValue.StringLiteralType
 
