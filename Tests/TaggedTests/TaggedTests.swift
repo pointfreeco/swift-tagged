@@ -47,10 +47,6 @@ final class TaggedTests: XCTestCase {
     XCTAssertEqual(1, Tagged<Tag, Int>(rawValue: 1))
   }
 
-  func testExpressibleByNilLiteral() {
-    XCTAssertEqual(nil, Tagged<Tag, String?>(rawValue: nil))
-  }
-
   func testExpressibleByStringLiteral() {
     XCTAssertEqual("Hello!", Tagged<Tag, String>(rawValue: "Hello!"))
   }
