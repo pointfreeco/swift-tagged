@@ -16,6 +16,12 @@ extension Tagged: CustomStringConvertible {
 extension Tagged: RawRepresentable {
 }
 
+extension Tagged: CustomPlaygroundDisplayConvertible {
+  public var playgroundDescription: Any {
+    return self.rawValue
+  }
+}
+
 // MARK: - Conditional Conformances
 
 extension Tagged: Comparable where RawValue: Comparable {
