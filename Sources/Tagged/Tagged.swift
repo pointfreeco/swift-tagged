@@ -16,10 +16,8 @@ extension Tagged: CustomStringConvertible {
 extension Tagged: RawRepresentable {
 }
 
-extension Tagged: CustomPlaygroundDisplayConvertible
-{
-  public var playgroundDescription: Any
-  {
+extension Tagged: CustomPlaygroundDisplayConvertible {
+  public var playgroundDescription: Any {
     return self.rawValue
   }
 }
