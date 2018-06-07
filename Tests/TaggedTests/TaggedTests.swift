@@ -69,4 +69,9 @@ final class TaggedTests: XCTestCase {
   func testSignedNumeric() {
     XCTAssertEqual(Tagged<Tag, Int>(rawValue: -1), -Tagged<Tag, Int>(rawValue: 1))
   }
+
+  func testMap() {
+    let x: Tagged<Tag, Int> = 1
+    XCTAssertEqual("1!", x.map { "\($0)!" })
+  }
 }

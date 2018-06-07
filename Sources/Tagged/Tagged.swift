@@ -5,6 +5,10 @@ public struct Tagged<Tag, RawValue> {
   public init(rawValue: RawValue) {
     self.rawValue = rawValue
   }
+
+  public func map<B>(_ f: (RawValue) -> B) -> Tagged<Tag, B> {
+    return .init(rawValue: f(self.rawValue))
+  }
 }
 
 extension Tagged: CustomStringConvertible {
