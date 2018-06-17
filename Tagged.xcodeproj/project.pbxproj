@@ -28,14 +28,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8034672720D6B54F008CCF71 /* PBXContainerItemProxy */ = {
+		8034672920D6B5FD008CCF71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::Tagged";
 			remoteInfo = Tagged;
 		};
-		8034672820D6B550008CCF71 /* PBXContainerItemProxy */ = {
+		8034672A20D6B5FD008CCF71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -49,7 +49,7 @@
 		OBJ_14 /* TaggedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTests.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Tagged.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Tagged.xcworkspace; sourceTree = SOURCE_ROOT; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_8 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		OBJ_8 /* Tagged.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tagged.xcconfig; sourceTree = "<group>"; };
 		"Tagged::Tagged::Product" /* Tagged.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tagged.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Tagged::TaggedTests::Product" /* TaggedTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = TaggedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,7 +124,7 @@
 		OBJ_7 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_8 /* Development.xcconfig */,
+				OBJ_8 /* Tagged.xcconfig */,
 			);
 			name = Configs;
 			sourceTree = "<group>";
@@ -246,19 +246,19 @@
 		OBJ_36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::TaggedTests" /* TaggedTests */;
-			targetProxy = 8034672820D6B550008CCF71 /* PBXContainerItemProxy */;
+			targetProxy = 8034672A20D6B5FD008CCF71 /* PBXContainerItemProxy */;
 		};
 		OBJ_45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = 8034672720D6B54F008CCF71 /* PBXContainerItemProxy */;
+			targetProxy = 8034672920D6B5FD008CCF71 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		OBJ_21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -283,7 +283,7 @@
 		};
 		OBJ_22 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -364,7 +364,7 @@
 		};
 		OBJ_39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -405,7 +405,7 @@
 		};
 		OBJ_40 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Development.xcconfig */;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
