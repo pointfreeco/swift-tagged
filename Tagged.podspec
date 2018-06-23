@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "Tagged"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
   s.summary = "A library for safer types."
 
   s.description = <<-DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 
   s.source = {
     :git => "https://github.com/pointfreeco/swift-tagged.git",
-    :tag => "0.1.0"
+    :tag => "0.2.0"
   }
 
   s.ios.deployment_target = "8.0"
