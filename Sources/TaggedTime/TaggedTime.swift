@@ -11,9 +11,6 @@ extension Tagged where Tag == MillisecondsTag, RawValue: BinaryFloatingPoint {
   public var seconds: Seconds<RawValue> {
     return .init(rawValue: self.rawValue / 1000)
   }
-}
-
-extension Tagged where Tag == MillisecondsTag, RawValue: BinaryFloatingPoint {
 
   public var date: Date {
     let seconds = self.seconds
