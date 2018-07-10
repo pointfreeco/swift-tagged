@@ -329,6 +329,9 @@ let futureTime: Milliseconds = 1528378451000
 breakingBlogPost.publishedAt < futureTime
 // 🛑 Binary operator '<' cannot be applied to operands of type
 // 'Tagged<SecondsTag, Double>' and 'Tagged<MillisecondsTag, Double>'
+
+breakingBlogPost.publishedAt.milliseconds < futureTime
+// ✅ true
 ```
 
 Read more on our blog post: [Tagged Seconds and Milliseconds](https://www.pointfree.co/blog/posts/6-tagged-seconds-and-milliseconds).
@@ -350,6 +353,9 @@ let moneyRaised: Cents<Int> = 50_000
 theBigPrize.amount < moneyRaised
 // 🛑 Binary operator '<' cannot be applied to operands of type
 // 'Tagged<DollarsTag, Int>' and 'Tagged<CentsTag, Int>'
+
+theBigPrize.amount.cents < moneyRaised
+// ✅ true
 ```
 
 It is important to note that these types do not encapsulate _currency_, but rather just the abstract notion of the whole and fractional unit of money. You will still need to track particular currencies, like USD, EUR, MXN, alongside these values.
