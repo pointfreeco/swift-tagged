@@ -352,6 +352,8 @@ theBigPrize.amount < moneyRaised
 // 'Tagged<DollarsTag, Int>' and 'Tagged<CentsTag, Int>'
 ```
 
+It is important to note that these types do not encapsulate _currency_, but rather just the abstract notion of the whole and fractional unit of money. You will still need to track particular currencies, like USD, EUR, MXN, alongside these values.
+
 ## FAQ
 
   - **Why not use a type alias?**
