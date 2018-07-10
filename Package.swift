@@ -6,6 +6,7 @@ let package = Package(
   products: [
     .library(name: "Tagged", targets: ["Tagged"]),
     .library(name: "TaggedTime", targets: ["TaggedTime"]),
+    .library(name: "TaggedMoney", targets: ["TaggedMoney"]),
   ],
   dependencies: [
   ],
@@ -15,5 +16,8 @@ let package = Package(
 
     .target(name: "TaggedTime", dependencies: ["Tagged"]),
     .testTarget(name: "TaggedTimeTests", dependencies: ["TaggedTime"]),
+
+    .target(name: "TaggedMoney", dependencies: ["Tagged"]),
+    .testTarget(name: "TaggedMoneyTests", dependencies: ["TaggedMoney"]),
   ]
 )

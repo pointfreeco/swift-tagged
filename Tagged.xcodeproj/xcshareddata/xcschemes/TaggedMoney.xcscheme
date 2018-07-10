@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "9999"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,37 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tagged::Tagged"
-               BuildableName = "Tagged.framework"
-               BlueprintName = "Tagged"
-               ReferencedContainer = "container:Tagged.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Tagged::TaggedMoney"
                BuildableName = "TaggedMoney.framework"
                BlueprintName = "TaggedMoney"
-               ReferencedContainer = "container:Tagged.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tagged::TaggedTime"
-               BuildableName = "TaggedTime.framework"
-               BlueprintName = "TaggedTime"
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -60,33 +32,22 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tagged::TaggedTimeTests"
-               BuildableName = "TaggedTimeTests.xctest"
-               BlueprintName = "TaggedTimeTests"
-               ReferencedContainer = "container:Tagged.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Tagged::TaggedMoneyTests"
                BuildableName = "TaggedMoneyTests.xctest"
                BlueprintName = "TaggedMoneyTests"
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tagged::TaggedTests"
-               BuildableName = "TaggedTests.xctest"
-               BlueprintName = "TaggedTests"
-               ReferencedContainer = "container:Tagged.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "Tagged::TaggedMoney"
+            BuildableName = "TaggedMoney.framework"
+            BlueprintName = "TaggedMoney"
+            ReferencedContainer = "container:Tagged.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -103,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Tagged::Tagged"
-            BuildableName = "Tagged.framework"
-            BlueprintName = "Tagged"
+            BlueprintIdentifier = "Tagged::TaggedMoney"
+            BuildableName = "TaggedMoney.framework"
+            BlueprintName = "TaggedMoney"
             ReferencedContainer = "container:Tagged.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -118,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "Tagged::TaggedMoney"
+            BuildableName = "TaggedMoney.framework"
+            BlueprintName = "TaggedMoney"
+            ReferencedContainer = "container:Tagged.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

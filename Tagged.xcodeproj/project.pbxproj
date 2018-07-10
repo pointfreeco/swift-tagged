@@ -9,12 +9,13 @@
 /* Begin PBXAggregateTarget section */
 		"Tagged::TaggedPackageTests::ProductTarget" /* TaggedPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_39 /* Build configuration list for PBXAggregateTarget "TaggedPackageTests" */;
+			buildConfigurationList = OBJ_65 /* Build configuration list for PBXAggregateTarget "TaggedPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_42 /* PBXTargetDependency */,
-				OBJ_44 /* PBXTargetDependency */,
+				OBJ_68 /* PBXTargetDependency */,
+				OBJ_70 /* PBXTargetDependency */,
+				OBJ_72 /* PBXTargetDependency */,
 			);
 			name = TaggedPackageTests;
 			productName = TaggedPackageTests;
@@ -22,164 +23,239 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		CA24433120F44A78004FA268 /* TaggedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* TaggedTests.swift */; };
-		OBJ_30 /* Tagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Tagged.swift */; };
-		OBJ_37 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_52 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
-		OBJ_59 /* TaggedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* TaggedTime.swift */; };
-		OBJ_61 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
-		OBJ_67 /* TaggedTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* TaggedTimeTests.swift */; };
-		OBJ_69 /* TaggedTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::TaggedTime::Product" /* TaggedTime.framework */; };
-		OBJ_70 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
+		OBJ_36 /* Tagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Tagged.swift */; };
+		OBJ_43 /* TaggedMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* TaggedMoney.swift */; };
+		OBJ_45 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
+		OBJ_52 /* TaggedMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* TaggedMoneyTests.swift */; };
+		OBJ_54 /* TaggedMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::TaggedMoney::Product" /* TaggedMoney.framework */; };
+		OBJ_55 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
+		OBJ_63 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_77 /* TaggedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TaggedTests.swift */; };
+		OBJ_79 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
+		OBJ_86 /* TaggedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TaggedTime.swift */; };
+		OBJ_88 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
+		OBJ_94 /* TaggedTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* TaggedTimeTests.swift */; };
+		OBJ_96 /* TaggedTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::TaggedTime::Product" /* TaggedTime.framework */; };
+		OBJ_97 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CA24432A20F449E8004FA268 /* PBXContainerItemProxy */ = {
+		CACC3CC620F44D2400302050 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::Tagged";
 			remoteInfo = Tagged;
 		};
-		CA24432B20F449E8004FA268 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Tagged::Tagged";
-			remoteInfo = Tagged;
-		};
-		CA24432C20F449E8004FA268 /* PBXContainerItemProxy */ = {
+		CACC3CC720F44D2400302050 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::TaggedTime";
 			remoteInfo = TaggedTime;
 		};
-		CA24432D20F449E8004FA268 /* PBXContainerItemProxy */ = {
+		CACC3CC820F44D2400302050 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::Tagged";
 			remoteInfo = Tagged;
 		};
-		CA24432E20F449E8004FA268 /* PBXContainerItemProxy */ = {
+		CACC3CC920F44D2500302050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Tagged::Tagged";
+			remoteInfo = Tagged;
+		};
+		CACC3CCA20F44D2500302050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Tagged::TaggedMoney";
+			remoteInfo = TaggedMoney;
+		};
+		CACC3CCB20F44D2500302050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Tagged::Tagged";
+			remoteInfo = Tagged;
+		};
+		CACC3CCC20F44D2500302050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Tagged::Tagged";
+			remoteInfo = Tagged;
+		};
+		CACC3CCD20F44D2500302050 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::TaggedTimeTests";
 			remoteInfo = TaggedTimeTests;
 		};
-		CA24432F20F449E8004FA268 /* PBXContainerItemProxy */ = {
+		CACC3CCE20F44D2500302050 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::TaggedTests";
 			remoteInfo = TaggedTests;
 		};
+		CACC3CCF20F44D2500302050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Tagged::TaggedMoneyTests";
+			remoteInfo = TaggedMoneyTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		OBJ_11 /* TaggedTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTime.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Tagged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagged.swift; sourceTree = "<group>"; };
-		OBJ_16 /* TaggedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTests.swift; sourceTree = "<group>"; };
-		OBJ_18 /* TaggedTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTimeTests.swift; sourceTree = "<group>"; };
-		OBJ_19 /* Tagged.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Tagged.xcworkspace; sourceTree = SOURCE_ROOT; };
+		OBJ_11 /* TaggedMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedMoney.swift; sourceTree = "<group>"; };
+		OBJ_13 /* TaggedTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTime.swift; sourceTree = "<group>"; };
+		OBJ_15 /* Tagged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagged.swift; sourceTree = "<group>"; };
+		OBJ_18 /* TaggedMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedMoneyTests.swift; sourceTree = "<group>"; };
+		OBJ_20 /* TaggedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTests.swift; sourceTree = "<group>"; };
+		OBJ_22 /* TaggedTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTimeTests.swift; sourceTree = "<group>"; };
+		OBJ_23 /* Tagged.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Tagged.xcworkspace; sourceTree = SOURCE_ROOT; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* Tagged.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tagged.xcconfig; sourceTree = "<group>"; };
 		"Tagged::Tagged::Product" /* Tagged.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tagged.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Tagged::TaggedMoney::Product" /* TaggedMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TaggedMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Tagged::TaggedMoneyTests::Product" /* TaggedMoneyTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = TaggedMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Tagged::TaggedTests::Product" /* TaggedTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = TaggedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Tagged::TaggedTime::Product" /* TaggedTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TaggedTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Tagged::TaggedTimeTests::Product" /* TaggedTimeTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = TaggedTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_31 /* Frameworks */ = {
+		OBJ_37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_51 /* Frameworks */ = {
+		OBJ_44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_52 /* Tagged.framework in Frameworks */,
+				OBJ_45 /* Tagged.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_60 /* Frameworks */ = {
+		OBJ_53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_61 /* Tagged.framework in Frameworks */,
+				OBJ_54 /* TaggedMoney.framework in Frameworks */,
+				OBJ_55 /* Tagged.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_68 /* Frameworks */ = {
+		OBJ_78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_69 /* TaggedTime.framework in Frameworks */,
-				OBJ_70 /* Tagged.framework in Frameworks */,
+				OBJ_79 /* Tagged.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_88 /* Tagged.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_96 /* TaggedTime.framework in Frameworks */,
+				OBJ_97 /* Tagged.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_10 /* TaggedTime */ = {
+		OBJ_10 /* TaggedMoney */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* TaggedTime.swift */,
+				OBJ_11 /* TaggedMoney.swift */,
+			);
+			name = TaggedMoney;
+			path = Sources/TaggedMoney;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_12 /* TaggedTime */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* TaggedTime.swift */,
 			);
 			name = TaggedTime;
 			path = Sources/TaggedTime;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_12 /* Tagged */ = {
+		OBJ_14 /* Tagged */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* Tagged.swift */,
+				OBJ_15 /* Tagged.swift */,
 			);
 			name = Tagged;
 			path = Sources/Tagged;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_14 /* Tests */ = {
+		OBJ_16 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_15 /* TaggedTests */,
-				OBJ_17 /* TaggedTimeTests */,
+				OBJ_17 /* TaggedMoneyTests */,
+				OBJ_19 /* TaggedTests */,
+				OBJ_21 /* TaggedTimeTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_15 /* TaggedTests */ = {
+		OBJ_17 /* TaggedMoneyTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* TaggedTests.swift */,
+				OBJ_18 /* TaggedMoneyTests.swift */,
+			);
+			name = TaggedMoneyTests;
+			path = Tests/TaggedMoneyTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_19 /* TaggedTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* TaggedTests.swift */,
 			);
 			name = TaggedTests;
 			path = Tests/TaggedTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* TaggedTimeTests */ = {
+		OBJ_21 /* TaggedTimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* TaggedTimeTests.swift */,
+				OBJ_22 /* TaggedTimeTests.swift */,
 			);
 			name = TaggedTimeTests;
 			path = Tests/TaggedTimeTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_20 /* Products */ = {
+		OBJ_24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"Tagged::TaggedTests::Product" /* TaggedTests.xctest */,
 				"Tagged::TaggedTime::Product" /* TaggedTime.framework */,
-				"Tagged::Tagged::Product" /* Tagged.framework */,
+				"Tagged::TaggedMoney::Product" /* TaggedMoney.framework */,
 				"Tagged::TaggedTimeTests::Product" /* TaggedTimeTests.xctest */,
+				"Tagged::Tagged::Product" /* Tagged.framework */,
+				"Tagged::TaggedMoneyTests::Product" /* TaggedMoneyTests.xctest */,
+				"Tagged::TaggedTests::Product" /* TaggedTests.xctest */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -190,9 +266,9 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Configs */,
 				OBJ_9 /* Sources */,
-				OBJ_14 /* Tests */,
-				OBJ_19 /* Tagged.xcworkspace */,
-				OBJ_20 /* Products */,
+				OBJ_16 /* Tests */,
+				OBJ_23 /* Tagged.xcworkspace */,
+				OBJ_24 /* Products */,
 			);
 			name = "";
 			sourceTree = "<group>";
@@ -208,8 +284,9 @@
 		OBJ_9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_10 /* TaggedTime */,
-				OBJ_12 /* Tagged */,
+				OBJ_10 /* TaggedMoney */,
+				OBJ_12 /* TaggedTime */,
+				OBJ_14 /* Tagged */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -219,9 +296,9 @@
 /* Begin PBXNativeTarget section */
 		"Tagged::SwiftPMPackageDescription" /* TaggedPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_33 /* Build configuration list for PBXNativeTarget "TaggedPackageDescription" */;
+			buildConfigurationList = OBJ_59 /* Build configuration list for PBXNativeTarget "TaggedPackageDescription" */;
 			buildPhases = (
-				OBJ_36 /* Sources */,
+				OBJ_62 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -233,10 +310,10 @@
 		};
 		"Tagged::Tagged" /* Tagged */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_26 /* Build configuration list for PBXNativeTarget "Tagged" */;
+			buildConfigurationList = OBJ_32 /* Build configuration list for PBXNativeTarget "Tagged" */;
 			buildPhases = (
-				OBJ_29 /* Sources */,
-				OBJ_31 /* Frameworks */,
+				OBJ_35 /* Sources */,
+				OBJ_37 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,17 +324,52 @@
 			productReference = "Tagged::Tagged::Product" /* Tagged.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		"Tagged::TaggedTests" /* TaggedTests */ = {
+		"Tagged::TaggedMoney" /* TaggedMoney */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_46 /* Build configuration list for PBXNativeTarget "TaggedTests" */;
+			buildConfigurationList = OBJ_39 /* Build configuration list for PBXNativeTarget "TaggedMoney" */;
 			buildPhases = (
-				OBJ_49 /* Sources */,
-				OBJ_51 /* Frameworks */,
+				OBJ_42 /* Sources */,
+				OBJ_44 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_53 /* PBXTargetDependency */,
+				OBJ_46 /* PBXTargetDependency */,
+			);
+			name = TaggedMoney;
+			productName = TaggedMoney;
+			productReference = "Tagged::TaggedMoney::Product" /* TaggedMoney.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Tagged::TaggedMoneyTests" /* TaggedMoneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_48 /* Build configuration list for PBXNativeTarget "TaggedMoneyTests" */;
+			buildPhases = (
+				OBJ_51 /* Sources */,
+				OBJ_53 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_56 /* PBXTargetDependency */,
+				OBJ_57 /* PBXTargetDependency */,
+			);
+			name = TaggedMoneyTests;
+			productName = TaggedMoneyTests;
+			productReference = "Tagged::TaggedMoneyTests::Product" /* TaggedMoneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Tagged::TaggedTests" /* TaggedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_73 /* Build configuration list for PBXNativeTarget "TaggedTests" */;
+			buildPhases = (
+				OBJ_76 /* Sources */,
+				OBJ_78 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_80 /* PBXTargetDependency */,
 			);
 			name = TaggedTests;
 			productName = TaggedTests;
@@ -266,15 +378,15 @@
 		};
 		"Tagged::TaggedTime" /* TaggedTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_55 /* Build configuration list for PBXNativeTarget "TaggedTime" */;
+			buildConfigurationList = OBJ_82 /* Build configuration list for PBXNativeTarget "TaggedTime" */;
 			buildPhases = (
-				OBJ_58 /* Sources */,
-				OBJ_60 /* Frameworks */,
+				OBJ_85 /* Sources */,
+				OBJ_87 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_62 /* PBXTargetDependency */,
+				OBJ_89 /* PBXTargetDependency */,
 			);
 			name = TaggedTime;
 			productName = TaggedTime;
@@ -283,16 +395,16 @@
 		};
 		"Tagged::TaggedTimeTests" /* TaggedTimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_63 /* Build configuration list for PBXNativeTarget "TaggedTimeTests" */;
+			buildConfigurationList = OBJ_90 /* Build configuration list for PBXNativeTarget "TaggedTimeTests" */;
 			buildPhases = (
-				OBJ_66 /* Sources */,
-				OBJ_68 /* Frameworks */,
+				OBJ_93 /* Sources */,
+				OBJ_95 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_71 /* PBXTargetDependency */,
-				OBJ_72 /* PBXTargetDependency */,
+				OBJ_98 /* PBXTargetDependency */,
+				OBJ_99 /* PBXTargetDependency */,
 			);
 			name = TaggedTimeTests;
 			productName = TaggedTimeTests;
@@ -315,11 +427,13 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_20 /* Products */;
+			productRefGroup = OBJ_24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				"Tagged::Tagged" /* Tagged */,
+				"Tagged::TaggedMoney" /* TaggedMoney */,
+				"Tagged::TaggedMoneyTests" /* TaggedMoneyTests */,
 				"Tagged::SwiftPMPackageDescription" /* TaggedPackageDescription */,
 				"Tagged::TaggedPackageTests::ProductTarget" /* TaggedPackageTests */,
 				"Tagged::TaggedTests" /* TaggedTests */,
@@ -330,130 +444,118 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_29 /* Sources */ = {
+		OBJ_35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_30 /* Tagged.swift in Sources */,
+				OBJ_36 /* Tagged.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_36 /* Sources */ = {
+		OBJ_42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_37 /* Package.swift in Sources */,
+				OBJ_43 /* TaggedMoney.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_49 /* Sources */ = {
+		OBJ_51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				CA24433120F44A78004FA268 /* TaggedTests.swift in Sources */,
+				OBJ_52 /* TaggedMoneyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_58 /* Sources */ = {
+		OBJ_62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_59 /* TaggedTime.swift in Sources */,
+				OBJ_63 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_66 /* Sources */ = {
+		OBJ_76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_67 /* TaggedTimeTests.swift in Sources */,
+				OBJ_77 /* TaggedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_86 /* TaggedTime.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_94 /* TaggedTimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_42 /* PBXTargetDependency */ = {
+		OBJ_46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Tagged::Tagged" /* Tagged */;
+			targetProxy = CACC3CC920F44D2500302050 /* PBXContainerItemProxy */;
+		};
+		OBJ_56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Tagged::TaggedMoney" /* TaggedMoney */;
+			targetProxy = CACC3CCA20F44D2500302050 /* PBXContainerItemProxy */;
+		};
+		OBJ_57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Tagged::Tagged" /* Tagged */;
+			targetProxy = CACC3CCB20F44D2500302050 /* PBXContainerItemProxy */;
+		};
+		OBJ_68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::TaggedTimeTests" /* TaggedTimeTests */;
-			targetProxy = CA24432E20F449E8004FA268 /* PBXContainerItemProxy */;
+			targetProxy = CACC3CCD20F44D2500302050 /* PBXContainerItemProxy */;
 		};
-		OBJ_44 /* PBXTargetDependency */ = {
+		OBJ_70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::TaggedTests" /* TaggedTests */;
-			targetProxy = CA24432F20F449E8004FA268 /* PBXContainerItemProxy */;
-		};
-		OBJ_53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = CA24432B20F449E8004FA268 /* PBXContainerItemProxy */;
-		};
-		OBJ_62 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = CA24432A20F449E8004FA268 /* PBXContainerItemProxy */;
-		};
-		OBJ_71 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Tagged::TaggedTime" /* TaggedTime */;
-			targetProxy = CA24432C20F449E8004FA268 /* PBXContainerItemProxy */;
+			targetProxy = CACC3CCE20F44D2500302050 /* PBXContainerItemProxy */;
 		};
 		OBJ_72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			target = "Tagged::TaggedMoneyTests" /* TaggedMoneyTests */;
+			targetProxy = CACC3CCF20F44D2500302050 /* PBXContainerItemProxy */;
+		};
+		OBJ_80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
 			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = CA24432D20F449E8004FA268 /* PBXContainerItemProxy */;
+			targetProxy = CACC3CCC20F44D2500302050 /* PBXContainerItemProxy */;
+		};
+		OBJ_89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Tagged::Tagged" /* Tagged */;
+			targetProxy = CACC3CC620F44D2400302050 /* PBXContainerItemProxy */;
+		};
+		OBJ_98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Tagged::TaggedTime" /* TaggedTime */;
+			targetProxy = CACC3CC720F44D2400302050 /* PBXContainerItemProxy */;
+		};
+		OBJ_99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Tagged::Tagged" /* Tagged */;
+			targetProxy = CACC3CC820F44D2400302050 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Tagged.xcodeproj/Tagged_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Tagged;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Tagged;
-			};
-			name = Debug;
-		};
-		OBJ_28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Tagged.xcodeproj/Tagged_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Tagged;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGET_NAME = Tagged;
-			};
-			name = Release;
-		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -476,21 +578,51 @@
 			};
 			name = Debug;
 		};
-		OBJ_34 /* Debug */ = {
+		OBJ_33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Tagged.xcodeproj/Tagged_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Tagged;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Tagged;
 			};
 			name = Debug;
 		};
-		OBJ_35 /* Release */ = {
+		OBJ_34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Tagged.xcodeproj/Tagged_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Tagged;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Tagged;
 			};
 			name = Release;
 		};
@@ -516,17 +648,123 @@
 		};
 		OBJ_40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Tagged.xcodeproj/TaggedMoney_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TaggedMoney;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = TaggedMoney;
 			};
 			name = Debug;
 		};
 		OBJ_41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Tagged.xcodeproj/TaggedMoney_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = TaggedMoney;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = TaggedMoney;
+			};
+			name = Release;
+		};
+		OBJ_49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Tagged.xcodeproj/TaggedMoneyTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = TaggedMoneyTests;
+			};
+			name = Debug;
+		};
+		OBJ_50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Tagged.xcodeproj/TaggedMoneyTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = TaggedMoneyTests;
+			};
+			name = Release;
+		};
+		OBJ_60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_67 /* Release */ = {
+			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_47 /* Debug */ = {
+		OBJ_74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
@@ -546,7 +784,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_48 /* Release */ = {
+		OBJ_75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
@@ -566,7 +804,7 @@
 			};
 			name = Release;
 		};
-		OBJ_56 /* Debug */ = {
+		OBJ_83 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
@@ -590,7 +828,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_57 /* Release */ = {
+		OBJ_84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
@@ -614,7 +852,7 @@
 			};
 			name = Release;
 		};
-		OBJ_64 /* Debug */ = {
+		OBJ_91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
@@ -634,7 +872,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_65 /* Release */ = {
+		OBJ_92 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = OBJ_8 /* Tagged.xcconfig */;
 			buildSettings = {
@@ -666,25 +904,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_26 /* Build configuration list for PBXNativeTarget "Tagged" */ = {
+		OBJ_32 /* Build configuration list for PBXNativeTarget "Tagged" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_27 /* Debug */,
-				OBJ_28 /* Release */,
+				OBJ_33 /* Debug */,
+				OBJ_34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_33 /* Build configuration list for PBXNativeTarget "TaggedPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_34 /* Debug */,
-				OBJ_35 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_39 /* Build configuration list for PBXAggregateTarget "TaggedPackageTests" */ = {
+		OBJ_39 /* Build configuration list for PBXNativeTarget "TaggedMoney" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_40 /* Debug */,
@@ -693,29 +922,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_46 /* Build configuration list for PBXNativeTarget "TaggedTests" */ = {
+		OBJ_48 /* Build configuration list for PBXNativeTarget "TaggedMoneyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_47 /* Debug */,
-				OBJ_48 /* Release */,
+				OBJ_49 /* Debug */,
+				OBJ_50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_55 /* Build configuration list for PBXNativeTarget "TaggedTime" */ = {
+		OBJ_59 /* Build configuration list for PBXNativeTarget "TaggedPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_56 /* Debug */,
-				OBJ_57 /* Release */,
+				OBJ_60 /* Debug */,
+				OBJ_61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_63 /* Build configuration list for PBXNativeTarget "TaggedTimeTests" */ = {
+		OBJ_65 /* Build configuration list for PBXAggregateTarget "TaggedPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_64 /* Debug */,
-				OBJ_65 /* Release */,
+				OBJ_66 /* Debug */,
+				OBJ_67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_73 /* Build configuration list for PBXNativeTarget "TaggedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_74 /* Debug */,
+				OBJ_75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_82 /* Build configuration list for PBXNativeTarget "TaggedTime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_83 /* Debug */,
+				OBJ_84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_90 /* Build configuration list for PBXNativeTarget "TaggedTimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_91 /* Debug */,
+				OBJ_92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
