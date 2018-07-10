@@ -15,6 +15,7 @@ A wrapper type for safer, expressive code.
       - [Handling tag collisions](#handling-tag-collisions)
       - [Accessing raw values](#accessing-raw-values)
   - [Features](#features)
+  - [Nanolibraries](#nanolibraries)
   - [FAQ](#faq)
   - [Installation](#installation)
   - [Interested in learning more?](#interested-in-learning-more)
@@ -298,6 +299,57 @@ struct Product {
 ```
 ``` swift
 let totalCents = products.reduce(0) { $0.amount + $1.amount }
+```
+
+## Nanolibraries
+
+The `Tagged` library also comes with a few nanolibraries for handling common types in a type safe way.
+
+### `TaggedTime`
+
+The API's we interact with often return timestamps in seconds or milliseconds measured from an epoch time. Keeping track of the units can be messy, either being done via documentation or by naming fields in a particular way, e.g. `publishedAtMs`. Mixing up the units on accident can lead to wildly inaccurate logic.
+
+ By importing `TaggedTime` you will get access to two generic types, `Milliseconds<A>` and `Seconds<A>`, that allow the compiler to sort out the differences for you. You can use them in your models:
+
+```swift 
+struct BlogPost: Decodable {
+  typealias Id = Tagged<BlogPost, Int>
+
+  let id: Id
+  let publishedAt: Seconds<Int>
+  let title: String
+}
+```
+
+Now you have documentation of the unit in the type automatically, and you can never accidentally compare seconds to milliseconds:
+
+```swift 
+let futureTime: Milliseconds = 1528378451000
+
+breakingBlogPost.publishedAt < futureTime
+// 🛑 Binary operator '<' cannot be applied to operands of type
+// 'Tagged<SecondsTag, Double>' and 'Tagged<MillisecondsTag, Double>'
+```
+
+Read more on our blog post: [Tagged Seconds and Milliseconds](https://www.pointfree.co/blog/posts/6-tagged-seconds-and-milliseconds).
+
+### `TaggedMoney`
+
+API's can also send back money amounts in two standard units: whole dollar amounts or cents (1/100 of a dollar). Keeping track of this distinction can also be messy and error prone. 
+
+Importing the `TaggedMoney` libary gives you access to two generic types, `Dollars<A>` and `Cents<A>`, that give you compile-time guarantees in keeping the two units separate.
+
+```swift 
+struct Prize {
+  let amount: Dollars<Int> 
+  let name: String
+}
+
+let moneyRaised: Cents<Int> = 50_000
+
+theBigPrize.amount < moneyRaised
+// 🛑 Binary operator '<' cannot be applied to operands of type
+// 'Tagged<DollarsTag, Int>' and 'Tagged<CentsTag, Int>'
 ```
 
 ## FAQ
