@@ -8,7 +8,7 @@ final class TaggedTimeTests: XCTestCase {
   }
 
   func testMillisecondsToSeconds() {
-    let seconds: Milliseconds<Double> = 12000
-    XCTAssertEqual(12.0, seconds.seconds)
+    let milliseconds: Milliseconds<Double> = 12000
+    XCTAssertEqual(12.0, milliseconds.seconds)
   }
 }
