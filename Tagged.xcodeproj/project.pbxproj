@@ -14,8 +14,8 @@
 			);
 			dependencies = (
 				OBJ_68 /* PBXTargetDependency */,
-				OBJ_70 /* PBXTargetDependency */,
-				OBJ_72 /* PBXTargetDependency */,
+				OBJ_69 /* PBXTargetDependency */,
+				OBJ_71 /* PBXTargetDependency */,
 			);
 			name = TaggedPackageTests;
 			productName = TaggedPackageTests;
@@ -26,7 +26,7 @@
 		OBJ_36 /* Tagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Tagged.swift */; };
 		OBJ_43 /* TaggedMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* TaggedMoney.swift */; };
 		OBJ_45 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
-		OBJ_52 /* TaggedMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* TaggedMoneyTests.swift */; };
+		OBJ_52 /* TaggedMoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* TaggedMoneyTests.swift */; };
 		OBJ_54 /* TaggedMoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::TaggedMoney::Product" /* TaggedMoney.framework */; };
 		OBJ_55 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
 		OBJ_63 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
@@ -34,81 +34,81 @@
 		OBJ_79 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
 		OBJ_86 /* TaggedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TaggedTime.swift */; };
 		OBJ_88 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
-		OBJ_94 /* TaggedTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* TaggedTimeTests.swift */; };
+		OBJ_94 /* TaggedTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* TaggedTimeTests.swift */; };
 		OBJ_96 /* TaggedTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::TaggedTime::Product" /* TaggedTime.framework */; };
 		OBJ_97 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tagged::Tagged::Product" /* Tagged.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CACC3CC620F44D2400302050 /* PBXContainerItemProxy */ = {
+		80FAD54720F696C2009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::Tagged";
 			remoteInfo = Tagged;
 		};
-		CACC3CC720F44D2400302050 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Tagged::TaggedTime";
-			remoteInfo = TaggedTime;
-		};
-		CACC3CC820F44D2400302050 /* PBXContainerItemProxy */ = {
+		80FAD54820F696C2009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::Tagged";
 			remoteInfo = Tagged;
 		};
-		CACC3CC920F44D2500302050 /* PBXContainerItemProxy */ = {
+		80FAD54920F696C2009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::Tagged";
 			remoteInfo = Tagged;
 		};
-		CACC3CCA20F44D2500302050 /* PBXContainerItemProxy */ = {
+		80FAD54A20F696C2009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::TaggedMoney";
 			remoteInfo = TaggedMoney;
 		};
-		CACC3CCB20F44D2500302050 /* PBXContainerItemProxy */ = {
+		80FAD54B20F696C2009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::Tagged";
 			remoteInfo = Tagged;
 		};
-		CACC3CCC20F44D2500302050 /* PBXContainerItemProxy */ = {
+		80FAD54C20F696C2009F7FA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Tagged::TaggedTime";
+			remoteInfo = TaggedTime;
+		};
+		80FAD54D20F696C2009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::Tagged";
 			remoteInfo = Tagged;
 		};
-		CACC3CCD20F44D2500302050 /* PBXContainerItemProxy */ = {
+		80FAD54E20F696C3009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "Tagged::TaggedTimeTests";
-			remoteInfo = TaggedTimeTests;
+			remoteGlobalIDString = "Tagged::TaggedMoneyTests";
+			remoteInfo = TaggedMoneyTests;
 		};
-		CACC3CCE20F44D2500302050 /* PBXContainerItemProxy */ = {
+		80FAD54F20F696C3009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tagged::TaggedTests";
 			remoteInfo = TaggedTests;
 		};
-		CACC3CCF20F44D2500302050 /* PBXContainerItemProxy */ = {
+		80FAD55020F696C3009F7FA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "Tagged::TaggedMoneyTests";
-			remoteInfo = TaggedMoneyTests;
+			remoteGlobalIDString = "Tagged::TaggedTimeTests";
+			remoteInfo = TaggedTimeTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -116,9 +116,9 @@
 		OBJ_11 /* TaggedMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedMoney.swift; sourceTree = "<group>"; };
 		OBJ_13 /* TaggedTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTime.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Tagged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tagged.swift; sourceTree = "<group>"; };
-		OBJ_18 /* TaggedMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedMoneyTests.swift; sourceTree = "<group>"; };
+		OBJ_18 /* TaggedTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTimeTests.swift; sourceTree = "<group>"; };
 		OBJ_20 /* TaggedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTests.swift; sourceTree = "<group>"; };
-		OBJ_22 /* TaggedTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTimeTests.swift; sourceTree = "<group>"; };
+		OBJ_22 /* TaggedMoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedMoneyTests.swift; sourceTree = "<group>"; };
 		OBJ_23 /* Tagged.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = Tagged.xcworkspace; sourceTree = SOURCE_ROOT; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_8 /* Tagged.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tagged.xcconfig; sourceTree = "<group>"; };
@@ -213,20 +213,20 @@
 		OBJ_16 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* TaggedMoneyTests */,
+				OBJ_17 /* TaggedTimeTests */,
 				OBJ_19 /* TaggedTests */,
-				OBJ_21 /* TaggedTimeTests */,
+				OBJ_21 /* TaggedMoneyTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* TaggedMoneyTests */ = {
+		OBJ_17 /* TaggedTimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* TaggedMoneyTests.swift */,
+				OBJ_18 /* TaggedTimeTests.swift */,
 			);
-			name = TaggedMoneyTests;
-			path = Tests/TaggedMoneyTests;
+			name = TaggedTimeTests;
+			path = Tests/TaggedTimeTests;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_19 /* TaggedTests */ = {
@@ -238,24 +238,24 @@
 			path = Tests/TaggedTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_21 /* TaggedTimeTests */ = {
+		OBJ_21 /* TaggedMoneyTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* TaggedTimeTests.swift */,
+				OBJ_22 /* TaggedMoneyTests.swift */,
 			);
-			name = TaggedTimeTests;
-			path = Tests/TaggedTimeTests;
+			name = TaggedMoneyTests;
+			path = Tests/TaggedMoneyTests;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"Tagged::TaggedTime::Product" /* TaggedTime.framework */,
-				"Tagged::TaggedMoney::Product" /* TaggedMoney.framework */,
-				"Tagged::TaggedTimeTests::Product" /* TaggedTimeTests.xctest */,
-				"Tagged::Tagged::Product" /* Tagged.framework */,
-				"Tagged::TaggedMoneyTests::Product" /* TaggedMoneyTests.xctest */,
 				"Tagged::TaggedTests::Product" /* TaggedTests.xctest */,
+				"Tagged::TaggedMoney::Product" /* TaggedMoney.framework */,
+				"Tagged::TaggedMoneyTests::Product" /* TaggedMoneyTests.xctest */,
+				"Tagged::TaggedTimeTests::Product" /* TaggedTimeTests.xctest */,
+				"Tagged::TaggedTime::Product" /* TaggedTime.framework */,
+				"Tagged::Tagged::Product" /* Tagged.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -506,52 +506,52 @@
 		OBJ_46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = CACC3CC920F44D2500302050 /* PBXContainerItemProxy */;
+			targetProxy = 80FAD54720F696C2009F7FA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::TaggedMoney" /* TaggedMoney */;
-			targetProxy = CACC3CCA20F44D2500302050 /* PBXContainerItemProxy */;
+			targetProxy = 80FAD54A20F696C2009F7FA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = CACC3CCB20F44D2500302050 /* PBXContainerItemProxy */;
+			targetProxy = 80FAD54B20F696C2009F7FA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_68 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Tagged::TaggedTimeTests" /* TaggedTimeTests */;
-			targetProxy = CACC3CCD20F44D2500302050 /* PBXContainerItemProxy */;
+			target = "Tagged::TaggedMoneyTests" /* TaggedMoneyTests */;
+			targetProxy = 80FAD54E20F696C3009F7FA3 /* PBXContainerItemProxy */;
 		};
-		OBJ_70 /* PBXTargetDependency */ = {
+		OBJ_69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::TaggedTests" /* TaggedTests */;
-			targetProxy = CACC3CCE20F44D2500302050 /* PBXContainerItemProxy */;
+			targetProxy = 80FAD54F20F696C3009F7FA3 /* PBXContainerItemProxy */;
 		};
-		OBJ_72 /* PBXTargetDependency */ = {
+		OBJ_71 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Tagged::TaggedMoneyTests" /* TaggedMoneyTests */;
-			targetProxy = CACC3CCF20F44D2500302050 /* PBXContainerItemProxy */;
+			target = "Tagged::TaggedTimeTests" /* TaggedTimeTests */;
+			targetProxy = 80FAD55020F696C3009F7FA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = CACC3CCC20F44D2500302050 /* PBXContainerItemProxy */;
+			targetProxy = 80FAD54920F696C2009F7FA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = CACC3CC620F44D2400302050 /* PBXContainerItemProxy */;
+			targetProxy = 80FAD54820F696C2009F7FA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::TaggedTime" /* TaggedTime */;
-			targetProxy = CACC3CC720F44D2400302050 /* PBXContainerItemProxy */;
+			targetProxy = 80FAD54C20F696C2009F7FA3 /* PBXContainerItemProxy */;
 		};
 		OBJ_99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tagged::Tagged" /* Tagged */;
-			targetProxy = CACC3CC820F44D2400302050 /* PBXContainerItemProxy */;
+			targetProxy = 80FAD54D20F696C2009F7FA3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

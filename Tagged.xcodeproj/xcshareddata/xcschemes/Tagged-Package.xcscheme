@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tagged::Tagged"
-               BuildableName = "Tagged.framework"
-               BlueprintName = "Tagged"
-               ReferencedContainer = "container:Tagged.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Tagged::TaggedMoney"
                BuildableName = "TaggedMoney.framework"
                BlueprintName = "TaggedMoney"
@@ -48,6 +34,20 @@
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Tagged::Tagged"
+               BuildableName = "Tagged.framework"
+               BlueprintName = "Tagged"
+               ReferencedContainer = "container:Tagged.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -60,9 +60,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tagged::TaggedTimeTests"
-               BuildableName = "TaggedTimeTests.xctest"
-               BlueprintName = "TaggedTimeTests"
+               BlueprintIdentifier = "Tagged::TaggedTests"
+               BuildableName = "TaggedTests.xctest"
+               BlueprintName = "TaggedTests"
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -80,9 +80,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tagged::TaggedTests"
-               BuildableName = "TaggedTests.xctest"
-               BlueprintName = "TaggedTests"
+               BlueprintIdentifier = "Tagged::TaggedTimeTests"
+               BuildableName = "TaggedTimeTests.xctest"
+               BlueprintName = "TaggedTimeTests"
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -103,9 +103,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "Tagged::Tagged"
-            BuildableName = "Tagged.framework"
-            BlueprintName = "Tagged"
+            BlueprintIdentifier = "Tagged::TaggedMoney"
+            BuildableName = "TaggedMoney.framework"
+            BlueprintName = "TaggedMoney"
             ReferencedContainer = "container:Tagged.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
