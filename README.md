@@ -317,7 +317,7 @@ let totalCents = products.reduce(0) { $0.amount + $1.amount }
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-tagged" ~> 0.1
+github "pointfreeco/swift-tagged" ~> 0.2
 ```
 
 ### CocoaPods
@@ -325,7 +325,7 @@ github "pointfreeco/swift-tagged" ~> 0.1
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Tagged', '~> 0.1'
+pod 'Tagged', '~> 0.2'
 ```
 
 ### SwiftPM
@@ -334,7 +334,7 @@ If you want to use Tagged in a project that uses [SwiftPM](https://swift.org/pac
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.1.0")
+  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.2.0")
 ]
 ```
 
