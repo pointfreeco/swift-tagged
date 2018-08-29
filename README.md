@@ -385,7 +385,9 @@ github "pointfreeco/swift-tagged" ~> 0.2
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Tagged', '~> 0.2'
+pod 'Tagged/Tagged', '~> 0.2'
+pod 'Tagged/TaggedMoney', '~> 0.2'
+pod 'Tagged/TaggedTime', '~> 0.2'
 ```
 
 ### SwiftPM
