@@ -36,14 +36,13 @@ extension Tagged: Comparable where RawValue: Comparable {
 
 extension Tagged: Decodable where RawValue: Decodable {
   public init(from decoder: Decoder) throws {
-    self.init(rawValue: try decoder.singleValueContainer().decode(RawValue.self))
+    self.init(rawValue: try .init(from: decoder))
   }
 }
 
 extension Tagged: Encodable where RawValue: Encodable {
   public func encode(to encoder: Encoder) throws {
-    var container = encoder.singleValueContainer()
-    try container.encode(self.rawValue)
+    try rawValue.encode(to: encoder)
   }
 }
 
