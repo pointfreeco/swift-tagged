@@ -29,12 +29,12 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'TaggedTime' do |sub| 
-    sub.dependency = 'Tagged/Tagged'
+    sub.dependency 'Tagged/Tagged'
     sub.source_files = "Sources", "Sources/TaggedTime/*.swift"
   end
 
   s.subspec 'TaggedMoney' do |sub| 
-    sub.dependency = 'Tagged/Tagged'
+    sub.dependency 'Tagged/Tagged'
     sub.source_files = "Sources", "Sources/TaggedMoney/*.swift"
   end
 end
