@@ -9,12 +9,14 @@ public enum DollarsTag {}
 public typealias Dollars<A> = Tagged<DollarsTag, A>
 
 extension Tagged where Tag == CentsTag, RawValue: BinaryFloatingPoint {
+  /// Converts cents into dollars by dividing by 100.
   public var dollars: Dollars<RawValue> {
     return .init(rawValue: self.rawValue / 100)
   }
 }
 
 extension Tagged where Tag == DollarsTag, RawValue: Numeric {
+  /// Converts dollars into cents by multiplying by 100.
   public var cents: Cents<RawValue> {
     return .init(rawValue: self.rawValue * 100)
   }
