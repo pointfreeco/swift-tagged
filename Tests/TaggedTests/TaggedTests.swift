@@ -74,4 +74,18 @@ final class TaggedTests: XCTestCase {
     let x: Tagged<Tag, Int> = 1
     XCTAssertEqual("1!", x.map { "\($0)!" })
   }
+
+  func testOptionalRawTypeAndNilValueDecodesCorrectly() {
+    struct Container: Decodable {
+      typealias Idenitifer = Tagged<Container, String?>
+      let id: Idenitifer
+    }
+
+    XCTAssertNoThrow(try {
+      let data = "[{\"id\":null}]".data(using: .utf8)!
+      let containers = try JSONDecoder().decode([Container].self, from: data)
+      XCTAssertEqual(containers.count, 1)
+      XCTAssertEqual(containers.first?.id.rawValue, nil)
+      }())
+  }
 }
