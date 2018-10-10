@@ -17,8 +17,7 @@ extension Tagged: CustomStringConvertible {
   }
 }
 
-extension Tagged: RawRepresentable {
-}
+extension Tagged: RawRepresentable {}
 
 extension Tagged: CustomPlaygroundDisplayConvertible {
   public var playgroundDescription: Any {
@@ -34,26 +33,13 @@ extension Tagged: Comparable where RawValue: Comparable {
   }
 }
 
-extension Tagged: Decodable where RawValue: Decodable {
-  public init(from decoder: Decoder) throws {
-    self.init(rawValue: try .init(from: decoder))
-  }
-}
+extension Tagged: Decodable where RawValue: Decodable {}
 
-extension Tagged: Encodable where RawValue: Encodable {
-  public func encode(to encoder: Encoder) throws {
-    try rawValue.encode(to: encoder)
-  }
-}
+extension Tagged: Encodable where RawValue: Encodable {}
 
-extension Tagged: Equatable where RawValue: Equatable {
-  public static func == (lhs: Tagged, rhs: Tagged) -> Bool {
-    return lhs.rawValue == rhs.rawValue
-  }
-}
+extension Tagged: Equatable where RawValue: Equatable {}
 
-extension Tagged: Error where RawValue: Error {
-}
+extension Tagged: Error where RawValue: Error {}
 
 extension Tagged: ExpressibleByBooleanLiteral where RawValue: ExpressibleByBooleanLiteral {
   public typealias BooleanLiteralType = RawValue.BooleanLiteralType
@@ -147,14 +133,9 @@ extension Tagged: Numeric where RawValue: Numeric {
   }
 }
 
-extension Tagged: Hashable where RawValue: Hashable {
-  public var hashValue: Int {
-    return self.rawValue.hashValue
-  }
-}
+extension Tagged: Hashable where RawValue: Hashable {}
 
-extension Tagged: SignedNumeric where RawValue: SignedNumeric {
-}
+extension Tagged: SignedNumeric where RawValue: SignedNumeric {}
 
 // Commenting these out for Joe.
 //
