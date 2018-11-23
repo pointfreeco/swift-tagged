@@ -186,3 +186,10 @@ extension Tagged: SignedNumeric where RawValue: SignedNumeric {
 //    self.init(rawValue: f(elements))
 //  }
 //}
+
+// MARK: - Coerce
+extension Tagged {
+  public func coerce<Tag2>() -> Tagged<Tag2, RawValue> {
+    return unsafeBitCast(self, to: Tagged<Tag2, RawValue>.self)
+  }
+}

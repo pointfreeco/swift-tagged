@@ -88,4 +88,13 @@ final class TaggedTests: XCTestCase {
       XCTAssertEqual(containers.first?.id.rawValue, nil)
       }())
   }
+	
+   func testCoerce() {
+    let x: Tagged<Tag, Int> = 1
+	
+	enum Tag2 {}
+	let x2: Tagged<Tag2, Int> = x.coerce()
+	
+    XCTAssertEqual(1, x2.rawValue)
+  }
 }
