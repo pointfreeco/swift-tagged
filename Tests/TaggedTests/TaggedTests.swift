@@ -93,7 +93,7 @@ final class TaggedTests: XCTestCase {
     let x: Tagged<Tag, Int> = 1
 
     enum Tag2 {}
-    let x2: Tagged<Tag2, Int> = x.coerce(Tag2.self)
+    let x2: Tagged<Tag2, Int> = x.coerced(Tag2.self)
 
     XCTAssertEqual(1, x2.rawValue)
   }
