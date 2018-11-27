@@ -189,7 +189,7 @@ extension Tagged: SignedNumeric where RawValue: SignedNumeric {
 
 // MARK: - Coerce
 extension Tagged {
-  public func coerced<Tag2>(_ type: Tag2.Type) -> Tagged<Tag2, RawValue> {
+  public func coerced<Tag2>(to type: Tag2.Type) -> Tagged<Tag2, RawValue> {
     return unsafeBitCast(self, to: Tagged<Tag2, RawValue>.self)
   }
 }
