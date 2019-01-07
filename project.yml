@@ -1,6 +1,4 @@
 name: Tagged
-fileGroups:
-  - Tagged.playground
 options:
   bundleIdPrefix: co.pointfree
   deploymentTarget:

@@ -348,7 +348,6 @@
 		FR_03DAFA8FA0DDFDD9FE866763947086B0 /* TaggedTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaggedTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_0AC35E969A9DAD1CD41FDDA82EC83F38 /* TaggedTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaggedTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_0C7E76EC37DE3CF0C2CAE73F27BF4969 /* TaggedTimeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TaggedTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_1132223CD05B1338B237B6B33E18DD09 /* Tagged.playground */ = {isa = PBXFileReference; path = Tagged.playground; sourceTree = "<group>"; };
 		FR_28E86F15EB0ADA8BDAA2E7280A1CD8B9 /* TaggedTimeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TaggedTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_2D38C1BB2FB99F696CA356426066FBF5 /* Tagged.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tagged.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_2DE45EB9ADFF5F9E2F53BDA1A06DE9B2 /* TaggedMoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaggedMoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -620,7 +619,6 @@
 		G_BDA848ED70E8027DFAA00119A86B6FBE = {
 			isa = PBXGroup;
 			children = (
-				FR_1132223CD05B1338B237B6B33E18DD09 /* Tagged.playground */,
 				G_F86D449A5E2FFE0B46197CCCFECE92F8 /* Tagged */,
 				G_81EC9EC1CE913E014221E1C2BA7D6D32 /* TaggedMoney */,
 				G_2CE7BDCE26319B9084F5958E088C224E /* TaggedMoneyTests */,
