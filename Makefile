@@ -19,14 +19,14 @@ test-linux: linux-main
 test-macos:
 	set -o pipefail && \
 	xcodebuild test \
-		-scheme Tagged-Package \
+		-scheme Tagged_macOS \
 		-destination platform="macOS" \
 		| xcpretty
 
 test-ios:
 	set -o pipefail && \
 	xcodebuild test \
-		-scheme Tagged-Package \
+		-scheme Tagged_iOS \
 		-destination platform="iOS Simulator,name=iPhone XR,OS=12.1" \
 		| xcpretty
 
