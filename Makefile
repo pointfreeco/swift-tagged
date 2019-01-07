@@ -2,7 +2,7 @@ imports = \
 	@testable import TaggedTests;
 
 xcodeproj:
-	swift package generate-xcodeproj --xcconfig-overrides=Tagged.xcconfig
+	xcodegen
 
 linux-main:
 	sourcery \
