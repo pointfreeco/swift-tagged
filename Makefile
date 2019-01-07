@@ -27,7 +27,7 @@ test-ios:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme Tagged-Package \
-		-destination platform="iOS Simulator,name=iPhone 8,OS=11.3" \
+		-destination platform="iOS Simulator,name=iPhone XR,OS=12.1" \
 		| xcpretty
 
 test-swift:
