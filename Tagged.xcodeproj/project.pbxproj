@@ -476,6 +476,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-iOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -489,6 +490,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-macOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -562,6 +564,7 @@
 				PRODUCT_NAME = Tagged;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -575,6 +578,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-tvOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -587,6 +591,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-iOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -606,6 +611,7 @@
 				PRODUCT_NAME = Tagged;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -626,6 +632,7 @@
 				PRODUCT_NAME = Tagged;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -640,6 +647,7 @@
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Release;
@@ -660,6 +668,7 @@
 				PRODUCT_NAME = Tagged;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -681,6 +690,7 @@
 				PRODUCT_NAME = Tagged;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -694,6 +704,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-tvOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -715,6 +726,7 @@
 				PRODUCT_NAME = Tagged;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -728,6 +740,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-macOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -748,6 +761,7 @@
 				PRODUCT_NAME = Tagged;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -823,6 +837,7 @@
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 			};
 			name = Debug;
@@ -843,6 +858,7 @@
 				PRODUCT_NAME = Tagged;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

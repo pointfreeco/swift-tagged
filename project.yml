@@ -16,11 +16,15 @@ targets:
     platform: [macOS, iOS, tvOS, watchOS]
     scheme:
       testTargets: [TaggedTests_$platform]
+    settings:
+      SWIFT_VERSION: '5.0'
     sources: [Sources]
     type: framework
   TaggedTests:
     dependencies: [{target: Tagged_$platform}]
     platform: [macOS, iOS, tvOS, watchOS]
+    settings:
+      SWIFT_VERSION: '5.0'
     sources:
       - path: Tests
         excludes:
