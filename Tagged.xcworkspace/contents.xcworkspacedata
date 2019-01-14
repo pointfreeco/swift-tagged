@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+   <FileRef
+      location = "group:LICENSE">
+   </FileRef>
+   <FileRef
+      location = "group:Tagged.playground">
+   </FileRef>
+   <FileRef
+      location = "group:Tagged.xcodeproj">
+   </FileRef>
+</Workspace>

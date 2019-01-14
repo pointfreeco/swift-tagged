@@ -148,8 +148,8 @@ extension Tagged: Numeric where RawValue: Numeric {
 }
 
 extension Tagged: Hashable where RawValue: Hashable {
-  public var hashValue: Int {
-    return self.rawValue.hashValue
+  public func hash(into hasher: inout Hasher) {
+    return hasher.combine(self.rawValue)
   }
 }
 

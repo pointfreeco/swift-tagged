@@ -104,7 +104,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FR_1132223CD05B1338B237B6B33E18DD09 /* Tagged.playground */ = {isa = PBXFileReference; path = Tagged.playground; sourceTree = "<group>"; };
 		FR_2D38C1BB2FB99F696CA356426066FBF5 /* Tagged.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tagged.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_587C8A08B167EA6D3972C63CC2E98B74 /* TaggedTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TaggedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_662A9CE5BC4ABA725A52759C0A89BBE9 /* TaggedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaggedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +194,6 @@
 		G_BDA848ED70E8027DFAA00119A86B6FBE = {
 			isa = PBXGroup;
 			children = (
-				FR_1132223CD05B1338B237B6B33E18DD09 /* Tagged.playground */,
 				G_88C1EE64C84665EFE78610B338FAC7A7 /* Sources */,
 				G_F3B104BAAAB6C138CF2EC8710F8D8EEF /* Tests */,
 				G_22A7BB41E6B7EBA1E8C04085706F7E6C /* Products */,
