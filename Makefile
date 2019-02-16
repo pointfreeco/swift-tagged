@@ -21,6 +21,7 @@ test-macos:
 	xcodebuild test \
 		-scheme Tagged-Package \
 		-destination platform="macOS" \
+		-derivedDataPath ./.derivedData \
 		| xcpretty
 
 test-ios:
@@ -33,4 +34,10 @@ test-ios:
 test-swift:
 	swift test
 
-test-all: test-linux test-mac test-ios
+test-playgrounds: test-macos
+	find . \
+		-path '*.playground/*' \
+		-name '*.swift' \
+		-exec swift -F .derivedData/Build/Products/Debug/ -suppress-warnings {} +
+
+test-all: test-linux test-mac test-ios test-playgrounds
