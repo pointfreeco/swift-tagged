@@ -2,7 +2,7 @@ imports = \
 	@testable import TaggedTests;
 
 xcodeproj:
-	swift package generate-xcodeproj --xcconfig-overrides=Tagged.xcconfig
+	xcodegen
 
 linux-main:
 	sourcery \
@@ -19,7 +19,7 @@ test-linux: linux-main
 test-macos:
 	set -o pipefail && \
 	xcodebuild test \
-		-scheme Tagged-Package \
+		-scheme Tagged_macOS \
 		-destination platform="macOS" \
 		-derivedDataPath ./.derivedData \
 		| xcpretty
@@ -27,8 +27,8 @@ test-macos:
 test-ios:
 	set -o pipefail && \
 	xcodebuild test \
-		-scheme Tagged-Package \
-		-destination platform="iOS Simulator,name=iPhone 8,OS=11.3" \
+		-scheme Tagged_iOS \
+		-destination platform="iOS Simulator,name=iPhone XR,OS=12.1" \
 		| xcpretty
 
 test-swift:

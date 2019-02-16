@@ -148,8 +148,8 @@ extension Tagged: Numeric where RawValue: Numeric {
 }
 
 extension Tagged: Hashable where RawValue: Hashable {
-  public var hashValue: Int {
-    return self.rawValue.hashValue
+  public func hash(into hasher: inout Hasher) {
+    return hasher.combine(self.rawValue)
   }
 }
 
@@ -186,3 +186,10 @@ extension Tagged: SignedNumeric where RawValue: SignedNumeric {
 //    self.init(rawValue: f(elements))
 //  }
 //}
+
+// MARK: - Coerce
+extension Tagged {
+  public func coerced<Tag2>(to type: Tag2.Type) -> Tagged<Tag2, RawValue> {
+    return unsafeBitCast(self, to: Tagged<Tag2, RawValue>.self)
+  }
+}

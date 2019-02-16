@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     macos:
-      xcode: "9.3.0"
+      xcode: "10.1.0"
 
     steps:
       - checkout
@@ -19,17 +19,11 @@ jobs:
       - run:
           name: Run iOS tests
           command: make test-ios
-          environment:
-            SNAPSHOT_ARTIFACTS: $CIRCLE_ARTIFACTS
 
       - run:
           name: Run macOS tests
           command: make test-macos
-          environment:
-            SNAPSHOT_ARTIFACTS: $CIRCLE_ARTIFACTS
 
       - run:
           name: Run Swift tests
           command: make test-swift
-          environment:
-            SNAPSHOT_ARTIFACTS: $CIRCLE_ARTIFACTS
