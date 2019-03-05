@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_13FA98DD65AE23CB444CDB1D034789A8"
+               BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
                BuildableName = "Tagged.framework"
                BlueprintName = "Tagged_iOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_B33898A0EA4D85D4285AF6B63B9CB672"
+               BlueprintIdentifier = "C296CBD3ECD64F5C3FFB80587A5AA7D8"
                BuildableName = "TaggedTests.xctest"
                BlueprintName = "TaggedTests_iOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_13FA98DD65AE23CB444CDB1D034789A8"
+            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -66,7 +66,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_13FA98DD65AE23CB444CDB1D034789A8"
+            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -87,7 +87,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_13FA98DD65AE23CB444CDB1D034789A8"
+            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
