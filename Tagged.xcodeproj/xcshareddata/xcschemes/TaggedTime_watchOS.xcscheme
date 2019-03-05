@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
-               BuildableName = "Tagged.framework"
-               BlueprintName = "Tagged_iOS"
+               BlueprintIdentifier = "D19CFD35DD074BD40AEB4848A6B677E6"
+               BuildableName = "TaggedTime.framework"
+               BlueprintName = "TaggedTime_watchOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C296CBD3ECD64F5C3FFB80587A5AA7D8"
-               BuildableName = "TaggedTests.xctest"
-               BlueprintName = "TaggedTests_iOS"
+               BlueprintIdentifier = "9EE87D4D2C018E6012D5BCAEE2A625A0"
+               BuildableName = "TaggedTimeTests.xctest"
+               BlueprintName = "TaggedTimeTests_watchOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
-            BuildableName = "Tagged.framework"
-            BlueprintName = "Tagged_iOS"
+            BlueprintIdentifier = "D19CFD35DD074BD40AEB4848A6B677E6"
+            BuildableName = "TaggedTime.framework"
+            BlueprintName = "TaggedTime_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,9 +66,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
-            BuildableName = "Tagged.framework"
-            BlueprintName = "Tagged_iOS"
+            BlueprintIdentifier = "D19CFD35DD074BD40AEB4848A6B677E6"
+            BuildableName = "TaggedTime.framework"
+            BlueprintName = "TaggedTime_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -87,9 +87,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
-            BuildableName = "Tagged.framework"
-            BlueprintName = "Tagged_iOS"
+            BlueprintIdentifier = "D19CFD35DD074BD40AEB4848A6B677E6"
+            BuildableName = "TaggedTime.framework"
+            BlueprintName = "TaggedTime_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
