@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_1ADCE86807E59EE7535D998E36144A94"
+               BlueprintIdentifier = "213AC088EC49908C0701E8244072CB8A"
                BuildableName = "TaggedMoney.framework"
                BlueprintName = "TaggedMoney_watchOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_8366C5F37F1DE2BFE3CF8BB8C5B75EF9"
+               BlueprintIdentifier = "241BD94DF1E24BDE85137E46531ED557"
                BuildableName = "TaggedMoneyTests.xctest"
                BlueprintName = "TaggedMoneyTests_watchOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_1ADCE86807E59EE7535D998E36144A94"
+            BlueprintIdentifier = "213AC088EC49908C0701E8244072CB8A"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -66,7 +66,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_1ADCE86807E59EE7535D998E36144A94"
+            BlueprintIdentifier = "213AC088EC49908C0701E8244072CB8A"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -87,7 +87,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_1ADCE86807E59EE7535D998E36144A94"
+            BlueprintIdentifier = "213AC088EC49908C0701E8244072CB8A"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
