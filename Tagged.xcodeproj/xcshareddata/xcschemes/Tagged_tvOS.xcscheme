@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D95612042676E9F216FA0EB89452E863"
+               BlueprintIdentifier = "NT_147277C55534B0ECA146FCE49F31A45A"
                BuildableName = "Tagged.framework"
                BlueprintName = "Tagged_tvOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A47EC35DDBEBF0830B1B0E92E08572C0"
+               BlueprintIdentifier = "NT_37BE5BC28B04F06B47ACAE808B1E8D4E"
                BuildableName = "TaggedTests.xctest"
                BlueprintName = "TaggedTests_tvOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D95612042676E9F216FA0EB89452E863"
+            BlueprintIdentifier = "NT_147277C55534B0ECA146FCE49F31A45A"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -66,7 +66,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D95612042676E9F216FA0EB89452E863"
+            BlueprintIdentifier = "NT_147277C55534B0ECA146FCE49F31A45A"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -87,7 +87,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D95612042676E9F216FA0EB89452E863"
+            BlueprintIdentifier = "NT_147277C55534B0ECA146FCE49F31A45A"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">

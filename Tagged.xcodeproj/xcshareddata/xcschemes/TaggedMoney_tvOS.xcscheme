@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "004F62B8BC7EC30E8B31C293997375B8"
+               BlueprintIdentifier = "NT_7A89D4C2A7E5D2C8263CCEBA8008E578"
                BuildableName = "TaggedMoney.framework"
                BlueprintName = "TaggedMoney_tvOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8EC25E187529552C991B40385417B6A2"
+               BlueprintIdentifier = "NT_2F39DB577237ADB4AE198427419518C0"
                BuildableName = "TaggedMoneyTests.xctest"
                BlueprintName = "TaggedMoneyTests_tvOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "004F62B8BC7EC30E8B31C293997375B8"
+            BlueprintIdentifier = "NT_7A89D4C2A7E5D2C8263CCEBA8008E578"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -66,7 +66,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "004F62B8BC7EC30E8B31C293997375B8"
+            BlueprintIdentifier = "NT_7A89D4C2A7E5D2C8263CCEBA8008E578"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -87,7 +87,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "004F62B8BC7EC30E8B31C293997375B8"
+            BlueprintIdentifier = "NT_7A89D4C2A7E5D2C8263CCEBA8008E578"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4FF5888B64AA4694D3DCBD444C28FB36"
+               BlueprintIdentifier = "NT_4020867300E5BB2FF1F8369214AA2B45"
                BuildableName = "Tagged.framework"
                BlueprintName = "Tagged_macOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2AC916C7EA925175153EEE444FD70748"
+               BlueprintIdentifier = "NT_FE97B0B0E1074568B705A06C2FA34ADF"
                BuildableName = "TaggedTests.xctest"
                BlueprintName = "TaggedTests_macOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4FF5888B64AA4694D3DCBD444C28FB36"
+            BlueprintIdentifier = "NT_4020867300E5BB2FF1F8369214AA2B45"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_macOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -66,7 +66,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4FF5888B64AA4694D3DCBD444C28FB36"
+            BlueprintIdentifier = "NT_4020867300E5BB2FF1F8369214AA2B45"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_macOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -87,7 +87,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4FF5888B64AA4694D3DCBD444C28FB36"
+            BlueprintIdentifier = "NT_4020867300E5BB2FF1F8369214AA2B45"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_macOS"
             ReferencedContainer = "container:Tagged.xcodeproj">

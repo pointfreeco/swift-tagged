@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "566A54E220BB155E9BE6B92DF3AA8FD2"
+               BlueprintIdentifier = "NT_43FA9C163F027C06478C3657C3D9BBEE"
                BuildableName = "TaggedTime.framework"
                BlueprintName = "TaggedTime_iOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "463B75A3F5D6EC72E8395BC2C0582C27"
+               BlueprintIdentifier = "NT_C47F9BB7A243A941EF3A5471D2C6BDDE"
                BuildableName = "TaggedTimeTests.xctest"
                BlueprintName = "TaggedTimeTests_iOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "566A54E220BB155E9BE6B92DF3AA8FD2"
+            BlueprintIdentifier = "NT_43FA9C163F027C06478C3657C3D9BBEE"
             BuildableName = "TaggedTime.framework"
             BlueprintName = "TaggedTime_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -66,7 +66,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "566A54E220BB155E9BE6B92DF3AA8FD2"
+            BlueprintIdentifier = "NT_43FA9C163F027C06478C3657C3D9BBEE"
             BuildableName = "TaggedTime.framework"
             BlueprintName = "TaggedTime_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -87,7 +87,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "566A54E220BB155E9BE6B92DF3AA8FD2"
+            BlueprintIdentifier = "NT_43FA9C163F027C06478C3657C3D9BBEE"
             BuildableName = "TaggedTime.framework"
             BlueprintName = "TaggedTime_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
