@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name = "TaggedMoney"
+  s.name = "TaggedTime"
   s.summary = "A library for safer seconds and milliseconds types."
   s.version = "0.3.0"
 
