@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     :tag => s.version
   }
 
-  s.dependency = "Tagged", "~> 0.2.0"
+  s.dependency "Tagged", "~> 0.2.0"
 
   s.swift_version = "4.2"
 
