@@ -377,7 +377,7 @@ It is important to note that these types do not encapsulate _currency_, but rath
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-tagged" ~> 0.2
+github "pointfreeco/swift-tagged" ~> 0.3
 ```
 
 ### CocoaPods
@@ -385,9 +385,9 @@ github "pointfreeco/swift-tagged" ~> 0.2
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Tagged', '~> 0.2'
-pod 'TaggedMoney', '~> 0.2'
-pod 'TaggedTime', '~> 0.2'
+pod 'Tagged', '~> 0.3'
+pod 'TaggedMoney', '~> 0.3'
+pod 'TaggedTime', '~> 0.3'
 ```
 
 ### SwiftPM
@@ -396,7 +396,7 @@ If you want to use Tagged in a project that uses [SwiftPM](https://swift.org/pac
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.2.0")
+  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.3.0")
 ]
 ```
 

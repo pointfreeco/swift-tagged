@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "TaggedMoney"
-  s.version = "0.2.0"
+  s.version = "0.3.0"
   s.summary = "A library for safer dollars and cents types."
 
   s.description = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
     :tag => s.version
   }
 
-  s.dependency "Tagged", "~> 0.2.0"
+  s.dependency "Tagged", "0.3.0"
 
   s.swift_version = "4.2"
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "Tagged"
-  s.version = "0.2.0"
+  s.version = "0.3.0"
   s.summary = "A library for safer types."
 
   s.description = <<-DESC
