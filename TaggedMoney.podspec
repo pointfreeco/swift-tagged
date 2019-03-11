@@ -1,14 +1,16 @@
 Pod::Spec.new do |s|
-  s.name = "Tagged"
+  s.name = "TaggedMoney"
   s.version = "0.3.0"
-  s.summary = "A library for safer types."
+  s.summary = "A library for safer dollars and cents types."
 
   s.description = <<-DESC
   We often work with types that are far too general or hold far too many values
   than what is necessary for our domain. Sometimes we just want to
   differentiate between two seemingly equivalent values at the type level.
 
-  Tagged lets us wrap basic types in more specific contexts with ease.
+  Tagged lets us wrap basic types in more specific contexts with ease, and
+  TaggedMoney provides two completely different types for differentiating
+  between whole dollars and cents, regardless of currency.
   DESC
 
   s.homepage = "https://github.com/pointfreeco/swift-tagged"
@@ -26,6 +28,8 @@ Pod::Spec.new do |s|
     :tag => s.version
   }
 
+  s.dependency "Tagged", "0.3.0"
+
   s.swift_version = "4.2"
 
   s.ios.deployment_target = "8.0"
@@ -33,5 +37,5 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
 
-  s.source_files = "Sources", "Sources/Tagged/**/*.swift"
+  s.source_files = "Sources/TaggedMoney/**/*.swift"
 end
