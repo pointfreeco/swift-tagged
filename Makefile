@@ -2,7 +2,7 @@ imports = \
 	@testable import TaggedTests;
 
 xcodeproj:
-	swift run xcodegen
+	PF_DEVELOP=1 swift run xcodegen
 
 linux-main:
 	sourcery \
@@ -28,7 +28,7 @@ test-ios:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme Tagged_iOS \
-		-destination platform="iOS Simulator,name=iPhone XR,OS=12.1" \
+		-destination platform="iOS Simulator,name=iPhone XR,OS=12.2" \
 		| xcpretty
 
 test-swift:
