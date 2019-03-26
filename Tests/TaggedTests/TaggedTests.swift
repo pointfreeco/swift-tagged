@@ -52,7 +52,9 @@ final class TaggedTests: XCTestCase {
   }
 
   func testLosslessStringConvertible() {
-    XCTAssertEqual(Tagged<Tag, Bool>(rawValue: true), Tagged<Tag, Bool>("true"))
+    // NB: This explicit `.init` shouldn't be necessary, but there seems to be a bug in Swift 5.
+    //     Filed here: https://bugs.swift.org/browse/SR-9752
+    XCTAssertEqual(Tagged<Tag, Bool>(rawValue: true), Tagged<Tag, Bool>.init("true"))
   }
 
   func testNumeric() {
