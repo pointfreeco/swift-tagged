@@ -2,7 +2,7 @@ imports = \
 	@testable import TaggedTests;
 
 xcodeproj:
-	DEVELOP=1 swift run xcodegen
+	PF_DEVELOP=1 swift run xcodegen
 
 linux-main:
 	sourcery \
