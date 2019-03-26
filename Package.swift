@@ -9,7 +9,7 @@ let package = Package(
     .library(name: "TaggedTime", targets: ["TaggedTime"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/yonaskolb/XcodeGen.git", from: "2.2.0"),
+    .package(url: "https://github.com/yonaskolb/XcodeGen.git", from: "2.3.0"),
   ],
   targets: [
     .target(name: "Tagged", dependencies: []),
