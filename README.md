@@ -1,6 +1,6 @@
 # 🏷 Tagged
 
-[![Swift 4.2](https://img.shields.io/badge/swift-4.2-ED523F.svg?style=flat)](https://swift.org/download/)
+[![Swift 5](https://img.shields.io/badge/swift-5-ED523F.svg?style=flat)](https://swift.org/download/)
 [![iOS/macOS CI](https://img.shields.io/circleci/project/github/pointfreeco/swift-tagged/master.svg?label=ios/macos)](https://circleci.com/gh/pointfreeco/swift-tagged)
 [![Linux CI](https://img.shields.io/travis/pointfreeco/swift-tagged/master.svg?label=linux)](https://travis-ci.org/pointfreeco/swift-tagged)
 [![@pointfreeco](https://img.shields.io/badge/contact-@pointfreeco-5AA9E7.svg?style=flat)](https://twitter.com/pointfreeco)
@@ -15,6 +15,7 @@ A wrapper type for safer, expressive code.
       - [Handling tag collisions](#handling-tag-collisions)
       - [Accessing raw values](#accessing-raw-values)
   - [Features](#features)
+  - [Nanolibraries](#nanolibraries)
   - [FAQ](#faq)
   - [Installation](#installation)
   - [Interested in learning more?](#interested-in-learning-more)
@@ -300,6 +301,65 @@ struct Product {
 let totalCents = products.reduce(0) { $0.amount + $1.amount }
 ```
 
+## Nanolibraries
+
+The `Tagged` library also comes with a few nanolibraries for handling common types in a type safe way.
+
+### `TaggedTime`
+
+The API's we interact with often return timestamps in seconds or milliseconds measured from an epoch time. Keeping track of the units can be messy, either being done via documentation or by naming fields in a particular way, e.g. `publishedAtMs`. Mixing up the units on accident can lead to wildly inaccurate logic.
+
+ By importing `TaggedTime` you will get access to two generic types, `Milliseconds<A>` and `Seconds<A>`, that allow the compiler to sort out the differences for you. You can use them in your models:
+
+```swift 
+struct BlogPost: Decodable {
+  typealias Id = Tagged<BlogPost, Int>
+
+  let id: Id
+  let publishedAt: Seconds<Int>
+  let title: String
+}
+```
+
+Now you have documentation of the unit in the type automatically, and you can never accidentally compare seconds to milliseconds:
+
+```swift 
+let futureTime: Milliseconds = 1528378451000
+
+breakingBlogPost.publishedAt < futureTime
+// 🛑 Binary operator '<' cannot be applied to operands of type
+// 'Tagged<SecondsTag, Double>' and 'Tagged<MillisecondsTag, Double>'
+
+breakingBlogPost.publishedAt.milliseconds < futureTime
+// ✅ true
+```
+
+Read more on our blog post: [Tagged Seconds and Milliseconds](https://www.pointfree.co/blog/posts/6-tagged-seconds-and-milliseconds).
+
+### `TaggedMoney`
+
+API's can also send back money amounts in two standard units: whole dollar amounts or cents (1/100 of a dollar). Keeping track of this distinction can also be messy and error prone. 
+
+Importing the `TaggedMoney` libary gives you access to two generic types, `Dollars<A>` and `Cents<A>`, that give you compile-time guarantees in keeping the two units separate.
+
+```swift 
+struct Prize {
+  let amount: Dollars<Int> 
+  let name: String
+}
+
+let moneyRaised: Cents<Int> = 50_000
+
+theBigPrize.amount < moneyRaised
+// 🛑 Binary operator '<' cannot be applied to operands of type
+// 'Tagged<DollarsTag, Int>' and 'Tagged<CentsTag, Int>'
+
+theBigPrize.amount.cents < moneyRaised
+// ✅ true
+```
+
+It is important to note that these types do not encapsulate _currency_, but rather just the abstract notion of the whole and fractional unit of money. You will still need to track particular currencies, like USD, EUR, MXN, alongside these values.
+
 ## FAQ
 
   - **Why not use a type alias?**
@@ -317,7 +377,7 @@ let totalCents = products.reduce(0) { $0.amount + $1.amount }
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-tagged" ~> 0.2
+github "pointfreeco/swift-tagged" ~> 0.3
 ```
 
 ### CocoaPods
@@ -325,7 +385,9 @@ github "pointfreeco/swift-tagged" ~> 0.2
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Tagged', '~> 0.2'
+pod 'Tagged', '~> 0.3'
+pod 'TaggedMoney', '~> 0.3'
+pod 'TaggedTime', '~> 0.3'
 ```
 
 ### SwiftPM
@@ -334,7 +396,7 @@ If you want to use Tagged in a project that uses [SwiftPM](https://swift.org/pac
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.2.0")
+  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.3.0")
 ]
 ```
 

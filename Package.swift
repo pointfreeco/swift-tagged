@@ -1,21 +1,30 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
+import Foundation
 import PackageDescription
 
-let package = Package(
+var package = Package(
   name: "Tagged",
   products: [
-    .library(
-      name: "Tagged",
-      targets: ["Tagged"]),
-  ],
-  dependencies: [
+    .library(name: "Tagged", targets: ["Tagged"]),
+    .library(name: "TaggedMoney", targets: ["TaggedMoney"]),
+    .library(name: "TaggedTime", targets: ["TaggedTime"]),
   ],
   targets: [
-    .target(
-      name: "Tagged",
-      dependencies: []),
-    .testTarget(
-      name: "TaggedTests",
-      dependencies: ["Tagged"]),
+    .target(name: "Tagged", dependencies: []),
+    .testTarget(name: "TaggedTests", dependencies: ["Tagged"]),
+
+    .target(name: "TaggedMoney", dependencies: ["Tagged"]),
+    .testTarget(name: "TaggedMoneyTests", dependencies: ["TaggedMoney"]),
+
+    .target(name: "TaggedTime", dependencies: ["Tagged"]),
+    .testTarget(name: "TaggedTimeTests", dependencies: ["TaggedTime"]),
   ]
 )
+
+if ProcessInfo.processInfo.environment.keys.contains("PF_DEVELOP") {
+  package.dependencies.append(
+    contentsOf: [
+      .package(url: "https://github.com/yonaskolb/XcodeGen.git", from: "2.3.0"),
+    ]
+  )
+}

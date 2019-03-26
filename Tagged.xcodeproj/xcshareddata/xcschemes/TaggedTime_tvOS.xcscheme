@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
-               BuildableName = "Tagged.framework"
-               BlueprintName = "Tagged_iOS"
+               BlueprintIdentifier = "AD7381A67E25C7CB550E1ECA8989F8A0"
+               BuildableName = "TaggedTime.framework"
+               BlueprintName = "TaggedTime_tvOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C296CBD3ECD64F5C3FFB80587A5AA7D8"
-               BuildableName = "TaggedTests.xctest"
-               BlueprintName = "TaggedTests_iOS"
+               BlueprintIdentifier = "568FDE5B833BCAFF97C66408867C3301"
+               BuildableName = "TaggedTimeTests.xctest"
+               BlueprintName = "TaggedTimeTests_tvOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
-            BuildableName = "Tagged.framework"
-            BlueprintName = "Tagged_iOS"
+            BlueprintIdentifier = "AD7381A67E25C7CB550E1ECA8989F8A0"
+            BuildableName = "TaggedTime.framework"
+            BlueprintName = "TaggedTime_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,9 +66,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
-            BuildableName = "Tagged.framework"
-            BlueprintName = "Tagged_iOS"
+            BlueprintIdentifier = "AD7381A67E25C7CB550E1ECA8989F8A0"
+            BuildableName = "TaggedTime.framework"
+            BlueprintName = "TaggedTime_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -87,9 +87,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D6B117A02B8CEFE004D9B205A7A08E0"
-            BuildableName = "Tagged.framework"
-            BlueprintName = "Tagged_iOS"
+            BlueprintIdentifier = "AD7381A67E25C7CB550E1ECA8989F8A0"
+            BuildableName = "TaggedTime.framework"
+            BlueprintName = "TaggedTime_tvOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

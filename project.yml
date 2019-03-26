@@ -1,6 +1,4 @@
 name: Tagged
-fileGroups:
-  - Tagged.playground
 options:
   bundleIdPrefix: co.pointfree
   deploymentTarget:
@@ -17,14 +15,46 @@ targets:
       path: Info.plist
     platform: [macOS, iOS, tvOS, watchOS]
     scheme:
-      testTargets: [TaggedTests_$platform]
-    sources: [Sources]
+      testTargets: ['TaggedTests_${platform}']
+    settings:
+      SWIFT_VERSION: 5.0
+    sources: [Sources/Tagged]
     type: framework
   TaggedTests:
-    dependencies: [{target: Tagged_$platform}]
+    dependencies: [{target: 'Tagged_${platform}'}]
+    platform: [macOS, iOS, tvOS, watchOS]
+    settings:
+      SWIFT_VERSION: 5.0
+    sources:
+      - path: Tests/TaggedTests
+    type: bundle.unit-test
+  TaggedMoney:
+    dependencies: [{target: 'Tagged_${platform}'}]
+    info:
+      path: Info.plist
+    platform: [macOS, iOS, tvOS, watchOS]
+    scheme:
+      testTargets: ['TaggedMoneyTests_${platform}']
+    sources: [Sources/TaggedMoney]
+    type: framework
+  TaggedMoneyTests:
+    dependencies: [{target: 'TaggedMoney_${platform}'}]
     platform: [macOS, iOS, tvOS, watchOS]
     sources:
-      - path: Tests
-        excludes:
-          - LinuxMain.swift
+      - path: Tests/TaggedMoneyTests
+    type: bundle.unit-test
+  TaggedTime:
+    dependencies: [{target: 'Tagged_${platform}'}]
+    info:
+      path: Info.plist
+    platform: [macOS, iOS, tvOS, watchOS]
+    scheme:
+      testTargets: ['TaggedTimeTests_${platform}']
+    sources: [Sources/TaggedTime]
+    type: framework
+  TaggedTimeTests:
+    dependencies: [{target: 'TaggedTime_${platform}'}]
+    platform: [macOS, iOS, tvOS, watchOS]
+    sources:
+      - path: Tests/TaggedTimeTests
     type: bundle.unit-test

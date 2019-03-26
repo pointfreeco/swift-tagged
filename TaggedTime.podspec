@@ -1,20 +1,20 @@
 Pod::Spec.new do |s|
-  s.name = "Tagged"
+  s.name = "TaggedTime"
+  s.summary = "A library for safer seconds and milliseconds types."
   s.version = "0.3.0"
-  s.summary = "A library for safer types."
 
   s.description = <<-DESC
   We often work with types that are far too general or hold far too many values
   than what is necessary for our domain. Sometimes we just want to
   differentiate between two seemingly equivalent values at the type level.
 
-  Tagged lets us wrap basic types in more specific contexts with ease.
+  Tagged lets us wrap basic types in more specific contexts with ease, and
+  TaggedTime provides two completely different types for differentiating
+  between seconds and millseconds.
   DESC
 
   s.homepage = "https://github.com/pointfreeco/swift-tagged"
-
   s.license = "MIT"
-
   s.authors = {
     "Stephen Celis" => "stephen@stephencelis.com",
     "Brandon Williams" => "mbw234@gmail.com"
@@ -26,6 +26,8 @@ Pod::Spec.new do |s|
     :tag => s.version
   }
 
+  s.dependency "Tagged", "~> 0.3.0"
+
   s.swift_version = "5.0"
 
   s.ios.deployment_target = "8.0"
@@ -33,5 +35,5 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
   s.watchos.deployment_target = "2.0"
 
-  s.source_files = "Sources", "Sources/Tagged/**/*.swift"
+  s.source_files = "Sources", "Sources/TaggedTime/**/*.swift"
 end
