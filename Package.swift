@@ -1,15 +1,13 @@
 // swift-tools-version:5.0
+import Foundation
 import PackageDescription
 
-let package = Package(
+var package = Package(
   name: "Tagged",
   products: [
     .library(name: "Tagged", targets: ["Tagged"]),
     .library(name: "TaggedMoney", targets: ["TaggedMoney"]),
     .library(name: "TaggedTime", targets: ["TaggedTime"]),
-  ],
-  dependencies: [
-    .package(url: "https://github.com/yonaskolb/XcodeGen.git", from: "2.3.0"),
   ],
   targets: [
     .target(name: "Tagged", dependencies: []),
@@ -22,3 +20,11 @@ let package = Package(
     .testTarget(name: "TaggedTimeTests", dependencies: ["TaggedTime"]),
   ]
 )
+
+if ProcessInfo.processInfo.environment.keys.contains("DEVELOP") {
+  package.dependencies.append(
+    contentsOf: [
+      .package(url: "https://github.com/yonaskolb/XcodeGen.git", from: "2.3.0"),
+    ]
+  )
+}
