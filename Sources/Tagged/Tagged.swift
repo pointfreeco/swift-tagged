@@ -152,7 +152,7 @@ extension Tagged: Numeric where RawValue: Numeric {
 
 extension Tagged: Hashable where RawValue: Hashable {
   public func hash(into hasher: inout Hasher) {
-    return hasher.combine(self.rawValue)
+    hasher.combine(self.rawValue)
   }
 }
 
