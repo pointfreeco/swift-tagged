@@ -35,7 +35,12 @@ extension Tagged: Comparable where RawValue: Comparable {
 
 extension Tagged: Decodable where RawValue: Decodable {
   public init(from decoder: Decoder) throws {
-    self.init(rawValue: try .init(from: decoder))
+    do {
+      self.init(rawValue: try decoder.singleValueContainer().decode(RawValue.self))
+    }
+    catch {
+      self.init(rawValue: try .init(from: decoder))
+    }
   }
 }
 

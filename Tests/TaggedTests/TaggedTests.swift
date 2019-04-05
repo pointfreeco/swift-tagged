@@ -19,6 +19,24 @@ final class TaggedTests: XCTestCase {
       try JSONDecoder().decode([Tagged<Tag, Int>].self, from: Data("[1]".utf8))
     )
   }
+  
+  func testDecodableCustomDates() {
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .custom { decoder in
+      let seconds = try decoder.singleValueContainer().decode(Int.self)
+      return Date(timeIntervalSince1970: TimeInterval(seconds))
+    }
+    
+    XCTAssertEqual(
+      [Date(timeIntervalSince1970: 1)],
+      try decoder.decode([Date].self, from: Data("[1]".utf8))
+    )
+    
+    XCTAssertEqual(
+      [Tagged<Tag, Date>(rawValue: Date(timeIntervalSince1970: 1))],
+      try decoder.decode([Tagged<Tag, Date>].self, from: Data("[1]".utf8))
+    )
+  }
 
   func testEncodable() {
     XCTAssertEqual(
@@ -79,8 +97,8 @@ final class TaggedTests: XCTestCase {
 
   func testOptionalRawTypeAndNilValueDecodesCorrectly() {
     struct Container: Decodable {
-      typealias Idenitifer = Tagged<Container, String?>
-      let id: Idenitifer
+      typealias Identifier = Tagged<Container, String?>
+      let id: Identifier
     }
 
     XCTAssertNoThrow(try {
