@@ -46,7 +46,8 @@ extension Tagged: Decodable where RawValue: Decodable {
 
 extension Tagged: Encodable where RawValue: Encodable {
   public func encode(to encoder: Encoder) throws {
-    try rawValue.encode(to: encoder)
+      var container = encoder.singleValueContainer()
+      try container.encode(self.rawValue)
   }
 }
 

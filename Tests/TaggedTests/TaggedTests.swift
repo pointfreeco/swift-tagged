@@ -44,6 +44,25 @@ final class TaggedTests: XCTestCase {
       try JSONEncoder().encode([Tagged<Tag, Int>(rawValue: 1)])
     )
   }
+  
+  func testEncodableCustomDates() {
+    let encoder = JSONEncoder()
+    encoder.dateEncodingStrategy = .custom { date, encoder in
+      var container = encoder.singleValueContainer()
+      let seconds = Int(date.timeIntervalSince1970)
+      try container.encode(seconds)
+    }
+    
+    XCTAssertEqual(
+      Data("[1]".utf8),
+      try encoder.encode([Date(timeIntervalSince1970: 1)])
+    )
+    
+    XCTAssertEqual(
+      Data("[1]".utf8),
+      try encoder.encode([Tagged<Tag, Date>(rawValue: Date(timeIntervalSince1970: 1))])
+    )
+  }
 
   func testEquatable() {
     XCTAssertEqual(Tagged<Tag, Int>(rawValue: 1), Tagged<Tag, Int>(rawValue: 1))
@@ -108,8 +127,20 @@ final class TaggedTests: XCTestCase {
       XCTAssertEqual(containers.first?.id.rawValue, nil)
       }())
   }
+  
+  func testOptionalRawTypeAndNilValueEncodesCorrectly() {
+    struct Container: Encodable {
+      typealias Identifier = Tagged<Container, String?>
+      let id: Identifier
+    }
+    
+    XCTAssertNoThrow(try {
+      let data = try JSONEncoder().encode([Container(id: Tagged<Container, String?>(rawValue: nil))])
+      XCTAssertEqual(data, Data("[{\"id\":null}]".utf8))
+      }())
+  }
 
-   func testCoerce() {
+  func testCoerce() {
     let x: Tagged<Tag, Int> = 1
 
     enum Tag2 {}
