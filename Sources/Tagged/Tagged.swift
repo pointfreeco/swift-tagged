@@ -37,8 +37,7 @@ extension Tagged: Decodable where RawValue: Decodable {
   public init(from decoder: Decoder) throws {
     do {
       self.init(rawValue: try decoder.singleValueContainer().decode(RawValue.self))
-    }
-    catch {
+    } catch {
       self.init(rawValue: try .init(from: decoder))
     }
   }
