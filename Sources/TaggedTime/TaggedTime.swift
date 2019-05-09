@@ -39,7 +39,7 @@ extension Tagged where Tag == MillisecondsTag, RawValue: BinaryInteger {
   }
 
   /// Converts milliseconds into `DispatchTimeInterval`.
-  public var dispatchTimeInterval: TimeInterval {
+  public var dispatchTimeInterval: DispatchTimeInterval {
     return .milliseconds(Int(self.rawValue))
   }
 
@@ -63,7 +63,7 @@ extension Tagged where Tag == SecondsTag, RawValue: BinaryInteger {
   }
 
   /// Converts seconds into `DispatchTimeInterval`.
-  public var dispatchTimeInterval: TimeInterval {
+  public var dispatchTimeInterval: DispatchTimeInterval {
     return .seconds(Int(self.rawValue))
   }
 
