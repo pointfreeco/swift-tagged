@@ -109,6 +109,7 @@ extension Tagged: LosslessStringConvertible where RawValue: LosslessStringConver
   }
 }
 
+#if compiler(>=5)
 extension Tagged: AdditiveArithmetic where RawValue: AdditiveArithmetic {
   public static var zero: Tagged {
     return self.init(rawValue: .zero)
@@ -149,6 +150,43 @@ extension Tagged: Numeric where RawValue: Numeric {
     lhs.rawValue *= rhs.rawValue
   }
 }
+#else
+extension Tagged: Numeric where RawValue: Numeric {
+  public typealias Magnitude = RawValue.Magnitude
+
+  public init?<T>(exactly source: T) where T: BinaryInteger {
+    guard let rawValue = RawValue(exactly: source) else { return nil }
+    self.init(rawValue: rawValue)
+  }
+  public var magnitude: RawValue.Magnitude {
+    return self.rawValue.magnitude
+  }
+
+  public static func + (lhs: Tagged<Tag, RawValue>, rhs: Tagged<Tag, RawValue>) -> Tagged<Tag, RawValue> {
+    return self.init(rawValue: lhs.rawValue + rhs.rawValue)
+  }
+
+  public static func += (lhs: inout Tagged<Tag, RawValue>, rhs: Tagged<Tag, RawValue>) {
+    lhs.rawValue += rhs.rawValue
+  }
+
+  public static func * (lhs: Tagged, rhs: Tagged) -> Tagged {
+    return self.init(rawValue: lhs.rawValue * rhs.rawValue)
+  }
+
+  public static func *= (lhs: inout Tagged, rhs: Tagged) {
+    lhs.rawValue *= rhs.rawValue
+  }
+
+  public static func - (lhs: Tagged, rhs: Tagged) -> Tagged<Tag, RawValue> {
+    return self.init(rawValue: lhs.rawValue - rhs.rawValue)
+  }
+
+  public static func -= (lhs: inout Tagged<Tag, RawValue>, rhs: Tagged<Tag, RawValue>) {
+    lhs.rawValue -= rhs.rawValue
+  }
+}
+#endif
 
 extension Tagged: Hashable where RawValue: Hashable {
   public func hash(into hasher: inout Hasher) {
