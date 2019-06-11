@@ -23,8 +23,8 @@ public struct Tagged<Tag, RawValue> {
     return .init(rawValue: transform(self.rawValue))
   }
 
-  public func coerced<Tag2>(to type: Tag2.Type) -> Tagged<Tag2, RawValue> {
-    return unsafeBitCast(self, to: Tagged<Tag2, RawValue>.self)
+  public func coerced<NewTag>(to type: NewTag.Type) -> Tagged<NewTag, RawValue> {
+    return unsafeBitCast(self, to: Tagged<NewTag, RawValue>.self)
   }
 }
 
