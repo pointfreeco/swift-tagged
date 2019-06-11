@@ -40,6 +40,7 @@ Package.pins
 Package.resolved
 .build/
 .derivedData/
+.swiftpm/
 
 # CocoaPods
 #

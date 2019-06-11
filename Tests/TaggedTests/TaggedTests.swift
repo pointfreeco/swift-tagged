@@ -38,6 +38,10 @@ final class TaggedTests: XCTestCase {
     )
   }
 
+  func testDynamicMemberLookup() {
+    XCTAssertEqual(14, Tagged<Tag, String>(rawValue: "Hello, Tagged!").count)
+  }
+
   func testEncodable() {
     XCTAssertEqual(
       Data("[1]".utf8),

@@ -1,3 +1,4 @@
+@dynamicMemberLookup
 public struct Tagged<Tag, RawValue> {
   public var rawValue: RawValue
 
@@ -5,8 +6,25 @@ public struct Tagged<Tag, RawValue> {
     self.rawValue = rawValue
   }
 
-  public func map<B>(_ f: (RawValue) -> B) -> Tagged<Tag, B> {
-    return .init(rawValue: f(self.rawValue))
+  public subscript<NewRawValue>(dynamicMember keyPath: KeyPath<RawValue, NewRawValue>) -> NewRawValue {
+    return self.rawValue[keyPath: keyPath]
+  }
+
+  public subscript<NewRawValue>(dynamicMember keyPath: WritableKeyPath<RawValue, NewRawValue>) -> NewRawValue {
+    get {
+      return self.rawValue[keyPath: keyPath]
+    }
+    set {
+      self.rawValue[keyPath: keyPath] = newValue
+    }
+  }
+
+  public func map<NewRawValue>(_ transform: (RawValue) -> NewRawValue) -> Tagged<Tag, NewRawValue> {
+    return .init(rawValue: transform(self.rawValue))
+  }
+
+  public func coerced<Tag2>(to type: Tag2.Type) -> Tagged<Tag2, RawValue> {
+    return unsafeBitCast(self, to: Tagged<Tag2, RawValue>.self)
   }
 }
 
@@ -232,10 +250,3 @@ extension Tagged: SignedNumeric where RawValue: SignedNumeric {
 //    self.init(rawValue: f(elements))
 //  }
 //}
-
-// MARK: - Coerce
-extension Tagged {
-  public func coerced<Tag2>(to type: Tag2.Type) -> Tagged<Tag2, RawValue> {
-    return unsafeBitCast(self, to: Tagged<Tag2, RawValue>.self)
-  }
-}
