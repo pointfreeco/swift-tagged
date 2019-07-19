@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D24C21202E93A5E0085DB23E57748A2F"
+               BlueprintIdentifier = "D24C21202E93A5E0085DB23E"
                BuildableName = "Tagged.framework"
                BlueprintName = "Tagged_watchOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "989C823B51D6F32E83EFA5E87145D3EE"
+               BlueprintIdentifier = "989C823B51D6F32E83EFA5E8"
                BuildableName = "TaggedTests.xctest"
                BlueprintName = "TaggedTests_watchOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D24C21202E93A5E0085DB23E57748A2F"
+            BlueprintIdentifier = "D24C21202E93A5E0085DB23E"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -52,6 +52,8 @@
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
+      <CodeCoverageTargets>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -66,7 +68,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D24C21202E93A5E0085DB23E57748A2F"
+            BlueprintIdentifier = "D24C21202E93A5E0085DB23E"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -87,7 +89,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D24C21202E93A5E0085DB23E57748A2F"
+            BlueprintIdentifier = "D24C21202E93A5E0085DB23E"
             BuildableName = "Tagged.framework"
             BlueprintName = "Tagged_watchOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
