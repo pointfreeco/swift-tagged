@@ -70,6 +70,7 @@ final class TaggedTests: XCTestCase {
 
   func testError() {
     XCTAssertThrowsError(try { throw Tagged<Tag, Unit>(rawValue: Unit()) }())
+    XCTAssertEqual(Unit().localizedDescription, Tagged<Tag, Unit>(rawValue: Unit()).localizedDescription)
   }
 
   func testExpressibleByBooleanLiteral() {
