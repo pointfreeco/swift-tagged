@@ -1,3 +1,5 @@
+import Foundation
+
 public struct Tagged<Tag, RawValue> {
   public var rawValue: RawValue
 
@@ -56,7 +58,21 @@ extension Tagged: Equatable where RawValue: Equatable {
   }
 }
 
-extension Tagged: Error where RawValue: Error {
+extension Tagged: Error where RawValue: Error {}
+
+extension Tagged: LocalizedError where RawValue: LocalizedError {
+  public var errorDescription: String? {
+    return rawValue.errorDescription
+  }
+  public var failureReason: String? {
+    return rawValue.failureReason
+  }
+  public var recoverySuggestion: String? {
+    return rawValue.recoverySuggestion
+  }
+  public var helpAnchor: String? {
+    return rawValue.helpAnchor
+  }
 }
 
 extension Tagged: ExpressibleByBooleanLiteral where RawValue: ExpressibleByBooleanLiteral {

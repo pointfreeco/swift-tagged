@@ -67,11 +67,16 @@ final class TaggedTests: XCTestCase {
   func testEquatable() {
     XCTAssertEqual(Tagged<Tag, Int>(rawValue: 1), Tagged<Tag, Int>(rawValue: 1))
   }
-
+  
   func testError() {
     XCTAssertThrowsError(try { throw Tagged<Tag, Unit>(rawValue: Unit()) }())
+    
+    struct DummyError: LocalizedError {
+      let errorDescription: String? = "Dummy error"
+    }
+    XCTAssert(DummyError().localizedDescription == Tagged<Tag, DummyError>(rawValue: DummyError()).localizedDescription)
   }
-
+  
   func testExpressibleByBooleanLiteral() {
     XCTAssertEqual(true, Tagged<Tag, Bool>(rawValue: true))
   }
