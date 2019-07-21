@@ -56,9 +56,6 @@ extension Tagged: Equatable where RawValue: Equatable {
   }
 }
 
-extension Tagged: Error where RawValue: Error {
-}
-
 extension Tagged: ExpressibleByBooleanLiteral where RawValue: ExpressibleByBooleanLiteral {
   public typealias BooleanLiteralType = RawValue.BooleanLiteralType
 

@@ -68,10 +68,6 @@ final class TaggedTests: XCTestCase {
     XCTAssertEqual(Tagged<Tag, Int>(rawValue: 1), Tagged<Tag, Int>(rawValue: 1))
   }
 
-  func testError() {
-    XCTAssertThrowsError(try { throw Tagged<Tag, Unit>(rawValue: Unit()) }())
-  }
-
   func testExpressibleByBooleanLiteral() {
     XCTAssertEqual(true, Tagged<Tag, Bool>(rawValue: true))
   }
