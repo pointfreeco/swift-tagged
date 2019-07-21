@@ -59,6 +59,15 @@ extension Tagged: Equatable where RawValue: Equatable {
 extension Tagged: Error where RawValue: Error {
 }
 
+#if canImport(Foundation)
+import Foundation
+extension Tagged: LocalizedError where RawValue: Error {
+  public var errorDescription: String? {
+    return rawValue.localizedDescription
+  }
+}
+#endif
+
 extension Tagged: ExpressibleByBooleanLiteral where RawValue: ExpressibleByBooleanLiteral {
   public typealias BooleanLiteralType = RawValue.BooleanLiteralType
 
