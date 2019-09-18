@@ -12,6 +12,7 @@ extension TaggedTests {
     ("testEncodable", testEncodable),
     ("testEquatable", testEquatable),
     ("testError", testError),
+    ("testLocalizedError", testLocalizedError),
     ("testExpressibleByBooleanLiteral", testExpressibleByBooleanLiteral),
     ("testExpressibleByFloatLiteral", testExpressibleByFloatLiteral),
     ("testExpressibleByIntegerLiteral", testExpressibleByIntegerLiteral),
