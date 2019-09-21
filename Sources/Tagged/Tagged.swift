@@ -220,6 +220,17 @@ extension Tagged: Hashable where RawValue: Hashable {
 extension Tagged: SignedNumeric where RawValue: SignedNumeric {
 }
 
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Tagged: Identifiable where RawValue: Identifiable {
+    
+  public typealias ID = RawValue.ID
+            
+  public var id: ID {
+        return rawValue.id
+    }
+        
+}
+
 // Commenting these out for Joe.
 //
 // https://twitter.com/jckarter/status/985375396601282560
