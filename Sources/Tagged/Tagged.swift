@@ -220,6 +220,39 @@ extension Tagged: Hashable where RawValue: Hashable {
 extension Tagged: SignedNumeric where RawValue: SignedNumeric {
 }
 
+extension Tagged: Sequence where RawValue: Sequence {
+  public typealias Iterator = RawValue.Iterator
+
+  public __consuming func makeIterator() -> RawValue.Iterator {
+    rawValue.makeIterator()
+  }
+}
+
+extension Tagged: Collection where RawValue: Collection {
+  public typealias Element = RawValue.Element
+  public typealias Index = RawValue.Index
+
+  public func index(after i: RawValue.Index) -> RawValue.Index {
+    return rawValue.index(after: i)
+  }
+
+  public subscript(position: RawValue.Index) -> RawValue.Element {
+    rawValue[position]
+  }
+
+  public var startIndex: RawValue.Index {
+    rawValue.startIndex
+  }
+
+  public var endIndex: RawValue.Index {
+    rawValue.endIndex
+  }
+
+  public __consuming func makeIterator() -> RawValue.Iterator {
+    rawValue.makeIterator()
+  }
+}
+
 // Commenting these out for Joe.
 //
 // https://twitter.com/jckarter/status/985375396601282560
