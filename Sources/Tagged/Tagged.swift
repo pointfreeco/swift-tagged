@@ -224,7 +224,7 @@ extension Tagged: Sequence where RawValue: Sequence {
   public typealias Iterator = RawValue.Iterator
 
   public __consuming func makeIterator() -> RawValue.Iterator {
-    rawValue.makeIterator()
+    return rawValue.makeIterator()
   }
 }
 
@@ -237,19 +237,19 @@ extension Tagged: Collection where RawValue: Collection {
   }
 
   public subscript(position: RawValue.Index) -> RawValue.Element {
-    rawValue[position]
+    return rawValue[position]
   }
 
   public var startIndex: RawValue.Index {
-    rawValue.startIndex
+    return rawValue.startIndex
   }
 
   public var endIndex: RawValue.Index {
-    rawValue.endIndex
+    return rawValue.endIndex
   }
 
   public __consuming func makeIterator() -> RawValue.Iterator {
-    rawValue.makeIterator()
+    return rawValue.makeIterator()
   }
 }
 
