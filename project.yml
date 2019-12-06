@@ -17,6 +17,7 @@ targets:
     scheme:
       testTargets: ['TaggedTests_${platform}']
     settings:
+      APPLICATION_EXTENSION_API_ONLY: true
       SWIFT_VERSION: 5.0
     sources: [Sources/Tagged]
     type: framework
@@ -35,11 +36,16 @@ targets:
     platform: [macOS, iOS, tvOS, watchOS]
     scheme:
       testTargets: ['TaggedMoneyTests_${platform}']
+    settings:
+      APPLICATION_EXTENSION_API_ONLY: true
+      SWIFT_VERSION: 5.0
     sources: [Sources/TaggedMoney]
     type: framework
   TaggedMoneyTests:
     dependencies: [{target: 'TaggedMoney_${platform}'}]
     platform: [macOS, iOS, tvOS, watchOS]
+    settings:
+      SWIFT_VERSION: 5.0
     sources:
       - path: Tests/TaggedMoneyTests
     type: bundle.unit-test
@@ -50,11 +56,16 @@ targets:
     platform: [macOS, iOS, tvOS, watchOS]
     scheme:
       testTargets: ['TaggedTimeTests_${platform}']
+    settings:
+      APPLICATION_EXTENSION_API_ONLY: true
+      SWIFT_VERSION: 5.0
     sources: [Sources/TaggedTime]
     type: framework
   TaggedTimeTests:
     dependencies: [{target: 'TaggedTime_${platform}'}]
     platform: [macOS, iOS, tvOS, watchOS]
+    settings:
+      SWIFT_VERSION: 5.0
     sources:
       - path: Tests/TaggedTimeTests
     type: bundle.unit-test

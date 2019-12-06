@@ -1,3 +1,4 @@
+import Dispatch
 import Foundation
 import Tagged
 
@@ -31,10 +32,15 @@ extension Tagged where Tag == MillisecondsTag, RawValue: BinaryFloatingPoint {
   }
 }
 
-extension Tagged where Tag == MillisecondsTag, RawValue == Int {
+extension Tagged where Tag == MillisecondsTag, RawValue: BinaryInteger {
   /// Converts milliseconds into `TimeInterval`, which is measured in seconds.
   public var timeInterval: TimeInterval {
     return self.map(TimeInterval.init).timeInterval
+  }
+
+  /// Converts milliseconds into `DispatchTimeInterval`.
+  public var dispatchTimeInterval: DispatchTimeInterval {
+    return .milliseconds(Int(self.rawValue))
   }
 
   /// Converts milliseconds into `Date`, which is measured in seconds.
@@ -54,6 +60,11 @@ extension Tagged where Tag == SecondsTag, RawValue: BinaryInteger {
   /// Converts seconds into `TimeInterval`.
   public var timeInterval: TimeInterval {
     return TimeInterval(Int64(self.rawValue))
+  }
+
+  /// Converts seconds into `DispatchTimeInterval`.
+  public var dispatchTimeInterval: DispatchTimeInterval {
+    return .seconds(Int(self.rawValue))
   }
 
   /// Converts seconds in `Date`.

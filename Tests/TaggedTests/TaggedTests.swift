@@ -19,11 +19,48 @@ final class TaggedTests: XCTestCase {
       try JSONDecoder().decode([Tagged<Tag, Int>].self, from: Data("[1]".utf8))
     )
   }
+  
+  func testDecodableCustomDates() {
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .custom { decoder in
+      let seconds = try decoder.singleValueContainer().decode(Int.self)
+      return Date(timeIntervalSince1970: TimeInterval(seconds))
+    }
+    
+    XCTAssertEqual(
+      [Date(timeIntervalSince1970: 1)],
+      try decoder.decode([Date].self, from: Data("[1]".utf8))
+    )
+    
+    XCTAssertEqual(
+      [Tagged<Tag, Date>(rawValue: Date(timeIntervalSince1970: 1))],
+      try decoder.decode([Tagged<Tag, Date>].self, from: Data("[1]".utf8))
+    )
+  }
 
   func testEncodable() {
     XCTAssertEqual(
       Data("[1]".utf8),
       try JSONEncoder().encode([Tagged<Tag, Int>(rawValue: 1)])
+    )
+  }
+  
+  func testEncodableCustomDates() {
+    let encoder = JSONEncoder()
+    encoder.dateEncodingStrategy = .custom { date, encoder in
+      var container = encoder.singleValueContainer()
+      let seconds = Int(date.timeIntervalSince1970)
+      try container.encode(seconds)
+    }
+    
+    XCTAssertEqual(
+      Data("[1]".utf8),
+      try encoder.encode([Date(timeIntervalSince1970: 1)])
+    )
+    
+    XCTAssertEqual(
+      Data("[1]".utf8),
+      try encoder.encode([Tagged<Tag, Date>(rawValue: Date(timeIntervalSince1970: 1))])
     )
   }
 
@@ -34,6 +71,26 @@ final class TaggedTests: XCTestCase {
   func testError() {
     XCTAssertThrowsError(try { throw Tagged<Tag, Unit>(rawValue: Unit()) }())
   }
+  
+  #if canImport(Foundation)
+  func testLocalizedError() {
+    let taggedError: Error = Tagged<Tag, Error>(rawValue: Unit())
+    XCTAssertEqual(taggedError.localizedDescription, Unit().localizedDescription)
+    
+    struct DummyLocalizedError: LocalizedError {
+      var errorDescription: String? { return "errorDescription" }
+      var failureReason: String? { return "failureReason" }
+      var helpAnchor: String? { return "helpAnchor" }
+      var recoverySuggestion: String? { return "recoverySuggestion" }
+    }
+    let taggedLocalizedError: LocalizedError = Tagged<Tag, DummyLocalizedError>(rawValue: DummyLocalizedError())
+    XCTAssertEqual(taggedLocalizedError.localizedDescription, DummyLocalizedError().localizedDescription)
+    XCTAssertEqual(taggedLocalizedError.errorDescription, DummyLocalizedError().errorDescription)
+    XCTAssertEqual(taggedLocalizedError.failureReason, DummyLocalizedError().failureReason)
+    XCTAssertEqual(taggedLocalizedError.helpAnchor, DummyLocalizedError().helpAnchor)
+    XCTAssertEqual(taggedLocalizedError.recoverySuggestion, DummyLocalizedError().recoverySuggestion)
+  }
+  #endif
 
   func testExpressibleByBooleanLiteral() {
     XCTAssertEqual(true, Tagged<Tag, Bool>(rawValue: true))
@@ -79,8 +136,8 @@ final class TaggedTests: XCTestCase {
 
   func testOptionalRawTypeAndNilValueDecodesCorrectly() {
     struct Container: Decodable {
-      typealias Idenitifer = Tagged<Container, String?>
-      let id: Idenitifer
+      typealias Identifier = Tagged<Container, String?>
+      let id: Identifier
     }
 
     XCTAssertNoThrow(try {
@@ -90,8 +147,20 @@ final class TaggedTests: XCTestCase {
       XCTAssertEqual(containers.first?.id.rawValue, nil)
       }())
   }
+  
+  func testOptionalRawTypeAndNilValueEncodesCorrectly() {
+    struct Container: Encodable {
+      typealias Identifier = Tagged<Container, String?>
+      let id: Identifier
+    }
+    
+    XCTAssertNoThrow(try {
+      let data = try JSONEncoder().encode([Container(id: Tagged<Container, String?>(rawValue: nil))])
+      XCTAssertEqual(data, Data("[{\"id\":null}]".utf8))
+      }())
+  }
 
-   func testCoerce() {
+  func testCoerce() {
     let x: Tagged<Tag, Int> = 1
 
     enum Tag2 {}

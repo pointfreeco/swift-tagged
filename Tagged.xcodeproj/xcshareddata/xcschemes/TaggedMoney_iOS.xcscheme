@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C3E139B076143AA6A816CFD9E49EADF"
+               BlueprintIdentifier = "1C3E139B076143AA6A816CFD"
                BuildableName = "TaggedMoney.framework"
                BlueprintName = "TaggedMoney_iOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5CF277532DD19BD2ADDCAEE13A0BF618"
+               BlueprintIdentifier = "5CF277532DD19BD2ADDCAEE1"
                BuildableName = "TaggedMoneyTests.xctest"
                BlueprintName = "TaggedMoneyTests_iOS"
                ReferencedContainer = "container:Tagged.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1C3E139B076143AA6A816CFD9E49EADF"
+            BlueprintIdentifier = "1C3E139B076143AA6A816CFD"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -52,6 +52,8 @@
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
+      <CodeCoverageTargets>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -66,7 +68,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1C3E139B076143AA6A816CFD9E49EADF"
+            BlueprintIdentifier = "1C3E139B076143AA6A816CFD"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
@@ -87,7 +89,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1C3E139B076143AA6A816CFD9E49EADF"
+            BlueprintIdentifier = "1C3E139B076143AA6A816CFD"
             BuildableName = "TaggedMoney.framework"
             BlueprintName = "TaggedMoney_iOS"
             ReferencedContainer = "container:Tagged.xcodeproj">
