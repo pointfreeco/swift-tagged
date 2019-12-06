@@ -1,31 +1,12 @@
-// Generated using Sourcery 0.10.1 — https://github.com/krzysztofzablocki/Sourcery
-// DO NOT EDIT
-
 import XCTest
 
-@testable import TaggedTests;
-extension TaggedTests {
-  static var allTests: [(String, (TaggedTests) -> () throws -> Void)] = [
-    ("testCustomStringConvertible", testCustomStringConvertible),
-    ("testComparable", testComparable),
-    ("testDecodable", testDecodable),
-    ("testEncodable", testEncodable),
-    ("testEquatable", testEquatable),
-    ("testError", testError),
-    ("testLocalizedError", testLocalizedError),
-    ("testExpressibleByBooleanLiteral", testExpressibleByBooleanLiteral),
-    ("testExpressibleByFloatLiteral", testExpressibleByFloatLiteral),
-    ("testExpressibleByIntegerLiteral", testExpressibleByIntegerLiteral),
-    ("testExpressibleByStringLiteral", testExpressibleByStringLiteral),
-    ("testLosslessStringConvertible", testLosslessStringConvertible),
-    ("testNumeric", testNumeric),
-    ("testHashable", testHashable),
-    ("testSignedNumeric", testSignedNumeric)
-  ]
-}
+import TaggedMoneyTests
+import TaggedTests
+import TaggedTimeTests
 
-// swiftlint:disable trailing_comma
-XCTMain([
-  testCase(TaggedTests.allTests),
-])
-// swiftlint:enable trailing_comma
+var tests = [XCTestCaseEntry]()
+tests += TaggedMoneyTests.__allTests()
+tests += TaggedTests.__allTests()
+tests += TaggedTimeTests.__allTests()
+
+XCTMain(tests)
