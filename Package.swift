@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.1
 import Foundation
 import PackageDescription
 
@@ -20,8 +20,8 @@ var package = Package(
     .testTarget(name: "TaggedTimeTests", dependencies: ["TaggedTime"]),
   ],
   swiftLanguageVersions: [
-    .version("5"),
     .v4_2,
+    .v5
   ]
 )
 

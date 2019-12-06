@@ -1,16 +1,8 @@
-imports = \
-	@testable import TaggedTests;
-
 xcodeproj:
 	PF_DEVELOP=1 swift run xcodegen
 
 linux-main:
-	sourcery \
-		--sources ./Tests/ \
-		--templates ./.sourcery-templates/ \
-		--output ./Tests/ \
-		--args testimports='$(imports)' \
-		&& mv ./Tests/LinuxMain.generated.swift ./Tests/LinuxMain.swift
+	swift test --generate-linuxmain
 
 test-linux: linux-main
 	docker build --tag tagged-testing . \
@@ -28,7 +20,7 @@ test-ios:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme Tagged_iOS \
-		-destination platform="iOS Simulator,name=iPhone XR,OS=12.2" \
+		-destination platform="iOS Simulator,name=iPhone 11 Pro Max,OS=13.2.2" \
 		| xcpretty
 
 test-swift:
