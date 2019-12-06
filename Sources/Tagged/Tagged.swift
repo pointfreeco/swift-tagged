@@ -16,8 +16,7 @@ extension Tagged: CustomStringConvertible {
   }
 }
 
-extension Tagged: RawRepresentable {
-}
+extension Tagged: RawRepresentable {}
 
 extension Tagged: CustomPlaygroundDisplayConvertible {
   public var playgroundDescription: Any {
@@ -75,14 +74,9 @@ extension Tagged: Encodable where RawValue: Encodable {
   }
 }
 
-extension Tagged: Equatable where RawValue: Equatable {
-  public static func == (lhs: Tagged, rhs: Tagged) -> Bool {
-    return lhs.rawValue == rhs.rawValue
-  }
-}
+extension Tagged: Equatable where RawValue: Equatable {}
 
-extension Tagged: Error where RawValue: Error {
-}
+extension Tagged: Error where RawValue: Error {}
 
 #if canImport(Foundation)
 import Foundation
@@ -244,14 +238,9 @@ extension Tagged: Numeric where RawValue: Numeric {
 }
 #endif
 
-extension Tagged: Hashable where RawValue: Hashable {
-  public func hash(into hasher: inout Hasher) {
-    hasher.combine(self.rawValue)
-  }
-}
+extension Tagged: Hashable where RawValue: Hashable {}
 
-extension Tagged: SignedNumeric where RawValue: SignedNumeric {
-}
+extension Tagged: SignedNumeric where RawValue: SignedNumeric {}
 
 extension Tagged: Sequence where RawValue: Sequence {
   public typealias Iterator = RawValue.Iterator
