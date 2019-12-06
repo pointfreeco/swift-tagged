@@ -172,6 +172,13 @@ final class TaggedTests: XCTestCase {
     XCTAssertTrue(user.id == User(id: 123).id)
   }
 
+  func testCollection() {
+    let x: Tagged<Tag, [Int]> = .init(rawValue:[-1, -3, 57, 43])
+    XCTAssertFalse(x.isEmpty)
+    XCTAssertTrue(x.contains(57))
+    XCTAssertFalse(x.contains(-57))
+  }
+
   func testCoerce() {
     let x: Tagged<Tag, Int> = 1
 

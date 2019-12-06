@@ -27,6 +27,31 @@ extension Tagged: CustomPlaygroundDisplayConvertible {
 
 // MARK: - Conditional Conformances
 
+extension Tagged: Collection where RawValue: Collection {
+  public typealias Element = RawValue.Element
+  public typealias Index = RawValue.Index
+
+  public func index(after i: RawValue.Index) -> RawValue.Index {
+    return rawValue.index(after: i)
+  }
+
+  public subscript(position: RawValue.Index) -> RawValue.Element {
+    return rawValue[position]
+  }
+
+  public var startIndex: RawValue.Index {
+    return rawValue.startIndex
+  }
+
+  public var endIndex: RawValue.Index {
+    return rawValue.endIndex
+  }
+
+  public __consuming func makeIterator() -> RawValue.Iterator {
+    return rawValue.makeIterator()
+  }
+}
+
 extension Tagged: Comparable where RawValue: Comparable {
   public static func < (lhs: Tagged, rhs: Tagged) -> Bool {
     return lhs.rawValue < rhs.rawValue
@@ -125,6 +150,14 @@ extension Tagged: ExpressibleByUnicodeScalarLiteral where RawValue: ExpressibleB
   }
 }
 
+extension Tagged: Identifiable where RawValue: Identifiable {
+  public typealias ID = RawValue.ID
+
+  public var id: ID {
+    return rawValue.id
+  }
+}
+
 extension Tagged: LosslessStringConvertible where RawValue: LosslessStringConvertible {
   public init?(_ description: String) {
     guard let rawValue = RawValue(description) else { return nil }
@@ -220,15 +253,12 @@ extension Tagged: Hashable where RawValue: Hashable {
 extension Tagged: SignedNumeric where RawValue: SignedNumeric {
 }
 
-@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
-extension Tagged: Identifiable where RawValue: Identifiable {
-    
-  public typealias ID = RawValue.ID
-            
-  public var id: ID {
-        return rawValue.id
-    }
-        
+extension Tagged: Sequence where RawValue: Sequence {
+  public typealias Iterator = RawValue.Iterator
+
+  public __consuming func makeIterator() -> RawValue.Iterator {
+    return rawValue.makeIterator()
+  }
 }
 
 // Commenting these out for Joe.
