@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = "TaggedTime"
   s.summary = "A library for safer seconds and milliseconds types."
-  s.version = "0.4.0"
+  s.version = "0.5.0"
 
   s.description = <<-DESC
   We often work with types that are far too general or hold far too many values
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
     :tag => s.version
   }
 
-  s.dependency "Tagged", "~> 0.4.0"
+  s.dependency "Tagged", "~> 0.5.0"
 
-  s.swift_version = "5.0"
+  s.swift_version = "5.0", "5.1.2"
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
