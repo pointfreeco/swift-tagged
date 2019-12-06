@@ -144,6 +144,7 @@ extension Tagged: ExpressibleByUnicodeScalarLiteral where RawValue: ExpressibleB
   }
 }
 
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 extension Tagged: Identifiable where RawValue: Identifiable {
   public typealias ID = RawValue.ID
 
