@@ -20,8 +20,7 @@ var package = Package(
     .testTarget(name: "TaggedTimeTests", dependencies: ["TaggedTime"]),
   ],
   swiftLanguageVersions: [
-    .v4_2,
-    .v5
+    .v5_1
   ]
 )
 
