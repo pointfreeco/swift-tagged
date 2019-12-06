@@ -27,6 +27,31 @@ extension Tagged: CustomPlaygroundDisplayConvertible {
 
 // MARK: - Conditional Conformances
 
+extension Tagged: Collection where RawValue: Collection {
+  public typealias Element = RawValue.Element
+  public typealias Index = RawValue.Index
+
+  public func index(after i: RawValue.Index) -> RawValue.Index {
+    return rawValue.index(after: i)
+  }
+
+  public subscript(position: RawValue.Index) -> RawValue.Element {
+    return rawValue[position]
+  }
+
+  public var startIndex: RawValue.Index {
+    return rawValue.startIndex
+  }
+
+  public var endIndex: RawValue.Index {
+    return rawValue.endIndex
+  }
+
+  public __consuming func makeIterator() -> RawValue.Iterator {
+    return rawValue.makeIterator()
+  }
+}
+
 extension Tagged: Comparable where RawValue: Comparable {
   public static func < (lhs: Tagged, rhs: Tagged) -> Bool {
     return lhs.rawValue < rhs.rawValue
@@ -122,6 +147,14 @@ extension Tagged: ExpressibleByUnicodeScalarLiteral where RawValue: ExpressibleB
 
   public init(unicodeScalarLiteral: UnicodeScalarLiteralType) {
     self.init(rawValue: RawValue(unicodeScalarLiteral: unicodeScalarLiteral))
+  }
+}
+
+extension Tagged: Identifiable where RawValue: Identifiable {
+  public typealias ID = RawValue.ID
+
+  public var id: ID {
+    return rawValue.id
   }
 }
 
@@ -222,31 +255,6 @@ extension Tagged: SignedNumeric where RawValue: SignedNumeric {
 
 extension Tagged: Sequence where RawValue: Sequence {
   public typealias Iterator = RawValue.Iterator
-
-  public __consuming func makeIterator() -> RawValue.Iterator {
-    return rawValue.makeIterator()
-  }
-}
-
-extension Tagged: Collection where RawValue: Collection {
-  public typealias Element = RawValue.Element
-  public typealias Index = RawValue.Index
-
-  public func index(after i: RawValue.Index) -> RawValue.Index {
-    return rawValue.index(after: i)
-  }
-
-  public subscript(position: RawValue.Index) -> RawValue.Element {
-    return rawValue[position]
-  }
-
-  public var startIndex: RawValue.Index {
-    return rawValue.startIndex
-  }
-
-  public var endIndex: RawValue.Index {
-    return rawValue.endIndex
-  }
 
   public __consuming func makeIterator() -> RawValue.Iterator {
     return rawValue.makeIterator()

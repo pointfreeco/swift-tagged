@@ -159,6 +159,18 @@ final class TaggedTests: XCTestCase {
       XCTAssertEqual(data, Data("[{\"id\":null}]".utf8))
       }())
   }
+  
+  func testIdentifiable() {
+    
+    struct User: Identifiable {
+      let id: Tagged<User, Int>
+      var location: String?
+    }
+    var user = User(id: 123)
+    user.location = "Los Angeles"
+    
+    XCTAssertTrue(user.id == User(id: 123).id)
+  }
 
   func testCollection() {
     let x: Tagged<Tag, [Int]> = .init(rawValue:[-1, -3, 57, 43])
