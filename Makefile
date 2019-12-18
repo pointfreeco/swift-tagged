@@ -4,7 +4,7 @@ xcodeproj:
 linux-main:
 	swift test --generate-linuxmain
 
-test-linux: linux-main
+test-linux:
 	docker build --tag tagged-testing . \
 		&& docker run --rm tagged-testing
 
@@ -24,7 +24,7 @@ test-ios:
 		| xcpretty
 
 test-swift:
-	swift test
+	swift test -v
 
 test-playgrounds: test-macos
 	find . \
