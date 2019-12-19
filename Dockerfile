@@ -6,4 +6,4 @@ COPY . ./
 
 RUN swift package resolve
 RUN swift package clean
-CMD swift test --parallel
+CMD swift test --parallel -v
