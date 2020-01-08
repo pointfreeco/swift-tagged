@@ -1,12 +1,14 @@
 xcodeproj:
 	PF_DEVELOP=1 swift run xcodegen
 
-linux-main:
-	swift test --generate-linuxmain
-
-test-linux: linux-main
-	docker build --tag tagged-testing . \
-		&& docker run --rm tagged-testing
+test-linux:
+	docker run \
+		-it \
+		--rm \
+		-v "$(PWD):$(PWD)" \
+		-w "$(PWD)" \
+		swift:5.1 \
+		bash -c 'make test-swift'
 
 test-macos:
 	set -o pipefail && \
@@ -24,7 +26,10 @@ test-ios:
 		| xcpretty
 
 test-swift:
-	swift test
+	swift test \
+		--enable-pubgrub-resolver \
+		--enable-test-discovery \
+		--parallel
 
 test-playgrounds: test-macos
 	find . \
@@ -32,4 +37,4 @@ test-playgrounds: test-macos
 		-name '*.swift' \
 		-exec swift -F .derivedData/Build/Products/Debug/ -suppress-warnings {} +
 
-test-all: test-linux test-macos test-ios test-playgrounds
+test-all: test-linux test-macos test-ios test-playgrounds test-swift
