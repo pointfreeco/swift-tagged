@@ -136,6 +136,14 @@ extension Tagged: ExpressibleByStringLiteral where RawValue: ExpressibleByString
   }
 }
 
+extension Tagged: ExpressibleByStringInterpolation where RawValue: ExpressibleByStringInterpolation {
+  public typealias StringInterpolation = RawValue.StringInterpolation
+
+  public init(stringInterpolation: Self.StringInterpolation) {
+    self.init(rawValue: RawValue(stringInterpolation: stringInterpolation))
+  }
+}
+
 extension Tagged: ExpressibleByUnicodeScalarLiteral where RawValue: ExpressibleByUnicodeScalarLiteral {
   public typealias UnicodeScalarLiteralType = RawValue.UnicodeScalarLiteralType
 
