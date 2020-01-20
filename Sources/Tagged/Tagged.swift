@@ -259,6 +259,22 @@ extension Tagged: Sequence where RawValue: Sequence {
   }
 }
 
+#if canImport(SwiftUI)
+import SwiftUI
+@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+extension Tagged: PreferenceKey where RawValue: PreferenceKey {
+  public typealias Value = RawValue.Value
+  public static var defaultValue: RawValue.Value {
+    RawValue.defaultValue
+  }
+
+  public static func reduce(value: inout RawValue.Value, nextValue: () -> RawValue.Value) {
+    RawValue.reduce(value: &value, nextValue: nextValue)
+  }
+}
+#endif
+
+
 // Commenting these out for Joe.
 //
 // https://twitter.com/jckarter/status/985375396601282560

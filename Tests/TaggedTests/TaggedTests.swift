@@ -1,5 +1,8 @@
 import XCTest
 import Tagged
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
 
 enum Tag {}
 struct Unit: Error {}
@@ -181,6 +184,19 @@ final class TaggedTests: XCTestCase {
     XCTAssertFalse(x.isEmpty)
     XCTAssertTrue(x.contains(57))
     XCTAssertFalse(x.contains(-57))
+  }
+
+  @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
+  func testPreferenceKey() {
+    struct Key: PreferenceKey {
+      static var defaultValue: Int = 0
+      static func reduce(value: inout Int, nextValue: () -> Int) {
+        value += nextValue()
+      }
+    }
+    var value = Tagged<Tag, Key>.defaultValue
+    Tagged<Tag, Key>.reduce(value: &value, nextValue: { 1 })
+    XCTAssertEqual(value, 1)
   }
 
   func testCoerce() {
