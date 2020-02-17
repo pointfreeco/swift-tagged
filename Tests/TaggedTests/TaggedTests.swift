@@ -137,6 +137,17 @@ final class TaggedTests: XCTestCase {
     let x: Tagged<Tag, Int> = 1
     XCTAssertEqual("1!", x.map { "\($0)!" })
   }
+  
+  func testDynamicMemberLookup() {
+    struct MyStruct {
+      let val1: String = "val1"
+      let val2: Int = 1
+    }
+    
+    let x: Tagged<Tag, MyStruct> = Tagged(rawValue: MyStruct())
+    XCTAssertEqual("val1", x.val1)
+    XCTAssertEqual(1, x.val2)
+  }
 
   func testOptionalRawTypeAndNilValueDecodesCorrectly() {
     struct Container: Decodable {
