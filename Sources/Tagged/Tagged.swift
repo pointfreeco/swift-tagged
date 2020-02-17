@@ -1,3 +1,4 @@
+@dynamicMemberLookup
 public struct Tagged<Tag, RawValue> {
   public var rawValue: RawValue
 
@@ -8,6 +9,12 @@ public struct Tagged<Tag, RawValue> {
   public func map<B>(_ f: (RawValue) -> B) -> Tagged<Tag, B> {
     return .init(rawValue: f(self.rawValue))
   }
+}
+
+extension Tagged {
+    public subscript<T>(dynamicMember keyPath: KeyPath<RawValue, T>) -> T {
+        return self.rawValue[keyPath: keyPath]
+    }
 }
 
 extension Tagged: CustomStringConvertible {
