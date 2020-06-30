@@ -3,7 +3,7 @@ import Foundation
 import PackageDescription
 
 var package = Package(
-  name: "Tagged",
+  name: "swift-tagged",
   products: [
     .library(name: "Tagged", targets: ["Tagged"]),
     .library(name: "TaggedMoney", targets: ["TaggedMoney"]),
