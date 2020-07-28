@@ -168,13 +168,6 @@ extension Tagged: Identifiable where RawValue: Identifiable {
   }
 }
 
-extension Tagged: LosslessStringConvertible where RawValue: LosslessStringConvertible {
-  public init?(_ description: String) {
-    guard let rawValue = RawValue(description) else { return nil }
-    self.init(rawValue: rawValue)
-  }
-}
-
 #if compiler(>=5)
 extension Tagged: AdditiveArithmetic where RawValue: AdditiveArithmetic {
   public static var zero: Tagged {
@@ -253,6 +246,13 @@ extension Tagged: Numeric where RawValue: Numeric {
   }
 }
 #endif
+
+extension Tagged: LosslessStringConvertible where RawValue: LosslessStringConvertible {
+  public init?(_ description: String) {
+    guard let rawValue = RawValue(description) else { return nil }
+    self.init(rawValue: rawValue)
+  }
+}
 
 extension Tagged: Hashable where RawValue: Hashable {}
 

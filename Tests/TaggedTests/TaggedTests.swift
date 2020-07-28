@@ -202,4 +202,9 @@ final class TaggedTests: XCTestCase {
 
     XCTAssertEqual(1, x2.rawValue)
   }
+    
+  func testLosslessString() {
+    let x: Tagged<Tag, Int> = 1
+    XCTAssertEqual(String(x), "1")
+  }
 }
