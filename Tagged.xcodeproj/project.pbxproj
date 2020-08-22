@@ -45,6 +45,14 @@
 		A2A77580BE9258A737826922 /* TaggedTime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B907F74D036E172EEA3C22B3 /* TaggedTime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3AF1D8EC8FE94248252FA8E /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE932F792E9AC6044E7A15B4 /* Tagged.framework */; };
 		ABF23123088730740369E890 /* TaggedMoney.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCB95490C8697C67A27796D4 /* TaggedMoney.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC652A8824F12B380084EEAA /* ZipTagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652A8724F12B380084EEAA /* ZipTagged.swift */; };
+		AC652A8924F12B380084EEAA /* ZipTagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652A8724F12B380084EEAA /* ZipTagged.swift */; };
+		AC652A8A24F12B380084EEAA /* ZipTagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652A8724F12B380084EEAA /* ZipTagged.swift */; };
+		AC652A8B24F12B380084EEAA /* ZipTagged.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652A8724F12B380084EEAA /* ZipTagged.swift */; };
+		AC652A9124F1306A0084EEAA /* ZipTaggedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652A8C24F12F070084EEAA /* ZipTaggedTests.swift */; };
+		AC652A9224F1306B0084EEAA /* ZipTaggedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652A8C24F12F070084EEAA /* ZipTaggedTests.swift */; };
+		AC652A9324F1306B0084EEAA /* ZipTaggedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652A8C24F12F070084EEAA /* ZipTaggedTests.swift */; };
+		AC652A9424F1306B0084EEAA /* ZipTaggedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC652A8C24F12F070084EEAA /* ZipTaggedTests.swift */; };
 		B1DDFD704ED6B4E1A0BBBBFC /* TaggedTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3462D4AA2B8A6D969B8670 /* TaggedTime.swift */; };
 		B29F86068636C4FD1FCD5E79 /* Tagged.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD1519E97A6E0D706A6D4F1 /* Tagged.framework */; };
 		B50BF3324293373AAD141A49 /* TaggedTime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF943F0658D192E366A44701 /* TaggedTime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -364,6 +372,8 @@
 		9BFDEF89D1C89E2F215970BF /* TaggedMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedMoney.swift; sourceTree = "<group>"; };
 		A0B02594D5480D6E94910317 /* TaggedTimeTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TaggedTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A39F50DCB26F142407E9DFEC /* TaggedTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaggedTimeTests.swift; sourceTree = "<group>"; };
+		AC652A8724F12B380084EEAA /* ZipTagged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTagged.swift; sourceTree = "<group>"; };
+		AC652A8C24F12F070084EEAA /* ZipTaggedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipTaggedTests.swift; sourceTree = "<group>"; };
 		B907F74D036E172EEA3C22B3 /* TaggedTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaggedTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB95490C8697C67A27796D4 /* TaggedMoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TaggedMoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE932F792E9AC6044E7A15B4 /* Tagged.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tagged.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -544,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				5E326C526AD542BA4CD5EAC7 /* TaggedTests.swift */,
+				AC652A8C24F12F070084EEAA /* ZipTaggedTests.swift */,
 			);
 			name = TaggedTests;
 			path = Tests/TaggedTests;
@@ -580,6 +591,7 @@
 			isa = PBXGroup;
 			children = (
 				992F4AF33D9B5E7A23D051A3 /* Tagged.swift */,
+				AC652A8724F12B380084EEAA /* ZipTagged.swift */,
 			);
 			name = Tagged;
 			path = Sources/Tagged;
@@ -1109,6 +1121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE242A5A56BA355A595BE24 /* TaggedTests.swift in Sources */,
+				AC652A9424F1306B0084EEAA /* ZipTaggedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1125,6 +1138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EE90CF37207C46148BB98F /* Tagged.swift in Sources */,
+				AC652A8B24F12B380084EEAA /* ZipTagged.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1133,6 +1147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89FDE4F5D606D166A2673BAF /* Tagged.swift in Sources */,
+				AC652A8824F12B380084EEAA /* ZipTagged.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,6 +1172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F9A0B3806329F54E0AA892 /* Tagged.swift in Sources */,
+				AC652A8924F12B380084EEAA /* ZipTagged.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1173,6 +1189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F19188A10DEDF74095B84B11 /* TaggedTests.swift in Sources */,
+				AC652A9224F1306B0084EEAA /* ZipTaggedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1189,6 +1206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A39FC835DDED260BEB36ABE /* Tagged.swift in Sources */,
+				AC652A8A24F12B380084EEAA /* ZipTagged.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1229,6 +1247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F66B071C5FC5B37B8E3400C2 /* TaggedTests.swift in Sources */,
+				AC652A9124F1306A0084EEAA /* ZipTaggedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1293,6 +1312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB030F2C3546B6AA8E194B97 /* TaggedTests.swift in Sources */,
+				AC652A9324F1306B0084EEAA /* ZipTaggedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1472,7 +1492,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-iOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = iphoneos;
@@ -1494,7 +1518,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTime-macOS";
 				PRODUCT_NAME = TaggedTime;
 				SDKROOT = macosx;
@@ -1509,7 +1536,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-macOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = macosx;
@@ -1522,7 +1553,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTimeTests-macOS";
 				PRODUCT_NAME = TaggedTimeTests;
 				SDKROOT = macosx;
@@ -1556,7 +1591,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoneyTests-watchOS";
 				PRODUCT_NAME = TaggedMoneyTests;
 				SDKROOT = watchos;
@@ -1571,7 +1610,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTimeTests-macOS";
 				PRODUCT_NAME = TaggedTimeTests;
 				SDKROOT = macosx;
@@ -1591,7 +1634,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Tagged-tvOS";
 				PRODUCT_NAME = Tagged;
 				SDKROOT = appletvos;
@@ -1607,7 +1653,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-macOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = macosx;
@@ -1627,7 +1677,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Tagged-iOS";
 				PRODUCT_NAME = Tagged;
 				SDKROOT = iphoneos;
@@ -1664,7 +1717,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoneyTests-iOS";
 				PRODUCT_NAME = TaggedMoneyTests;
 				SDKROOT = iphoneos;
@@ -1686,7 +1743,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTime-macOS";
 				PRODUCT_NAME = TaggedTime;
 				SDKROOT = macosx;
@@ -1700,7 +1760,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTimeTests-tvOS";
 				PRODUCT_NAME = TaggedTimeTests;
 				SDKROOT = appletvos;
@@ -1776,7 +1840,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Tagged-macOS";
 				PRODUCT_NAME = Tagged;
 				SDKROOT = macosx;
@@ -1791,7 +1858,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoneyTests-macOS";
 				PRODUCT_NAME = TaggedMoneyTests;
 				SDKROOT = macosx;
@@ -1803,7 +1874,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-watchOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = watchos;
@@ -1825,7 +1900,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTime-tvOS";
 				PRODUCT_NAME = TaggedTime;
 				SDKROOT = appletvos;
@@ -1840,7 +1918,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoneyTests-tvOS";
 				PRODUCT_NAME = TaggedMoneyTests;
 				SDKROOT = appletvos;
@@ -1854,7 +1936,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoneyTests-macOS";
 				PRODUCT_NAME = TaggedMoneyTests;
 				SDKROOT = macosx;
@@ -1866,7 +1952,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTimeTests-watchOS";
 				PRODUCT_NAME = TaggedTimeTests;
 				SDKROOT = watchos;
@@ -1888,7 +1978,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoney-iOS";
 				PRODUCT_NAME = TaggedMoney;
 				SDKROOT = iphoneos;
@@ -1903,7 +1996,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTimeTests-iOS";
 				PRODUCT_NAME = TaggedTimeTests;
 				SDKROOT = iphoneos;
@@ -1916,7 +2013,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoneyTests-iOS";
 				PRODUCT_NAME = TaggedMoneyTests;
 				SDKROOT = iphoneos;
@@ -1938,7 +2039,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoney-macOS";
 				PRODUCT_NAME = TaggedMoney;
 				SDKROOT = macosx;
@@ -1960,7 +2064,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Tagged-iOS";
 				PRODUCT_NAME = Tagged;
 				SDKROOT = iphoneos;
@@ -1983,7 +2090,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Tagged-tvOS";
 				PRODUCT_NAME = Tagged;
 				SDKROOT = appletvos;
@@ -1998,7 +2108,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-tvOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = appletvos;
@@ -2019,7 +2133,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTime-iOS";
 				PRODUCT_NAME = TaggedTime;
 				SDKROOT = iphoneos;
@@ -2034,7 +2151,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTimeTests-iOS";
 				PRODUCT_NAME = TaggedTimeTests;
 				SDKROOT = iphoneos;
@@ -2047,7 +2168,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTimeTests-watchOS";
 				PRODUCT_NAME = TaggedTimeTests;
 				SDKROOT = watchos;
@@ -2123,7 +2248,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoneyTests-tvOS";
 				PRODUCT_NAME = TaggedMoneyTests;
 				SDKROOT = appletvos;
@@ -2136,7 +2265,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoneyTests-watchOS";
 				PRODUCT_NAME = TaggedMoneyTests;
 				SDKROOT = watchos;
@@ -2180,7 +2313,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoney-iOS";
 				PRODUCT_NAME = TaggedMoney;
 				SDKROOT = iphoneos;
@@ -2204,7 +2340,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.Tagged-macOS";
 				PRODUCT_NAME = Tagged;
 				SDKROOT = macosx;
@@ -2226,7 +2365,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoney-tvOS";
 				PRODUCT_NAME = TaggedMoney;
 				SDKROOT = appletvos;
@@ -2241,7 +2383,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-iOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = iphoneos;
@@ -2262,7 +2408,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoney-tvOS";
 				PRODUCT_NAME = TaggedMoney;
 				SDKROOT = appletvos;
@@ -2285,7 +2434,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTime-iOS";
 				PRODUCT_NAME = TaggedTime;
 				SDKROOT = iphoneos;
@@ -2300,7 +2452,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-tvOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = appletvos;
@@ -2322,7 +2478,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedMoney-macOS";
 				PRODUCT_NAME = TaggedMoney;
 				SDKROOT = macosx;
@@ -2336,7 +2495,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTimeTests-tvOS";
 				PRODUCT_NAME = TaggedTimeTests;
 				SDKROOT = appletvos;
@@ -2357,7 +2520,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTime-tvOS";
 				PRODUCT_NAME = TaggedTime;
 				SDKROOT = appletvos;
@@ -2372,7 +2538,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pointfree.TaggedTests-watchOS";
 				PRODUCT_NAME = TaggedTests;
 				SDKROOT = watchos;
