@@ -198,6 +198,16 @@ extension Tagged: AdditiveArithmetic where RawValue: AdditiveArithmetic {
   }
 }
 
+extension Tagged: Strideable where RawValue: Strideable {
+  public func advanced(by n: RawValue.Stride) -> Tagged<Tag, RawValue> {
+    .init(rawValue: self.rawValue.advanced(by: n))
+  }
+
+  public func distance(to other: Tagged<Tag, RawValue>) -> RawValue.Stride {
+    self.rawValue.distance(to: other.rawValue)
+  }
+}
+
 extension Tagged: Numeric where RawValue: Numeric {
   public init?<T>(exactly source: T) where T: BinaryInteger {
     guard let rawValue = RawValue(exactly: source) else { return nil }
