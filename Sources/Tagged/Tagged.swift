@@ -266,6 +266,18 @@ extension Tagged: Sequence where RawValue: Sequence {
   }
 }
 
+extension Tagged: Strideable where RawValue: Strideable {
+    public typealias Stride = RawValue.Stride
+
+    public func distance(to other: Tagged<Tag, RawValue>) -> RawValue.Stride {
+        rawValue.distance(to: other.rawValue)
+    }
+    
+    public func advanced(by n: RawValue.Stride) -> Tagged<Tag, RawValue> {
+        Tagged(rawValue: rawValue.advanced(by: n))
+    }
+}
+
 // Commenting these out for Joe.
 //
 // https://twitter.com/jckarter/status/985375396601282560
