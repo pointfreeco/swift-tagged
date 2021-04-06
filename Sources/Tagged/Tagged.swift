@@ -101,6 +101,12 @@ extension Tagged: LocalizedError where RawValue: Error {
     return (rawValue as? LocalizedError)?.recoverySuggestion
   }
 }
+
+extension Tagged where RawValue == UUID {
+  public static func uuid(_ uuid: UUID = UUID()) -> Self {
+    return self.init(rawValue: uuid)
+  }
+}
 #endif
 
 extension Tagged: ExpressibleByBooleanLiteral where RawValue: ExpressibleByBooleanLiteral {
