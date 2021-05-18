@@ -395,7 +395,7 @@ If you want to use Tagged in a project that uses [SwiftPM](https://swift.org/pac
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.5.0")
+  .package(name: "Tagged", url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.5.0")
 ]
 ```
 
