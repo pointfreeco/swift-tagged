@@ -266,36 +266,32 @@ extension Tagged: Sequence where RawValue: Sequence {
   }
 }
 
-// Commenting these out for Joe.
-//
-// https://twitter.com/jckarter/status/985375396601282560
-//
-//extension Tagged: ExpressibleByArrayLiteral where RawValue: ExpressibleByArrayLiteral {
-//  public typealias ArrayLiteralElement = RawValue.ArrayLiteralElement
-//
-//  public init(arrayLiteral elements: ArrayLiteralElement...) {
-//    let f = unsafeBitCast(
-//      RawValue.init(arrayLiteral:) as (ArrayLiteralElement...) -> RawValue,
-//      to: (([ArrayLiteralElement]) -> RawValue).self
-//    )
-//
-//    self.init(rawValue: f(elements))
-//  }
-//}
-//
-//extension Tagged: ExpressibleByDictionaryLiteral where RawValue: ExpressibleByDictionaryLiteral {
-//  public typealias Key = RawValue.Key
-//  public typealias Value = RawValue.Value
-//
-//  public init(dictionaryLiteral elements: (Key, Value)...) {
-//    let f = unsafeBitCast(
-//      RawValue.init(dictionaryLiteral:) as ((Key, Value)...) -> RawValue,
-//      to: (([(Key, Value)]) -> RawValue).self
-//    )
-//
-//    self.init(rawValue: f(elements))
-//  }
-//}
+extension Tagged: ExpressibleByArrayLiteral where RawValue: ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = RawValue.ArrayLiteralElement
+
+  public init(arrayLiteral elements: ArrayLiteralElement...) {
+    let f = unsafeBitCast(
+      RawValue.init(arrayLiteral:) as (ArrayLiteralElement...) -> RawValue,
+      to: (([ArrayLiteralElement]) -> RawValue).self
+    )
+
+    self.init(rawValue: f(elements))
+  }
+}
+
+extension Tagged: ExpressibleByDictionaryLiteral where RawValue: ExpressibleByDictionaryLiteral {
+  public typealias Key = RawValue.Key
+  public typealias Value = RawValue.Value
+
+  public init(dictionaryLiteral elements: (Key, Value)...) {
+    let f = unsafeBitCast(
+      RawValue.init(dictionaryLiteral:) as ((Key, Value)...) -> RawValue,
+      to: (([(Key, Value)]) -> RawValue).self
+    )
+
+    self.init(rawValue: f(elements))
+  }
+}
 
 // MARK: - Coerce
 extension Tagged {
