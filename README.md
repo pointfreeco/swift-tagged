@@ -1,7 +1,7 @@
 # 🏷 Tagged
 
 [![Swift 5.1](https://img.shields.io/badge/swift-5.1-ED523F.svg?style=flat)](https://swift.org/download/)
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fpointfreeco%2Fswift-tagged%2Fbadge&style=flat)](https://actions-badge.atrox.dev/pointfreeco/swift-tagged/goto)
+[![CI](https://github.com/pointfreeco/swift-tagged/workflows/CI/badge.svg)](https://actions-badge.atrox.dev/pointfreeco/swift-tagged/goto)
 [![@pointfreeco](https://img.shields.io/badge/contact-@pointfreeco-5AA9E7.svg?style=flat)](https://twitter.com/pointfreeco)
 
 A wrapper type for safer, expressive code.
@@ -376,7 +376,7 @@ It is important to note that these types do not encapsulate _currency_, but rath
 If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
 
 ``` ruby
-github "pointfreeco/swift-tagged" ~> 0.5
+github "pointfreeco/swift-tagged" ~> 0.6
 ```
 
 ### CocoaPods
@@ -384,9 +384,9 @@ github "pointfreeco/swift-tagged" ~> 0.5
 If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
 
 ``` ruby
-pod 'Tagged', '~> 0.5'
-pod 'TaggedMoney', '~> 0.5'
-pod 'TaggedTime', '~> 0.5'
+pod 'Tagged', '~> 0.6'
+pod 'TaggedMoney', '~> 0.6'
+pod 'TaggedTime', '~> 0.6'
 ```
 
 ### SwiftPM
@@ -395,7 +395,7 @@ If you want to use Tagged in a project that uses [SwiftPM](https://swift.org/pac
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.5.0")
+  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.6.0")
 ]
 ```
 
@@ -405,7 +405,7 @@ Submodule, clone, or download Tagged, and drag `Tagged.xcodeproj` into your proj
 
 ## Interested in learning more?
 
-These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://github.com/mbrandonw) and [Stephen Celis](https://github.com/stephencelis).
+These concepts (and more) are explored thoroughly in [Point-Free](https://www.pointfree.co), a video series exploring functional programming and Swift hosted by [Brandon Williams](https://twitter.com/mbrandonw) and [Stephen Celis](https://twitter.com/stephencelis).
 
 Tagged was first explored in [Episode #12](https://www.pointfree.co/episodes/ep12-tagged):
 

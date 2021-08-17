@@ -267,47 +267,43 @@ extension Tagged: Sequence where RawValue: Sequence {
 }
 
 extension Tagged: Strideable where RawValue: Strideable {
-    public typealias Stride = RawValue.Stride
+  public typealias Stride = RawValue.Stride
 
-    public func distance(to other: Tagged<Tag, RawValue>) -> RawValue.Stride {
-        rawValue.distance(to: other.rawValue)
-    }
-    
-    public func advanced(by n: RawValue.Stride) -> Tagged<Tag, RawValue> {
-        Tagged(rawValue: rawValue.advanced(by: n))
-    }
+  public func distance(to other: Tagged<Tag, RawValue>) -> RawValue.Stride {
+    self.rawValue.distance(to: other.rawValue)
+  }
+
+  public func advanced(by n: RawValue.Stride) -> Tagged<Tag, RawValue> {
+    Tagged(rawValue: self.rawValue.advanced(by: n))
+  }
 }
 
-// Commenting these out for Joe.
-//
-// https://twitter.com/jckarter/status/985375396601282560
-//
-//extension Tagged: ExpressibleByArrayLiteral where RawValue: ExpressibleByArrayLiteral {
-//  public typealias ArrayLiteralElement = RawValue.ArrayLiteralElement
-//
-//  public init(arrayLiteral elements: ArrayLiteralElement...) {
-//    let f = unsafeBitCast(
-//      RawValue.init(arrayLiteral:) as (ArrayLiteralElement...) -> RawValue,
-//      to: (([ArrayLiteralElement]) -> RawValue).self
-//    )
-//
-//    self.init(rawValue: f(elements))
-//  }
-//}
-//
-//extension Tagged: ExpressibleByDictionaryLiteral where RawValue: ExpressibleByDictionaryLiteral {
-//  public typealias Key = RawValue.Key
-//  public typealias Value = RawValue.Value
-//
-//  public init(dictionaryLiteral elements: (Key, Value)...) {
-//    let f = unsafeBitCast(
-//      RawValue.init(dictionaryLiteral:) as ((Key, Value)...) -> RawValue,
-//      to: (([(Key, Value)]) -> RawValue).self
-//    )
-//
-//    self.init(rawValue: f(elements))
-//  }
-//}
+extension Tagged: ExpressibleByArrayLiteral where RawValue: ExpressibleByArrayLiteral {
+  public typealias ArrayLiteralElement = RawValue.ArrayLiteralElement
+
+  public init(arrayLiteral elements: ArrayLiteralElement...) {
+    let f = unsafeBitCast(
+      RawValue.init(arrayLiteral:) as (ArrayLiteralElement...) -> RawValue,
+      to: (([ArrayLiteralElement]) -> RawValue).self
+    )
+
+    self.init(rawValue: f(elements))
+  }
+}
+
+extension Tagged: ExpressibleByDictionaryLiteral where RawValue: ExpressibleByDictionaryLiteral {
+  public typealias Key = RawValue.Key
+  public typealias Value = RawValue.Value
+
+  public init(dictionaryLiteral elements: (Key, Value)...) {
+    let f = unsafeBitCast(
+      RawValue.init(dictionaryLiteral:) as ((Key, Value)...) -> RawValue,
+      to: (([(Key, Value)]) -> RawValue).self
+    )
+
+    self.init(rawValue: f(elements))
+  }
+}
 
 // MARK: - Coerce
 extension Tagged {
