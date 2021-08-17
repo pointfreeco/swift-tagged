@@ -1,8 +1,8 @@
 # 🏷 Tagged
 
-[![Swift 5.1](https://img.shields.io/badge/swift-5.1-ED523F.svg?style=flat)](https://swift.org/download/)
 [![CI](https://github.com/pointfreeco/swift-tagged/workflows/CI/badge.svg)](https://actions-badge.atrox.dev/pointfreeco/swift-tagged/goto)
-[![@pointfreeco](https://img.shields.io/badge/contact-@pointfreeco-5AA9E7.svg?style=flat)](https://twitter.com/pointfreeco)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fpointfreeco%2Fswift-tagged%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/pointfreeco/swift-tagged)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fpointfreeco%2Fswift-tagged%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/pointfreeco/swift-tagged)
 
 A wrapper type for safer, expressive code.
 
@@ -371,37 +371,17 @@ It is important to note that these types do not encapsulate _currency_, but rath
 
 ## Installation
 
-### Carthage
+You can add Tagged to an Xcode project by adding it as a package dependency.
 
-If you use [Carthage](https://github.com/Carthage/Carthage), you can add the following dependency to your `Cartfile`:
+> https://github.com/pointfreeco/swift-tagged
 
-``` ruby
-github "pointfreeco/swift-tagged" ~> 0.6
-```
-
-### CocoaPods
-
-If your project uses [CocoaPods](https://cocoapods.org), just add the following to your `Podfile`:
-
-``` ruby
-pod 'Tagged', '~> 0.6'
-pod 'TaggedMoney', '~> 0.6'
-pod 'TaggedTime', '~> 0.6'
-```
-
-### SwiftPM
-
-If you want to use Tagged in a project that uses [SwiftPM](https://swift.org/package-manager/), it's as simple as adding a `dependencies` clause to your `Package.swift`:
+If you want to use Tagged in a [SwiftPM](https://swift.org/package-manager/) project, it's as simple as adding it to a `dependencies` clause in your `Package.swift`:
 
 ``` swift
 dependencies: [
-  .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.6.0")
+  .package(url: "https://github.com/pointfreeco/swift-tagged", from: "0.6.0")
 ]
 ```
-
-### Xcode Sub-project
-
-Submodule, clone, or download Tagged, and drag `Tagged.xcodeproj` into your project.
 
 ## Interested in learning more?
 
