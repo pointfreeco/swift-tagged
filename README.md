@@ -260,7 +260,7 @@ JSONDecoder().decode(User.self, from: Data("""
   "address": "1 Blob Ln",
   "subscriptionId": null
 }
-""".utf8)
+""".utf8))
 ```
 
 ### ExpressiblyBy-Literal
@@ -297,7 +297,7 @@ struct Product {
 }
 ```
 ``` swift
-let totalCents = products.reduce(0) { $0.amount + $1.amount }
+let totalCents = products.reduce(0) { $0 + $1.amount }
 ```
 
 ## Nanolibraries
@@ -323,7 +323,7 @@ struct BlogPost: Decodable {
 Now you have documentation of the unit in the type automatically, and you can never accidentally compare seconds to milliseconds:
 
 ```swift 
-let futureTime: Milliseconds = 1528378451000
+let futureTime: Milliseconds<Int> = 1528378451000
 
 breakingBlogPost.publishedAt < futureTime
 // 🛑 Binary operator '<' cannot be applied to operands of type
