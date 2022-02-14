@@ -85,6 +85,10 @@ extension Tagged: Equatable where RawValue: Equatable {}
 
 extension Tagged: Error where RawValue: Error {}
 
+#if canImport(_Concurrency) && compiler(>=5.5.2)
+extension Tagged: Sendable where RawValue: Sendable {}
+#endif
+
 #if canImport(Foundation)
 import Foundation
 extension Tagged: LocalizedError where RawValue: Error {
