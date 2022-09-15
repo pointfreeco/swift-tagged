@@ -1,4 +1,5 @@
 @dynamicMemberLookup
+@propertyWrapper
 public struct Tagged<Tag, RawValue> {
   public var rawValue: RawValue
 
@@ -6,15 +7,43 @@ public struct Tagged<Tag, RawValue> {
     self.rawValue = rawValue
   }
 
-  public func map<B>(_ f: (RawValue) -> B) -> Tagged<Tag, B> {
-    return .init(rawValue: f(self.rawValue))
+  /// - Note: This value is the same as ``rawValue``. It is required by the property wrapper.
+  public var wrappedValue: RawValue {
+    _read { yield rawValue }
+    _modify { yield &rawValue }
+  }
+
+  public var projectedValue: Self { self }
+}
+
+extension Tagged {
+  /// Initialises a wrapped `RawValue` value.
+  ///
+  /// You can either fully specify the tagged property wrapper's type:
+  /// ```swift
+  /// @Tagged<MyTag, Int> var number = 42
+  /// ```
+  /// or you can only pass the `Tag`'s type as argument to the initializer:
+  /// ```swift
+  /// @Tagged(MyTag.self) var number = 42
+  /// ```
+  public init(wrappedValue: RawValue, _ tag: Tag.Type = Tag.self) {
+    self.rawValue = wrappedValue
   }
 }
 
 extension Tagged {
-    public subscript<T>(dynamicMember keyPath: KeyPath<RawValue, T>) -> T {
-        return self.rawValue[keyPath: keyPath]
-    }
+  public func map<B>(_ f: (RawValue) -> B) -> Tagged<Tag, B> {
+    return .init(rawValue: f(self.rawValue))
+  }
+  
+  public var tag: Tag.Type { Tag.self }
+}
+
+extension Tagged {
+  public subscript<T>(dynamicMember keyPath: KeyPath<RawValue, T>) -> T {
+    return self.rawValue[keyPath: keyPath]
+  }
 }
 
 extension Tagged: CustomStringConvertible {

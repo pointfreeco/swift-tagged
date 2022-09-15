@@ -202,4 +202,17 @@ final class TaggedTests: XCTestCase {
 
     XCTAssertEqual(1, x2.rawValue)
   }
+  
+  func testPropertyWrapper() {
+    enum Tag1 {}
+    enum Tag2 {}
+    struct Container {
+      @Tagged(Tag1.self) var value1 = 42
+      @Tagged<Tag2, Int> var value2 = 42
+    }
+    
+    let container = Container()
+    XCTAssertEqual(container.value1, container.value2)
+    XCTAssertTrue(container.$value1.tag == Tag1.self)
+  }
 }
