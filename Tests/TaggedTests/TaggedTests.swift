@@ -5,6 +5,12 @@ enum Tag {}
 struct Unit: Error {}
 
 final class TaggedTests: XCTestCase {
+  func testInit() {
+    let int1 = Tagged<Self, Int>(rawValue: 42)
+    let int2 = Tagged<Self, Int>(1729)
+    XCTAssertNotEqual(int1, int2)
+  }
+
   func testCustomStringConvertible() {
     XCTAssertEqual("1", Tagged<Tag, Int>(rawValue: 1).description)
   }
