@@ -6,6 +6,10 @@ public struct Tagged<Tag, RawValue> {
     self.rawValue = rawValue
   }
 
+  public init(_ rawValue: RawValue) {
+    self.rawValue = rawValue
+  }
+
   public func map<B>(_ f: (RawValue) -> B) -> Tagged<Tag, B> {
     return .init(rawValue: f(self.rawValue))
   }
