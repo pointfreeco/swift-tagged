@@ -3,17 +3,19 @@ import Foundation
 import Tagged
 
 public enum MillisecondsTag {}
+
 /// A type that represents milliseconds of time.
 public typealias Milliseconds<A> = Tagged<MillisecondsTag, A>
 
 public enum SecondsTag {}
+
 /// A type that represents seconds of time.
 public typealias Seconds<A> = Tagged<SecondsTag, A>
 
 extension Tagged where Tag == MillisecondsTag, RawValue: BinaryFloatingPoint {
   /// Converts milliseconds to seconds.
   public var seconds: Seconds<RawValue> {
-    return .init(rawValue: self.rawValue / 1000)
+    Seconds(rawValue: self.rawValue / 1000)
   }
 
   /// Converts milliseconds into `TimeInterval`, which is measured in seconds.
@@ -28,65 +30,91 @@ extension Tagged where Tag == MillisecondsTag, RawValue: BinaryFloatingPoint {
 
   /// Converts milliseconds into `Date`, which is measured in seconds.
   public var date: Date {
-    return Date(timeIntervalSince1970: self.timeInterval)
+    Date(timeIntervalSince1970: self.timeInterval)
+  }
+
+  /// Converts milliseconds into `Duration`.
+  @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+  public var duration: Duration {
+    .milliseconds(Double(self.rawValue))
   }
 }
 
 extension Tagged where Tag == MillisecondsTag, RawValue: BinaryInteger {
   /// Converts milliseconds into `TimeInterval`, which is measured in seconds.
   public var timeInterval: TimeInterval {
-    return self.map(TimeInterval.init).timeInterval
+    self.map(TimeInterval.init).timeInterval
   }
 
   /// Converts milliseconds into `DispatchTimeInterval`.
   public var dispatchTimeInterval: DispatchTimeInterval {
-    return .milliseconds(Int(self.rawValue))
+    .milliseconds(Int(self.rawValue))
   }
 
   /// Converts milliseconds into `Date`, which is measured in seconds.
   public var date: Date {
-    return Date(timeIntervalSince1970: self.timeInterval)
+    Date(timeIntervalSince1970: self.timeInterval)
+  }
+
+  /// Converts milliseconds into `Duration`.
+  @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+  public var duration: Duration {
+    .milliseconds(self.rawValue)
   }
 }
 
 extension Tagged where Tag == SecondsTag, RawValue: Numeric {
   /// Converts seconds in milliseconds.
   public var milliseconds: Milliseconds<RawValue> {
-    return .init(rawValue: self.rawValue * 1000)
+    return Milliseconds(rawValue: self.rawValue * 1000)
   }
 }
 
 extension Tagged where Tag == SecondsTag, RawValue: BinaryInteger {
   /// Converts seconds into `TimeInterval`.
   public var timeInterval: TimeInterval {
-    return TimeInterval(Int64(self.rawValue))
+    TimeInterval(Int64(self.rawValue))
   }
 
   /// Converts seconds into `DispatchTimeInterval`.
   public var dispatchTimeInterval: DispatchTimeInterval {
-    return .seconds(Int(self.rawValue))
+    .seconds(Int(self.rawValue))
   }
 
-  /// Converts seconds in `Date`.
+  /// Converts seconds into `Date`.
   public var date: Date {
-    return Date(timeIntervalSince1970: self.timeInterval)
+    Date(timeIntervalSince1970: self.timeInterval)
+  }
+
+  /// Converts seconds into `Duration`.
+  @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+  public var duration: Duration {
+    .seconds(self.rawValue)
+  }
+}
+
+extension Tagged where Tag == SecondsTag, RawValue: BinaryFloatingPoint {
+  /// Converts milliseconds into `Duration`.
+  @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+  public var duration: Duration {
+    .seconds(Double(self.rawValue))
   }
 }
 
 extension Date {
-  /// Computes the number of seconds between the receiver and another given dte.
+  /// Computes the number of seconds between the receiver and another given date.
   ///
   /// - Parameter date: The date with which to compare the receiver.
   /// - Returns: The number of seconds between the receiver and the other date.
   public func secondsSince(_ date: Date) -> Seconds<TimeInterval> {
-    return Seconds(rawValue: self.timeIntervalSince(date))
+    Seconds(rawValue: self.timeIntervalSince(date))
   }
 
-  /// Computes the number of milliseconds between the receiver and another given dte.
+  /// Computes the number of milliseconds between the receiver and another given date.
   ///
   /// - Parameter date: The date with which to compare the receiver.
   /// - Returns: The number of milliseconds between the receiver and the other date.
   public func millisecondsSince(_ date: Date) -> Milliseconds<TimeInterval> {
-    return self.secondsSince(date).milliseconds
+    self.secondsSince(date).milliseconds
   }
 }
