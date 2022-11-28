@@ -33,11 +33,13 @@ extension Tagged where Tag == MillisecondsTag, RawValue: BinaryFloatingPoint {
     Date(timeIntervalSince1970: self.timeInterval)
   }
 
-  /// Converts milliseconds into `Duration`.
-  @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
-  public var duration: Duration {
-    .milliseconds(Double(self.rawValue))
-  }
+  #if swift(>=5.7)
+    /// Converts milliseconds into `Duration`.
+    @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+    public var duration: Duration {
+      .milliseconds(Double(self.rawValue))
+    }
+  #endif
 }
 
 extension Tagged where Tag == MillisecondsTag, RawValue: BinaryInteger {
@@ -56,11 +58,13 @@ extension Tagged where Tag == MillisecondsTag, RawValue: BinaryInteger {
     Date(timeIntervalSince1970: self.timeInterval)
   }
 
-  /// Converts milliseconds into `Duration`.
-  @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
-  public var duration: Duration {
-    .milliseconds(self.rawValue)
-  }
+  #if swift(>=5.7)
+    /// Converts milliseconds into `Duration`.
+    @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+    public var duration: Duration {
+      .milliseconds(self.rawValue)
+    }
+  #endif
 }
 
 extension Tagged where Tag == SecondsTag, RawValue: Numeric {
@@ -86,19 +90,23 @@ extension Tagged where Tag == SecondsTag, RawValue: BinaryInteger {
     Date(timeIntervalSince1970: self.timeInterval)
   }
 
-  /// Converts seconds into `Duration`.
-  @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
-  public var duration: Duration {
-    .seconds(self.rawValue)
-  }
+  #if swift(>=5.7)
+    /// Converts seconds into `Duration`.
+    @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+    public var duration: Duration {
+      .seconds(self.rawValue)
+    }
+  #endif
 }
 
 extension Tagged where Tag == SecondsTag, RawValue: BinaryFloatingPoint {
-  /// Converts milliseconds into `Duration`.
-  @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
-  public var duration: Duration {
-    .seconds(Double(self.rawValue))
-  }
+  #if swift(>=5.7)
+    /// Converts milliseconds into `Duration`.
+    @available(macOS 13, iOS 16, watchOS 9, tvOS 16, *)
+    public var duration: Duration {
+      .seconds(Double(self.rawValue))
+    }
+  #endif
 }
 
 extension Date {
