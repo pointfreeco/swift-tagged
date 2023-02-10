@@ -70,6 +70,17 @@ final class TaggedTests: XCTestCase {
     )
   }
 
+  func testCodingKeyRepresentable() {
+    if #available(macOS 12.3, iOS 15.4, watchOS 8.5, tvOS 15.4, *) {
+      enum Key {}
+      let xs: [Tagged<Key, String>: String] = [Tagged("Hello"): "World"]
+      XCTAssertEqual(
+        String(decoding: try JSONEncoder().encode(xs), as: UTF8.self),
+        #"{"Hello":"World"}"#
+      )
+    }
+  }
+
   func testEquatable() {
     XCTAssertEqual(Tagged<Tag, Int>(rawValue: 1), Tagged<Tag, Int>(rawValue: 1))
   }

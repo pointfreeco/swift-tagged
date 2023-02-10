@@ -89,6 +89,19 @@ extension Tagged: Encodable where RawValue: Encodable {
   }
 }
 
+@available(macOS 12.3, iOS 15.4, watchOS 8.5, tvOS 15.4, *)
+extension Tagged: CodingKeyRepresentable where RawValue: CodingKeyRepresentable {
+  public init?<T: CodingKey>(codingKey: T) {
+    guard let rawValue = RawValue(codingKey: codingKey)
+    else { return nil }
+    self.init(rawValue: rawValue)
+  }
+
+  public var codingKey: CodingKey {
+    self.rawValue.codingKey
+  }
+}
+
 extension Tagged: Equatable where RawValue: Equatable {}
 
 extension Tagged: Error where RawValue: Error {}
