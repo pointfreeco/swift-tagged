@@ -390,7 +390,7 @@ These concepts (and more) are explored thoroughly in [Point-Free](https://www.po
 Tagged was first explored in [Episode #12](https://www.pointfree.co/episodes/ep12-tagged):
 
 <a href="https://www.pointfree.co/episodes/ep12-tagged">
-  <img alt="video poster image" src="https://d1hf1soyumxcgv.cloudfront.net/0012-tagged/0012-poster.jpg" width="480">
+  <img alt="video poster image" src="https://d3rccdn33rt8ze.cloudfront.net/episodes/0012.jpeg" width="480">
 </a>
 
 ## License
