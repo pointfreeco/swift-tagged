@@ -27,6 +27,12 @@ extension Tagged: CustomStringConvertible {
   }
 }
 
+extension Tagged: CustomDebugStringConvertible {
+  public var debugDescription: String {
+    return String(reflecting: self.rawValue)
+  }
+}
+
 extension Tagged: RawRepresentable {}
 
 extension Tagged: CustomPlaygroundDisplayConvertible {
