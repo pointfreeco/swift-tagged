@@ -48,21 +48,19 @@ final class TaggedTimeTests: XCTestCase {
     XCTAssertEqual(12, seconds)
   }
 
-  #if swift(>=5.7)
-    func testDuration() {
-      if #available(macOS 13, iOS 16, watchOS 9, tvOS 16, *) {
-        let intSeconds: Seconds<Int> = 12
-        XCTAssertEqual(.seconds(12), intSeconds.duration)
+  func testDuration() {
+    if #available(macOS 13, iOS 16, watchOS 9, tvOS 16, *) {
+      let intSeconds: Seconds<Int> = 12
+      XCTAssertEqual(.seconds(12), intSeconds.duration)
 
-        let doubleSeconds: Seconds<Double> = 1.2
-        XCTAssertEqual(.seconds(1.2), doubleSeconds.duration)
+      let doubleSeconds: Seconds<Double> = 1.2
+      XCTAssertEqual(.seconds(1.2), doubleSeconds.duration)
 
-        let intMilliseconds: Milliseconds<Int> = 12000
-        XCTAssertEqual(.milliseconds(12000), intMilliseconds.duration)
+      let intMilliseconds: Milliseconds<Int> = 12000
+      XCTAssertEqual(.milliseconds(12000), intMilliseconds.duration)
 
-        let doubleMilliseconds: Milliseconds<Double> = 1.2
-        XCTAssertEqual(.milliseconds(1.2), doubleMilliseconds.duration)
-      }
+      let doubleMilliseconds: Milliseconds<Double> = 1.2
+      XCTAssertEqual(.milliseconds(1.2), doubleMilliseconds.duration)
     }
-  #endif
+  }
 }
