@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.0
 
 import Foundation
 import PackageDescription
@@ -19,12 +19,6 @@ var package = Package(
 
     .target(name: "TaggedTime", dependencies: ["Tagged"]),
     .testTarget(name: "TaggedTimeTests", dependencies: ["TaggedTime"]),
-  ]
+  ],
+  swiftLanguageVersions: [.v6]
 )
-
-for target in package.targets {
-  target.swiftSettings = target.swiftSettings ?? []
-  target.swiftSettings!.append(contentsOf: [
-    .enableExperimentalFeature("StrictConcurrency")
-  ])
-}
