@@ -339,7 +339,7 @@ Read more on our blog post: [Tagged Seconds and Milliseconds](https://www.pointf
 
 API's can also send back money amounts in two standard units: whole dollar amounts or cents (1/100 of a dollar). Keeping track of this distinction can also be messy and error prone. 
 
-Importing the `TaggedMoney` libary gives you access to two generic types, `Dollars<A>` and `Cents<A>`, that give you compile-time guarantees in keeping the two units separate.
+Importing the `TaggedMoney` library gives you access to two generic types, `Dollars<A>` and `Cents<A>`, that give you compile-time guarantees in keeping the two units separate.
 
 ```swift 
 struct Prize {
