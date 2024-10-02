@@ -15,6 +15,10 @@ final class TaggedTests: XCTestCase {
     XCTAssertEqual("1", Tagged<Tag, Int>(rawValue: 1).description)
   }
 
+  func testCustomDebugStringConvertible() {
+    XCTAssertEqual("(0.0, 0.0)", Tagged<Tag, CGPoint>(rawValue: .zero).debugDescription)
+  }
+
   func testComparable() {
     XCTAssertTrue(Tagged<Tag, Int>(rawValue: 1) < Tagged<Tag, Int>(rawValue: 2))
   }
