@@ -209,6 +209,83 @@ extension Tagged: Numeric where RawValue: Numeric {
   }
 }
 
+extension Tagged: SignedInteger where RawValue: SignedInteger {}
+
+extension Tagged: BinaryInteger where RawValue: BinaryInteger {
+
+    public static var isSigned: Bool {
+        RawValue.isSigned
+    }
+
+    public init?<T>(exactly source: T) where T : BinaryFloatingPoint {
+        guard let rawValue = RawValue(exactly: source) else { return nil }
+        self.init(rawValue: rawValue)
+    }
+
+    public init<T>(_ source: T) where T : BinaryFloatingPoint {
+        self.init(rawValue: RawValue(source))
+    }
+
+    public init<T>(_ source: T) where T : BinaryInteger {
+        self.init(rawValue: RawValue(source))
+    }
+
+    public init<T>(truncatingIfNeeded source: T) where T : BinaryInteger {
+        self.init(rawValue: RawValue(truncatingIfNeeded: source))
+    }
+
+    public init<T>(clamping source: T) where T : BinaryInteger {
+        self.init(rawValue: RawValue(clamping: source))
+    }
+
+    public var words: RawValue.Words { rawValue.words }
+
+    public var bitWidth: Int { rawValue.bitWidth }
+
+    public var trailingZeroBitCount: Int { rawValue.trailingZeroBitCount }
+
+    public static func / (lhs: Self, rhs: Self) -> Self { Self(rawValue: lhs.rawValue / rhs.rawValue) }
+
+    public static func /= (lhs: inout Self, rhs: Self) { lhs.rawValue /= rhs.rawValue }
+
+    public static func % (lhs: Self, rhs: Self) -> Self { Self(rawValue: lhs.rawValue % rhs.rawValue) }
+
+    public static func %= (lhs: inout Self, rhs: Self) { lhs.rawValue %= rhs.rawValue }
+
+    public prefix static func ~ (x: Self) -> Self { Self(rawValue: ~x.rawValue) }
+
+    public static func & (lhs: Self, rhs: Self) -> Self { Self(rawValue: lhs.rawValue & rhs.rawValue) }
+
+    public static func &= (lhs: inout Self, rhs: Self) { lhs.rawValue &= rhs.rawValue }
+
+    public static func | (lhs: Self, rhs: Self) -> Self { Self(rawValue: lhs.rawValue | rhs.rawValue)}
+
+    public static func |= (lhs: inout Self, rhs: Self) { lhs.rawValue |= rhs.rawValue }
+
+    public static func ^ (lhs: Self, rhs: Self) -> Self { Self(rawValue: lhs.rawValue ^ rhs.rawValue)}
+
+    public static func ^= (lhs: inout Self, rhs: Self) { lhs.rawValue ^= rhs.rawValue }
+
+    public static func >> <RHS>(lhs: Self, rhs: RHS) -> Self where RHS : BinaryInteger { Self(rawValue: lhs.rawValue >> rhs)}
+
+    public static func >>= <RHS>(lhs: inout Self, rhs: RHS) where RHS : BinaryInteger { lhs.rawValue >>= rhs }
+
+    public static func << <RHS>(lhs: Self, rhs: RHS) -> Self where RHS : BinaryInteger { Self(rawValue: lhs.rawValue << rhs)}
+
+    public static func <<= <RHS>(lhs: inout Self, rhs: RHS) where RHS : BinaryInteger{ lhs.rawValue <<= rhs }
+
+    public func quotientAndRemainder(dividingBy rhs: Self) -> (quotient: Self, remainder: Self) {
+        let (q, r) = rawValue.quotientAndRemainder(dividingBy: rhs.rawValue)
+        return (Self(rawValue: q), Self(rawValue: r))
+    }
+
+    public func isMultiple(of other: Self) -> Bool { rawValue.isMultiple(of: other.rawValue) }
+
+    public func signum() -> Self { Self(rawValue: rawValue.signum()) }
+}
+
+
+
 extension Tagged: Hashable where RawValue: Hashable {}
 
 extension Tagged: SignedNumeric where RawValue: SignedNumeric {}
