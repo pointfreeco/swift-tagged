@@ -109,6 +109,8 @@ extension Tagged: Error where RawValue: Error {}
 
 extension Tagged: Sendable where RawValue: Sendable {}
 
+extension Tagged: BitwiseCopyable where RawValue: BitwiseCopyable {}
+
 extension Tagged: ExpressibleByBooleanLiteral where RawValue: ExpressibleByBooleanLiteral {
   public init(booleanLiteral value: RawValue.BooleanLiteralType) {
     self.init(rawValue: RawValue(booleanLiteral: value))
