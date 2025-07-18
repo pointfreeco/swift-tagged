@@ -20,5 +20,5 @@ var package = Package(
     .target(name: "TaggedTime", dependencies: ["Tagged"]),
     .testTarget(name: "TaggedTimeTests", dependencies: ["TaggedTime"]),
   ],
-  swiftLanguageVersions: [.v6]
+  swiftLanguageModes: [.v6]
 )
