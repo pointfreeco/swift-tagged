@@ -109,6 +109,10 @@ extension Tagged: Error where RawValue: Error {}
 
 extension Tagged: Sendable where RawValue: Sendable {}
 
+#if swift(>=6.0)
+extension Tagged: BitwiseCopyable where RawValue: BitwiseCopyable {}
+#endif
+
 extension Tagged: ExpressibleByBooleanLiteral where RawValue: ExpressibleByBooleanLiteral {
   public init(booleanLiteral value: RawValue.BooleanLiteralType) {
     self.init(rawValue: RawValue(booleanLiteral: value))
