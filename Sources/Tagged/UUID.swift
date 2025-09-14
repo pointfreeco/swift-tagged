@@ -1,3 +1,4 @@
+#if canImport(Foundation)
 import Foundation
 
 extension Tagged where RawValue == UUID {
@@ -18,3 +19,4 @@ extension Tagged where RawValue == UUID {
     self.init(uuid)
   }
 }
+#endif
