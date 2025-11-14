@@ -57,11 +57,27 @@ extension Tagged: Collection where RawValue: Collection {
   public var endIndex: RawValue.Index {
     rawValue.endIndex
   }
-
-  public consuming func makeIterator() -> RawValue.Iterator {
-    rawValue.makeIterator()
+  
+  public func index(_ i: RawValue.Index, offsetBy distance: Int) -> RawValue.Index {
+    rawValue.index(i, offsetBy: distance)
+  }
+  
+  public func index(_ i: RawValue.Index, offsetBy distance: Int, limitedBy limit: RawValue.Index) -> RawValue.Index? {
+    rawValue.index(i, offsetBy: distance, limitedBy: limit)
+  }
+  
+  public func distance(from start: RawValue.Index, to end: RawValue.Index) -> Int {
+    rawValue.distance(from: start, to: end)
   }
 }
+
+extension Tagged: BidirectionalCollection where RawValue: BidirectionalCollection {
+  public func index(before i: RawValue.Index) -> RawValue.Index {
+    rawValue.index(before: i)
+  }
+}
+
+extension Tagged: RandomAccessCollection where RawValue: RandomAccessCollection {}
 
 extension Tagged: Comparable where RawValue: Comparable {
   public static func < (lhs: Self, rhs: Self) -> Bool {
